@@ -7,7 +7,9 @@ The forum page can be found here as well.
 ## Dependencies
 
 `Latest version of Contract Configurator
+
 Latest version of BD Armory Plus
+
 Latest version of Ferram Aerospace Research Continued`
 
 You must also untick the option Disable Guard Mode on Spawn in BD Armory Plus' settings, see the following image:
