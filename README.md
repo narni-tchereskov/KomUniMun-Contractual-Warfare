@@ -1,8 +1,8 @@
 # KomUniMun Contractual Warfare
 
 This repository acts as the main location where development will occur, with every
-version being released to SpaceDock simultaneously as well. The forum page can be found
-here as well.
+version being released to SpaceDock simultaneously as well.
+The forum page can be found here as well.
 
 ## Dependencies
 
@@ -10,8 +10,8 @@ here as well.
 Latest version of BD Armory Plus
 Latest version of Ferram Aerospace Research Continued`
 
-You must also untick the option Disable Guard Mode on Spawn in BD Armory Plus' settings,
-see the ![Guide Image.](https://i.imgur.com/Fs1PSbp.png)
+You must also untick the option Disable Guard Mode on Spawn in BD Armory Plus' settings, see the following image:
+<p align="center">![Guide Image](https://i.imgur.com/Fs1PSbp.png)</p>
 
 ## Komnenus Universalis Munistorum
 
