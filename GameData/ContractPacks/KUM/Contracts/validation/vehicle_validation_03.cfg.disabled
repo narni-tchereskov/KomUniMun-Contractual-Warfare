@@ -1,0 +1,181 @@
+CONTRACT_TYPE
+{
+	name = kumVALIDATION3
+
+	title = "VEHICLE VALIDATION [DEBUG] TITLE 03"
+	genericTitle = "VEHICLE VALIDATION [DEBUG] GENERIC TITLE 03"
+
+	group = munistorumVALIDATION
+	agent = komUniMun
+
+	description = "VEHICLE VALIDATION [DEBUG] DESCRIPTION" + "\n\nMission Latitude: " + @titleLat + "\nMission Longitude: " + @titleLon + "\nVehicle: " + @targetCraft
+	genericDescription = "VEHICLE VALIDATION [DEBUG] GENERIC DESCRIPTION"
+
+	topic = Weapons
+	subject = Experiment
+
+	synopsis = "VEHICLE VALIDATION [DEBUG] SYNOPSIS"
+	notes = "VEHICLE VALIDATION [DEBUG] NOTES"
+
+	completedMessage = "VEHICLE VALIDATION [DEBUG] COMPLETED MESSAGE"
+
+	minExpiry = 3.0
+	maxExpiry = 7.0
+
+	cancellable = true
+	declinable = true
+
+	targetBody = HomeWorld()
+
+	maxCompletions = 0
+	maxSimultaneous = 1
+
+	// Data node for the rewards
+	DATA
+	{
+		type = double
+
+		science = 1 * Random(0.5, 2.2)
+		reputation = 2 * Random(0.8, 2.0)
+		funds = 4000 * Random(0.8, 1.2)
+	}
+
+	// Name Safety
+	DATA
+	{
+		type = int
+
+		nameAppend = Random(0, 65535)
+
+		hidden = true
+	}
+
+	// Target Names
+	DATA
+	{
+		type = string
+		title = "Target vessels"
+
+		targetVessel = "Vehicle Validator" + " ID: " + @/nameAppend
+		targetCraft = "enemy_ugv_04a.craft"
+	}
+
+	// Vehicle Positions
+	DATA
+	{
+		type = double
+
+		squadLat = -0.02
+		squadLon = -74.8
+		squadHdg = Random(0.0, 360.0)
+	}
+
+	// Title Coordinates
+	DATA
+	{
+		type = double
+
+		titleLat = Round(@squadLat)
+		titleLon = Round(@squadLon)
+	}
+
+	// Value definitions
+	rewardScience = @/science
+	rewardReputation = @/reputation
+	rewardFunds = @/funds
+
+	failureReputation = @/reputation / 4
+	failureFunds = @/funds / 8
+	advanceFunds = @/funds / 4
+
+	// Behaviour such as vessel location, name etc
+
+	// Target
+	BEHAVIOUR
+	{
+		name = SpawnTarget
+		type = SpawnVessel
+		deferVesselCreation = true
+
+		VESSEL
+		{
+			name = @/targetVessel
+			craftURL = "ContractPacks/KUM/Assets/Ships/" + @/targetCraft
+			flagURL = Squad/Flags/retro
+			vesselType = Unknown
+			owned = false
+			targetBody = HomeWorld()
+
+			lat = @/squadLat
+			lon = @/squadLon
+
+			height = 5
+
+			heading = @/squadHdg
+		}
+	}
+
+	// Destroy all mission vessels for safety
+	BEHAVIOUR
+	{
+		name = ContingencyCleanup
+		type = DestroyVessel
+
+		onState = PARAMETER_COMPLETED
+		parameter = DestroyCraft
+
+		vessel = @/targetVessel
+	}
+
+	// Parameters for completing the contract
+
+	// Combat parameters
+	PARAMETER
+	{
+		name = CombatSequence
+		type = Sequence
+
+		title = "Destroy the target"
+
+		hiddenParameter = DestroyCraft
+
+		PARAMETER
+		{
+			name = DestroyCraft
+			type = TargetDestroyed
+
+			title = "Destroy the target"
+
+			vessel = @/targetVessel
+		}
+
+		// Parameter for recovering the vessel after the mission
+		PARAMETER
+		{
+			name = ToBase
+			type = All
+
+			title = "Land the testbed vessel and recover it safely on Kerbin"
+
+			disableOnStateChange = true
+			completeInSequence = true
+
+			PARAMETER
+			{
+				name = LandBase
+				type = ReturnHome
+
+				title = "Stop the testbed vessel on the surface"
+		}
+
+		PARAMETER
+		{
+				name = RecoverBase
+				type = RecoverVessel
+
+				title = "Recover the vessel"
+				completedMessage = "The testbed vessel was successfully recovered!"
+			}
+		}
+	}
+}
