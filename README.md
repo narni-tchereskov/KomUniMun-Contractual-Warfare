@@ -11,7 +11,7 @@ Latest version of BD Armory Plus
 Latest version of Ferram Aerospace Research Continued`
 
 You must also untick the option Disable Guard Mode on Spawn in BD Armory Plus' settings, see the following image:
-<p align="center">![Guide Image](https://i.imgur.com/Fs1PSbp.png)</p>
+<p align="center"><img src="https://i.imgur.com/Fs1PSbp.png" alt="Guide Image"/></p>
 
 ## Komnenus Universalis Munistorum
 
