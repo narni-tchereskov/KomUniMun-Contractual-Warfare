@@ -2,7 +2,7 @@
 
 This repository acts as the main location where development will occur, with every
 version being released to SpaceDock simultaneously as well.
-The forum page can be found [at this address](github.com) as well.
+The forum page can be found [at this address](https://forum.kerbalspaceprogram.com/topic/229136-1125-komunimun-contractual-warfare/) as well.
 
 ## Dependencies
 
@@ -12,7 +12,8 @@ The forum page can be found [at this address](github.com) as well.
 
 [Ferram Aerospace Research Continued](https://forum.kerbalspaceprogram.com/topic/179445-18-112-ferram-aerospace-research-continued-v01605-mader-030422/)
 
-You must also untick the option `Disable Guard Mode on Spawn` in BD Armory Plus' settings, see the following image:
+For the pack to work as intended you must untick the Disable Guard Mode on Spawn option found in the BDA+ settings:
+
 <p align="center"><img src="https://i.imgur.com/rJe8icW.png" alt="Guide Image"/></p>
 
 ## Komnenus Universalis Munistorum
