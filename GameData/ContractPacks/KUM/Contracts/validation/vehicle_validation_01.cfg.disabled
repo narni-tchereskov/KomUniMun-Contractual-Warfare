@@ -1,26 +1,25 @@
 CONTRACT_TYPE
 {
-	name = kumVALIDATION1
+	name = kumValidation1
 
-	title = "VEHICLE VALIDATION [DEBUG] TITLE 01"
-	genericTitle = "VEHICLE VALIDATION [DEBUG] GENERIC TITLE 01"
+	title = "[DEBUG] title 01"
+	genericTitle = "[DEBUG] title 01"
 
-	group = munistorumVALIDATION
+	group = munistorumValidation
 	agent = komUniMun
 
-	description = "VEHICLE VALIDATION [DEBUG] DESCRIPTION" + "\n\nMission Latitude: " + @titleLat + "\nMission Longitude: " + @titleLon + "\nVehicle: " + @targetCraft
-	genericDescription = "VEHICLE VALIDATION [DEBUG] GENERIC DESCRIPTION"
+	description = "description" + "\n\nMission Latitude: " + @titleLat + "\nMission Longitude: " + @titleLon
+	genericDescription = "genericDescription"
 
 	topic = Weapons
 	subject = Experiment
 
-	synopsis = "VEHICLE VALIDATION [DEBUG] SYNOPSIS"
-	notes = "VEHICLE VALIDATION [DEBUG] NOTES"
+	synopsis = "synopsis"
 
-	completedMessage = "VEHICLE VALIDATION [DEBUG] COMPLETED MESSAGE"
+	completedMessage = "completedMessage"
 
-	minExpiry = 3.0
-	maxExpiry = 7.0
+	minExpiry = 0.0
+	maxExpiry = 0.0
 
 	cancellable = true
 	declinable = true
@@ -60,6 +59,26 @@ CONTRACT_TYPE
 		targetCraft = "enemy_base_01.craft"
 	}
 
+	// Test Part
+	DATA
+	{
+		type = AvailablePart
+
+		testPart = AllParts().Where(b => b.IsUnlocked() && (b.Description().Contains("AAM-Testable"))).Random()
+
+		hidden = true
+	}
+
+	// Is part testing a parameter?
+	DATA
+	{
+		type = int
+
+		partTestValue = Random(0,1)
+
+		hidden = true
+	}
+
 	// Vehicle Positions
 	DATA
 	{
@@ -78,6 +97,8 @@ CONTRACT_TYPE
 		titleLat = Round(@squadLat)
 		titleLon = Round(@squadLon)
 	}
+
+	// Requirement node for contract prerequisites
 
 	// Value definitions
 	rewardScience = @/science
@@ -128,6 +149,76 @@ CONTRACT_TYPE
 	}
 
 	// Parameters for completing the contract
+	PARAMETER
+	{
+		name = TestThePart
+		type = PartTest
+
+		title = "Approach the target for testing purposes"
+		completedMessage = "Tests complete, destroy the target!"
+
+		rewardScience = @/science
+		rewardReputation = @/reputation
+		rewardFunds = (@/funds / 2)
+
+		failureReputation = 0.0
+		failureFunds = 0.0
+
+		optional = true
+
+		part = @/testPart
+
+		REQUIREMENT
+		{
+			name = Expression
+			type = Expression
+
+			expression = @/partTestValue == 1
+		}
+
+		PARAMETER
+		{
+			name = HasTestPart
+			type = PartValidation
+
+			title = "Have at least one " + @/testPart + " on your vehicle"
+
+			part = @/testPart
+			minCount = 1
+		}
+
+		PARAMETER
+		{
+			name = RendezvousCraft
+			type = Rendezvous
+
+			title = "Approach the target within 250 meters of distance"
+			notes = "Rendezvous should allow us to test the hardware."
+
+			vessel = @/targetVessel
+
+			disableOnStateChange = false
+
+			distance = 250.0
+		}
+
+		PARAMETER
+		{
+			name = TestDuration
+			type = Duration
+
+			preWaitText = "Rendezvous for equipment testing"
+			waitingText = "Testing equipment..."
+			completionText = "Equipment testing"
+
+			completeInSequence = true
+
+			duration = 10s
+
+			startCriteria = PARAMETER_COMPLETION
+			parameter = RendezvousCraft
+		}
+	}
 
 	// Combat parameters
 	PARAMETER
@@ -137,7 +228,8 @@ CONTRACT_TYPE
 
 		title = "Destroy the target"
 
-		hiddenParameter = DestroyCraft
+		hiddenParameter = LandBase
+		hiddenParameter = RecoverBase
 
 		PARAMETER
 		{
