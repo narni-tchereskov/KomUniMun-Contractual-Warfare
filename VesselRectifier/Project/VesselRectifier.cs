@@ -18,7 +18,9 @@ namespace KomUniMunVesselRectifier
         private static Harmony _harmonyInstance;
         private static int _addonInstanceCount;
 
-        private float _addonAwakeTime;
+        private static float _addonAwakeTime;
+        public static bool IsSceneSettled =>
+            Time.time - _addonAwakeTime > Settings.SceneSettleDuration;
 
         // Walks the call stack to see whether PRE triggered the current chain.
         internal static bool IsCallerPhysicsRangeExtender()
@@ -151,7 +153,7 @@ namespace KomUniMunVesselRectifier
             if (FlightGlobals.Vessels == null)
                 return;
 
-            bool sceneSettled = Time.time - _addonAwakeTime > Settings.SceneSettleDuration;
+            bool sceneSettled = IsSceneSettled;
 
             // Iterate backwards to avoid out-of-bounds.
             for (int i = FlightGlobals.Vessels.Count - 1; i >= 0; i--)
@@ -222,7 +224,7 @@ namespace KomUniMunVesselRectifier
         // Evaluates if packed vessel needs to be forced to load.
         private void CheckAndUnrailVessel(Vessel vessel, bool sceneSettled)
         {
-            if (!vessel.packed || !vessel.IsFullyInitialized())
+            if (!sceneSettled || !vessel.packed || !vessel.IsFullyInitialized())
                 return;
 
             bool isPositioned = VesselPositioned.Instance?.HasPositioned(vessel.id) == true;
@@ -237,7 +239,7 @@ namespace KomUniMunVesselRectifier
                 return;
             }
 
-            if (sceneSettled && vessel.vesselName.IsContractAircraft())
+            if (vessel.vesselName.IsContractAircraft())
             {
                 try
                 {
