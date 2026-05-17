@@ -5,7 +5,7 @@ namespace KomUniMunVesselRectifier
 {
     internal static class VesselClassification
     {
-        // Checks if it is a contract NON aircraft vessel.
+        // Matches any managed vessel.
         internal static bool IsContractVessel(this string vesselName)
         {
             if (string.IsNullOrEmpty(vesselName))
@@ -14,13 +14,37 @@ namespace KomUniMunVesselRectifier
             return vesselName.IndexOf("ID:", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        // Checks if it is a contract AIRCRAFT that flies over terrain without orbits.
+        // Identifies units requiring altitude reposition (AIR and ATGT).
         internal static bool IsContractAircraft(this string vesselName)
         {
             if (string.IsNullOrEmpty(vesselName))
                 return false;
 
-            return vesselName.IndexOf("AIR ID:", StringComparison.OrdinalIgnoreCase) >= 0;
+            return vesselName.IndexOf("AIR ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("ATGT ID:", StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        // Checks if Guard Mode should be enabled (AIR and GND).
+        internal static bool IsGuardEnabled(this string vesselName)
+        {
+            if (string.IsNullOrEmpty(vesselName))
+                return false;
+
+            return vesselName.IndexOf("SPC ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("AIR ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("GND ID:", StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        // Checks if Pilot AI should be enabled (AIR and ATGT).
+        internal static bool IsPilotEnabled(this string vesselName)
+        {
+            if (string.IsNullOrEmpty(vesselName))
+                return false;
+
+            return vesselName.IndexOf("SPC ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("AIR ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("GND ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("ATGT ID:", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
         // Validates if a vessel is initialized by its physics parameters.

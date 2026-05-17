@@ -30,13 +30,22 @@ namespace KomUniMunVesselRectifier
             BdaReflectionCache.Clear();
         }
 
-        // Enforces the active combat state on BDArmory modules.
+        // Enforces the active combat state on BDArmory modules based on ID.
         public static void ForceCombatState(Vessel vessel, VesselTrack tracking)
         {
             if (!IsAvailable || vessel?.parts == null || !vessel.loaded || tracking == null)
                 return;
 
-            VerboseLogging.Log($"Evaluating combat states for {vessel.vesselName}");
+            bool enableGuard = vessel.vesselName.IsGuardEnabled();
+            bool enablePilot = vessel.vesselName.IsPilotEnabled();
+
+            // If neither is required, abort the sweep.
+            if (!enableGuard && !enablePilot)
+                return;
+
+            VerboseLogging.Log(
+                $"Evaluating combat states for {vessel.vesselName} (Guard:{enableGuard}, Pilot:{enablePilot})"
+            );
 
             for (int i = vessel.parts.Count - 1; i >= 0; i--)
             {
@@ -55,16 +64,23 @@ namespace KomUniMunVesselRectifier
                     string typeName = module.GetType().Name;
 
                     // Check or die.
-                    if (typeName == "MissileFire")
+                    if (enableGuard && typeName == "MissileFire")
+                    {
                         EnforceWeaponManagerState(module);
+                    }
                     else if (
-                        typeName == "BDModulePilotAI"
-                        || typeName == "BDModuleSurfaceAI"
-                        || typeName == "BDModuleVTOLAI"
-                        || typeName == "BDModuleOrbitalAI"
-                        || typeName == "BDGenericAIBase"
+                        enablePilot
+                        && (
+                            typeName == "BDModulePilotAI"
+                            || typeName == "BDModuleSurfaceAI"
+                            || typeName == "BDModuleVTOLAI"
+                            || typeName == "BDModuleOrbitalAI"
+                            || typeName == "BDGenericAIBase"
+                        )
                     )
+                    {
                         EnforcePilotAiState(module);
+                    }
                 }
             }
         }
