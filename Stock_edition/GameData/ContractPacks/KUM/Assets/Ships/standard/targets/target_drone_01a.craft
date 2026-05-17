@@ -2,7 +2,7 @@ ship = target_drone_01a
 version = 1.12.5
 description = 
 type = SPH
-size = 7.39377117,1.51505089,5.76851082
+size = 7.39377117,1.51505089,5.76851273
 steamPublishedFileId = 0
 persistentId = 3808736796
 rot = 0,0,0,0
@@ -14,9 +14,9 @@ OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 PART
 {
-	part = probeCoreOcto2.v2_4292570970
+	part = probeCoreOcto2.v2_4294075608
 	partName = Part
-	persistentId = 967647883
+	persistentId = 1510716930
 	pos = 0,10,0
 	attPos = 0,0,0
 	attPos0 = 0,10,0
@@ -35,15 +35,14 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = -500
-	modMass = -0.0267999992
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	link = SurfAntenna_4292570910
-	link = batteryPack_4292570878
-	link = rtg_4292570840
+	link = SurfAntenna_4294075548
+	link = batteryPack_4294075516
+	link = rtg_4294075478
 	link = bdWarheadSmall_4294329160
-	link = Separator.0_4293606010
-	attN = bottom,rtg_4292570840_0|-0.0610621013|0_0|-1|0_0|-0.0610621013|0_0|-1|0
+	attN = bottom,rtg_4294075478_0|-0.0610621013|0_0|-1|0_0|-0.0610621013|0_0|-1|0
 	attN = top,bdWarheadSmall_4294329160_0|0.0610621013|0_0|1|0_0|0.0610621013|0_0|1|0
 	EVENTS
 	{
@@ -177,12 +176,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 12.5
+		Hitpoints = 50
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 1
-		hullType = Wood
+		HullTypeNum = 2
+		hullType = Aluminium
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -196,7 +195,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 0.699999988
+		radarReflectivity = 1
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -207,12 +206,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 11
-		maxTorque = 11
-		maxG = 25
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
 		maxSupportedArmor = 5
 		armorVolume = 0.752156436
-		ignitionTemp = 510
+		ignitionTemp = -1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -257,9 +256,9 @@ PART
 }
 PART
 {
-	part = SurfAntenna_4292570910
+	part = SurfAntenna_4294075548
 	partName = Part
-	persistentId = 3363935429
+	persistentId = 3845888834
 	pos = 0,10,0
 	attPos = -7.44645767E-09,-0.000813007355,0.33593753
 	attPos0 = 7.44645767E-09,0.000813007355,-0.33593753
@@ -278,10 +277,10 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = -150
-	modMass = -0.0100499997
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeCoreOcto2.v2_4292570970,collider,0|-0.0500000007|0,0|-1|0,0|-0.0500000007|0
+	srfN = srfAttach,probeCoreOcto2.v2_4294075608,collider,0|-0.0500000007|0,0|-1|0,0|-0.0500000007|0
 	EVENTS
 	{
 	}
@@ -349,12 +348,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 18.75
+		Hitpoints = 75
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 1
-		hullType = Wood
+		HullTypeNum = 2
+		hullType = Aluminium
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -368,7 +367,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 0.699999988
+		radarReflectivity = 1
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -379,12 +378,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 11
-		maxTorque = 11
-		maxG = 25
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
 		maxSupportedArmor = 5
 		armorVolume = 0.288384289
-		ignitionTemp = 510
+		ignitionTemp = -1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -399,9 +398,9 @@ PART
 }
 PART
 {
-	part = batteryPack_4292570878
+	part = batteryPack_4294075516
 	partName = Part
-	persistentId = 1954002166
+	persistentId = 2078463239
 	pos = 0,10,0
 	attPos = -2.10564757E-08,-0.0603193343,0.240858108
 	attPos0 = 2.10564757E-08,0.0603193343,-0.240858108
@@ -420,10 +419,10 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = -40
-	modMass = -0.0033499999
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeCoreOcto2.v2_4292570970,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,probeCoreOcto2.v2_4294075608,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -470,12 +469,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 6.25
+		Hitpoints = 25
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 1
-		hullType = Wood
+		HullTypeNum = 2
+		hullType = Aluminium
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -489,7 +488,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 0.699999988
+		radarReflectivity = 1
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -500,12 +499,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 11
-		maxTorque = 11
-		maxG = 25
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
 		maxSupportedArmor = 15
 		armorVolume = 0.311784476
-		ignitionTemp = 510
+		ignitionTemp = -1
 		stagingEnabled = True
 		EVENTS
 		{
@@ -531,10 +530,10 @@ PART
 }
 PART
 {
-	part = rtg_4292570840
+	part = rtg_4294075478
 	partName = Part
-	persistentId = 769185845
-	pos = 0,10,-2.38418693E-07
+	persistentId = 206375375
+	pos = 0,10,-2.38418636E-07
 	attPos = 0,0.3878645,-5.96046306E-08
 	attPos0 = 0,-0.387864619,5.96046448E-08
 	rot = 0.707106829,0,0,0.707106829
@@ -555,10 +554,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = bdPilotAI_4292570806
-	link = missileController_4292570780
+	link = bdPilotAI_4294075444
+	link = missileController_4294075418
 	link = miniFuselage_4293956650
-	attN = top,probeCoreOcto2.v2_4292570970_0|0.326802492|0_0|1|0_0|0.326802492|0_0|1|0
+	attN = top,probeCoreOcto2.v2_4294075608_0|0.326802492|0_0|1|0_0|0.326802492|0_0|1|0
 	attN = bottom,miniFuselage_4293956650_0|-0.326802492|0_0|-1|0_0|-0.326802492|0_0|-1|0
 	EVENTS
 	{
@@ -709,10 +708,10 @@ PART
 }
 PART
 {
-	part = bdPilotAI_4292570806
+	part = bdPilotAI_4294075444
 	partName = Part
-	persistentId = 1442116783
-	pos = 0,10,-4.76837386E-07
+	persistentId = 1523669668
+	pos = 0,10,-4.76837272E-07
 	attPos = 0,-0.0289705694,2.98023224E-08
 	attPos0 = 0,0.028970331,-2.98023224E-08
 	rot = 3.55271368E-15,-1.00000012,1.1920929E-07,4.37113918E-08
@@ -733,7 +732,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,rtg_4292570840,collider,0|-0.0206965208|0,0|-1|0,0|-0.0206965208|0
+	srfN = srfAttach,rtg_4294075478,collider,0|-0.0206965208|0,0|-1|0,0|-0.0206965208|0
 	EVENTS
 	{
 	}
@@ -989,10 +988,10 @@ PART
 }
 PART
 {
-	part = missileController_4292570780
+	part = missileController_4294075418
 	partName = Part
-	persistentId = 3822211323
-	pos = 0,10,-4.76837386E-07
+	persistentId = 4094241569
+	pos = 0,10,-4.76837272E-07
 	attPos = 2.71050543E-20,-1.13248825E-06,-0.399999648
 	attPos0 = -2.71050543E-20,8.94069672E-07,0.399999648
 	rot = 3.55271368E-15,-1.00000012,1.1920929E-07,4.37113918E-08
@@ -1013,7 +1012,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,rtg_4292570840,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
+	srfN = srfAttach,rtg_4294075478,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
 	EVENTS
 	{
 	}
@@ -1092,8 +1091,8 @@ PART
 		isVIP = False
 		weaponChannel = 0
 		underAttackAG = None
-		guardMode = False
-		team = <"Name":"Target","Neutral":false,"Allies":[]>
+		guardMode = True
+		team = <"Name":"Unknown","Neutral":false,"Allies":[]>
 		isArmed = False
 		stagingEnabled = True
 		EVENTS
@@ -1271,145 +1270,11 @@ PART
 }
 PART
 {
-	part = bdWarheadSmall_4294329160
-	partName = Part
-	persistentId = 3667763441
-	pos = 0,10,0.400000304
-	attPos = 0,0.261437714,-4.47034836E-08
-	attPos0 = 0,0.138562396,-1.49011612E-08
-	rot = 0.707106829,0,0,0.707106829
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = -90
-	modMass = -0.100500003
-	modSize = 0,0,0
-	attN = bottom,probeCoreOcto2.v2_4292570970_0|-0.0775002837|0_0|-1|0_0|-0.0775002837|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = BDExplosivePart
-		isEnabled = True
-		tntMass = 150
-		detonationRange = 0
-		detonateAtMinimumDistance = False
-		Armed = True
-		IFF_On = False
-		manualOverride = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ArmAG
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DetonateAG
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 37.5
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 1
-		hullType = Wood
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 0.699999988
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 11
-		maxTorque = 11
-		maxG = 25
-		maxSupportedArmor = 30
-		armorVolume = 0.939817607
-		ignitionTemp = 510
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	part = miniFuselage_4293956650
 	partName = Part
 	persistentId = 1858226804
-	pos = 0,10,-0.150000364
-	attPos = 0,0.695552528,-1.04308128E-07
+	pos = 0,10,-0.150000528
+	attPos = 0,0.695552349,-1.04308128E-07
 	attPos0 = 0,-0.795552611,1.19209261E-07
 	rot = 0.707106829,0,0,0.707106829
 	attRot = 0,0,0,1
@@ -1430,7 +1295,7 @@ PART
 	modMass = -0.0167500004
 	modSize = 0,0,0
 	link = miniFuselage_4293884242
-	attN = top,rtg_4292570840_0|0.46875|0_0|1|0_0|0.46875|0_0|1|0
+	attN = top,rtg_4294075478_0|0.46875|0_0|1|0_0|0.46875|0_0|1|0
 	attN = bottom,miniFuselage_4293884242_0|-0.46875|0_0|-1|0_0|-0.46875|0_0|-1|0
 	EVENTS
 	{
@@ -1562,7 +1427,7 @@ PART
 	part = miniFuselage_4293884242
 	partName = Part
 	persistentId = 3789381156
-	pos = 0,10,-1.08750725
+	pos = 0,10,-1.08750784
 	attPos = 0,0,0
 	attPos0 = 0,-0.937500298,1.78813892E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -1716,7 +1581,7 @@ PART
 	part = miniFuselage_4293883728
 	partName = Part
 	persistentId = 793669273
-	pos = 0,10,-2.02500844
+	pos = 0,10,-2.02500963
 	attPos = 0,0,0
 	attPos0 = 0,-0.937500179,0
 	rot = 0.707106829,0,0,0.707106829
@@ -1872,7 +1737,7 @@ PART
 	part = miniFuselage_4293426434
 	partName = Part
 	persistentId = 1167837906
-	pos = 0,10,-2.9625175
+	pos = 0,10,-2.96251893
 	attPos = 0,0,0
 	attPos0 = 0,-0.937500536,2.38418508E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2027,7 +1892,7 @@ PART
 	part = miniFuselage_4293425964
 	partName = Part
 	persistentId = 4095629395
-	pos = 0,9.99999809,-3.9000237
+	pos = 0,9.99999809,-3.90002584
 	attPos = 0,0,0
 	attPos0 = 0,-0.937501073,2.38418579E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2183,7 +2048,7 @@ PART
 	part = miniJetEngine_4293882212
 	partName = Part
 	persistentId = 3206333939
-	pos = 0,9.99999809,-4.36850977
+	pos = 0,9.99999809,-4.36851168
 	attPos = 0,0,0
 	attPos0 = 0,-0.468751192,0
 	rot = 0.707106829,0,0,0.707106829
@@ -2193,7 +2058,7 @@ PART
 	symMethod = Mirror
 	autostrutMode = Heaviest
 	rigidAttachment = True
-	istg = 1
+	istg = 0
 	resPri = 0
 	dstg = 0
 	sidx = 0
@@ -2439,7 +2304,7 @@ PART
 	part = structuralWing4_4294320604
 	partName = Part
 	persistentId = 2661574005
-	pos = -0.600000024,9.99999809,-4.16251707
+	pos = -0.600000024,9.99999809,-4.16251898
 	attPos = -0.291796684,-0.103906155,0
 	attPos0 = -0.30820334,0.103904247,0
 	rot = -0.477714688,0.521333694,0.477714866,0.521333575
@@ -2577,7 +2442,7 @@ PART
 	part = StandardCtrlSrf_4294324158
 	partName = Part
 	persistentId = 1690102369
-	pos = -1.19772005,10.0522919,-4.16252279
+	pos = -1.19772029,10.0522919,-4.16252518
 	attPos = -0.00500149839,0.490513682,-4.09256131E-08
 	attPos0 = 0.00500346534,0.109486043,-9.65074332E-09
 	rot = -0.706434011,0.0308432896,0.0308435839,-0.706433654
@@ -2819,7 +2684,7 @@ PART
 	part = structuralWing4_4294319312
 	partName = Part
 	persistentId = 3626371454
-	pos = 0.600000024,9.99999809,-4.16251612
+	pos = 0.600000024,9.99999809,-4.16251802
 	attPos = 0.291796684,-0.103907108,0
 	attPos0 = 0.30820334,0.103904247,0
 	rot = -0.477714688,-0.521333635,0.477714449,-0.521333933
@@ -2957,7 +2822,7 @@ PART
 	part = StandardCtrlSrf_4294317666
 	partName = Part
 	persistentId = 2049130516
-	pos = 1.1977191,10.0522919,-4.16251898
+	pos = 1.19771934,10.0522919,-4.16252089
 	attPos = -0.00500053912,0.490513891,-8.3115971E-08
 	attPos0 = 0.00500250608,0.109486081,-1.80362907E-08
 	rot = -0.0308436044,0.706434131,0.706433654,-0.0308433436
@@ -3199,7 +3064,7 @@ PART
 	part = IntakeRadialLong_4294375362
 	partName = Part
 	persistentId = 3281856131
-	pos = 0,10.3000002,-2.76251936
+	pos = 0,10.3000002,-2.76252079
 	attPos = 2.72918044E-08,0.0130217075,0.012181282
 	attPos0 = -2.72918044E-08,0.186976433,-0.312181473
 	rot = -5.32907052E-15,1.1920929E-07,1.00000012,-3.69823923E-08
@@ -3353,7 +3218,7 @@ PART
 	part = structuralWing4_4294312572
 	partName = Part
 	persistentId = 4095345507
-	pos = 1.15907284E-13,10.2700005,-3.56253123
+	pos = 1.22346577E-13,10.2700005,-3.56253338
 	attPos = 3.60891228E-08,0.306250632,-0.387189656
 	attPos0 = -3.60891264E-08,-0.306250691,-0.412812442
 	rot = -0.50000006,0.50000006,0.50000006,-0.50000006
@@ -3490,7 +3355,7 @@ PART
 	part = smallCtrlSrf_4294311520
 	partName = Part
 	persistentId = 3434790874
-	pos = 1.08441748E-06,10.75875,-4.16254044
+	pos = 1.14402212E-06,10.75875,-4.16254282
 	attPos = -0.0102338493,0.0249991417,-1.1920929E-07
 	attPos0 = -0.48976627,-0.625001669,5.96046448E-08
 	rot = -0.5,-0.50000006,-0.500000179,-0.49999994
@@ -3731,10 +3596,10 @@ PART
 	part = airlinerCtrlSrf_4294381040
 	partName = Part
 	persistentId = 1969084895
-	pos = -1.88,9.96999931,-1.37502372
+	pos = -1.88,9.96999931,-1.37502444
 	attPos = -1.68787813,0.361911535,0
 	attPos0 = -0.312121898,0.138087749,0
-	rot = -0.701901197,0.0493821166,-0.0129406229,-0.710442662
+	rot = -0.701901197,0.0493821204,-0.0129406247,-0.710442662
 	attRot = -1.35668987E-09,1.60548908E-08,-0.0436195247,-0.999048412
 	attRot0 = -5.96046448E-08,4.84287739E-08,-0.0436194912,-0.999048293
 	mir = 1,1,1
@@ -3973,7 +3838,7 @@ PART
 	part = airlinerCtrlSrf_4294380844
 	partName = Part
 	persistentId = 95228254
-	pos = 1.88,9.96999931,-1.37502348
+	pos = 1.88,9.96999931,-1.3750242
 	attPos = 1.68787813,0.361911058,0
 	attPos0 = 0.312121898,0.138087749,0
 	rot = 0.012938682,0.710442126,0.701901615,-0.0493838452
@@ -4212,33 +4077,31 @@ PART
 }
 PART
 {
-	part = Separator.0_4293606010
+	part = bdWarheadSmall_4294329160
 	partName = Part
-	persistentId = 1679548931
-	pos = 0,9.80000019,0
-	attPos = 0,-10000,0
-	attPos0 = 0,0.00376030803,0.287801772
-	rot = 0,0,0,1.00000012
-	attRot = -8.42937027E-08,0,0,1.00000012
-	attRot0 = -0.707106829,0,0,0.707106829
+	persistentId = 3667763441
+	pos = 0,10,0.400000185
+	attPos = 0,0.261437714,-4.47034836E-08
+	attPos0 = 0,0.138562396,-1.49011612E-08
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Heaviest
 	rigidAttachment = True
-	istg = 0
+	istg = -1
 	resPri = 0
-	dstg = 1
-	sidx = 0
-	sqor = 0
-	sepI = 0
-	attm = 1
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = -90
+	modMass = -0.100500003
 	modSize = 0,0,0
-	srfN = ,probeCoreOcto2.v2_4292570970,collider,0|0|0,0|1|0,0|0|0
-	attN = top,Null_0_0|0.0324999988|0_0|1|0_0|0.0324999988|0_0|1|0
-	attN = bottom,Null_0_0|-0.0324999988|0_0|-1|0_0|-0.0324999988|0_0|-1|0
+	attN = bottom,probeCoreOcto2.v2_4294075608_0|-0.0775002837|0_0|-1|0_0|-0.0775002837|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -4265,101 +4128,30 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDecouple
+		name = BDExplosivePart
 		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
+		tntMass = 150
+		detonationRange = 0
+		detonateAtMinimumDistance = False
+		Armed = True
+		IFF_On = False
+		manualOverride = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			DecoupleAction
+			ArmAG
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleToggleCrossfeed
-		isEnabled = True
-		crossfeedStatus = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
+			DetonateAG
 			{
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
-			EnableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DisableAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -4369,12 +4161,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 50
+		Hitpoints = 37.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 1
+		hullType = Wood
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -4388,7 +4180,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.699999988
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4399,12 +4191,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 150
-		maxTorque = 150
-		maxG = 50
-		maxSupportedArmor = 5
-		armorVolume = 0.813784003
-		ignitionTemp = -1
+		maxForce = 11
+		maxTorque = 11
+		maxG = 25
+		maxSupportedArmor = 30
+		armorVolume = 0.939817607
+		ignitionTemp = 510
 		stagingEnabled = True
 		EVENTS
 		{
