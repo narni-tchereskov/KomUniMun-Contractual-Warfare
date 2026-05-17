@@ -8,24 +8,27 @@ namespace KomUniMunVesselRectifier
     [HarmonyPatch(typeof(Vessel), nameof(Vessel.GoOffRails))]
     internal static class GoOffRailsPatch
     {
-        // Intercepts unrailing to apply safe spawn position.
+        // Intercepts unrailing to delay physics or apply safe spawn position.
         [HarmonyPrefix]
-        private static void Prefix(Vessel __instance)
+        private static bool Prefix(Vessel __instance)
         {
             if (__instance == null)
-                return;
+                return true;
 
             if (!VesselTracking.IsVesselManaged(__instance.id))
-                return;
+                return true;
 
             if (__instance.vesselType == VesselType.Debris)
-                return;
+                return true;
+
+            if (!VesselRectifier.IsSceneSettled)
+                return false;
 
             if (!__instance.vesselName.IsContractAircraft())
-                return;
+                return true;
 
             if (!__instance.IsFullyInitialized())
-                return;
+                return true;
 
             Positioning.MarkVesselAsFlying(__instance);
 
@@ -47,6 +50,8 @@ namespace KomUniMunVesselRectifier
                     VerboseLogging.Log($"Positioning aborted for {__instance.vesselName}");
                 }
             }
+
+            return true;
         }
 
         // Applies combat states and forces part unpacking.
@@ -113,7 +118,7 @@ namespace KomUniMunVesselRectifier
         }
     }
 
-    // Stops PRE camera changes to avoid scene load & physics issues.
+    // Stops PRE camera changes for aircraft to avoid scene load & physics issues.
     [HarmonyPatch(typeof(FlightGlobals), nameof(FlightGlobals.ForceSetActiveVessel))]
     internal static class PreventPreForceSetActiveVesselPatch
     {
@@ -124,9 +129,10 @@ namespace KomUniMunVesselRectifier
                 return true;
 
             bool isManaged = VesselTracking.IsVesselManaged(__0.id);
+            bool isAircraft = __0.vesselName.IsContractAircraft();
             bool callerIsPre = VesselRectifier.IsCallerPhysicsRangeExtender();
+            bool blocked = isManaged && isAircraft && callerIsPre;
 
-            bool blocked = isManaged && callerIsPre;
             if (blocked)
                 VerboseLogging.Log($"Blocked PRE switch for {__0.vesselName}.");
 
@@ -146,6 +152,7 @@ namespace KomUniMunVesselRectifier
 
             if (
                 VesselTracking.IsVesselManaged(__instance.id)
+                && __instance.vesselName.IsContractAircraft()
                 && VesselRectifier.IsCallerPhysicsRangeExtender()
             )
             {
@@ -173,6 +180,7 @@ namespace KomUniMunVesselRectifier
 
             if (
                 VesselTracking.IsVesselManaged(__instance.id)
+                && __instance.vesselName.IsContractAircraft()
                 && VesselRectifier.IsCallerPhysicsRangeExtender()
             )
             {
