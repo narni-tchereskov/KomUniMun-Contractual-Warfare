@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
@@ -82,17 +83,64 @@ namespace KomUniMunVesselRectifier
 
             if (_harmonyInstance == null)
             {
+                _harmonyInstance = new Harmony(HarmonyInstanceId);
+                ApplyHarmonyPatches();
+            }
+        }
+
+        // Avoids crashing all patches if one fails.
+        private static void ApplyHarmonyPatches()
+        {
+            Type[] types;
+            try
+            {
+                types = typeof(VesselRectifier).Assembly.GetTypes();
+            }
+            catch (ReflectionTypeLoadException ex)
+            {
+                types = ex.Types.Where(t => t != null).ToArray();
+            }
+
+            int applied = 0;
+            int skipped = 0;
+            int failed = 0;
+
+            foreach (Type type in types)
+            {
+                if (type.GetCustomAttributes(typeof(HarmonyPatch), true).Length == 0)
+                    continue;
+
                 try
                 {
-                    _harmonyInstance = new Harmony(HarmonyInstanceId);
-                    _harmonyInstance.PatchAll(typeof(VesselRectifier).Assembly);
-                    Debug.Log("[KUM] Harmony patches installed.");
+                    var result = new PatchClassProcessor(_harmonyInstance, type).Patch();
+                    if (result != null && result.Count > 0)
+                    {
+                        applied++;
+                        VerboseLogging.Log(
+                            $"Applied Harmony patch '{type.Name}' ({result.Count} target(s))."
+                        );
+                    }
+                    else
+                    {
+                        skipped++;
+                        Debug.LogWarning(
+                            $"[KUM] Skipped Harmony patch '{type.Name}': target method not found on this KSP version."
+                        );
+                    }
                 }
                 catch (Exception exception)
                 {
-                    Debug.LogError($"[KUM] Harmony patching failed: {exception}");
+                    failed++;
+                    Debug.LogWarning(
+                        $"[KUM] Failed Harmony patch '{type.Name}': "
+                            + $"{exception.GetBaseException().Message}"
+                    );
                 }
             }
+
+            Debug.Log(
+                $"[KUM] Harmony patches: {applied} applied, {skipped} skipped, {failed} failed."
+            );
         }
 
         // Sweeps and registers any managed vessels.

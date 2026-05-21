@@ -81,7 +81,7 @@ namespace KomUniMunVesselRectifier
             Vector3d newVelocity =
                 vessel.mainBody.getRFrmVel(newPosition) + northTangent * Settings.SpawnSpeed;
 
-            vessel.SetPosition((Vector3)newPosition);
+            vessel.SetPosition(newPosition);
             vessel.SetWorldVelocity(newVelocity);
             vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
             vessel.orbit?.UpdateFromStateVectors(
