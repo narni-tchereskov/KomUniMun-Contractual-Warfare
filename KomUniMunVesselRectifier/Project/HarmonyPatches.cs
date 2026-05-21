@@ -1,14 +1,79 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
 
 namespace KomUniMunVesselRectifier
 {
-    [HarmonyPatch(typeof(Vessel), nameof(Vessel.GoOffRails))]
+    // Resolves Harmony target methods at load time.
+    internal static class PatchTargets
+    {
+        private const BindingFlags AllInstanceOrStatic =
+            BindingFlags.Instance
+            | BindingFlags.Static
+            | BindingFlags.Public
+            | BindingFlags.NonPublic;
+
+        internal static MethodBase ByName(Type type, string name)
+        {
+            return AccessTools.Method(type, name);
+        }
+
+        // Enumerates every overload of a method whose first parameter matches firstParameter.
+        internal static IEnumerable<MethodBase> ByNameFirstParam(
+            Type type,
+            string name,
+            Type firstParameter
+        )
+        {
+            MethodInfo[] candidates = type.GetMethods(AllInstanceOrStatic);
+            for (int i = 0; i < candidates.Length; i++)
+            {
+                MethodInfo m = candidates[i];
+
+                if (m.Name != name)
+                    continue;
+
+                ParameterInfo[] parameters = m.GetParameters();
+
+                if (parameters.Length == 0)
+                    continue;
+
+                if (parameters[0].ParameterType != firstParameter)
+                    continue;
+
+                yield return m;
+            }
+        }
+
+        // Enumerates every overload of a method by name.
+        internal static IEnumerable<MethodBase> ByNameAny(Type type, string name)
+        {
+            MethodInfo[] candidates = type.GetMethods(AllInstanceOrStatic);
+            for (int i = 0; i < candidates.Length; i++)
+            {
+                if (candidates[i].Name == name)
+                    yield return candidates[i];
+            }
+        }
+    }
+
+    // Intercepts unrailing to delay physics or apply safe spawn position.
+    [HarmonyPatch]
     internal static class GoOffRailsPatch
     {
-        // Intercepts unrailing to delay physics or apply safe spawn position.
+        private static MethodBase TargetMethod()
+        {
+            return PatchTargets.ByName(typeof(Vessel), nameof(Vessel.GoOffRails));
+        }
+
+        private static bool Prepare()
+        {
+            return TargetMethod() != null;
+        }
+
         [HarmonyPrefix]
         private static bool Prefix(Vessel __instance)
         {
@@ -79,9 +144,19 @@ namespace KomUniMunVesselRectifier
     }
 
     // Keeps relevant vessels from changing physics states.
-    [HarmonyPatch(typeof(Vessel), nameof(Vessel.GoOnRails))]
+    [HarmonyPatch]
     internal static class GoOnRailsPatch
     {
+        private static MethodBase TargetMethod()
+        {
+            return PatchTargets.ByName(typeof(Vessel), nameof(Vessel.GoOnRails));
+        }
+
+        private static bool Prepare()
+        {
+            return TargetMethod() != null;
+        }
+
         // Blocks managed and non-debris vessels from going on-rails.
         [HarmonyPrefix]
         private static bool Prefix(Vessel __instance)
@@ -101,9 +176,19 @@ namespace KomUniMunVesselRectifier
     }
 
     // Applies temporary hardening to managed vessels.
-    [HarmonyPatch(typeof(Vessel), "MakeActive")]
+    [HarmonyPatch]
     internal static class VesselMakeActivePatch
     {
+        private static MethodBase TargetMethod()
+        {
+            return PatchTargets.ByName(typeof(Vessel), "MakeActive");
+        }
+
+        private static bool Prepare()
+        {
+            return TargetMethod() != null;
+        }
+
         [HarmonyPostfix]
         private static void Postfix(Vessel __instance)
         {
@@ -119,9 +204,22 @@ namespace KomUniMunVesselRectifier
     }
 
     // Stops PRE camera changes for aircraft to avoid scene load & physics issues.
-    [HarmonyPatch(typeof(FlightGlobals), nameof(FlightGlobals.ForceSetActiveVessel))]
+    [HarmonyPatch]
     internal static class PreventPreForceSetActiveVesselPatch
     {
+        private static MethodBase TargetMethod()
+        {
+            return PatchTargets.ByName(
+                typeof(FlightGlobals),
+                nameof(FlightGlobals.ForceSetActiveVessel)
+            );
+        }
+
+        private static bool Prepare()
+        {
+            return TargetMethod() != null;
+        }
+
         [HarmonyPrefix]
         private static bool Prefix(Vessel __0)
         {
@@ -140,10 +238,20 @@ namespace KomUniMunVesselRectifier
         }
     }
 
-    // Prevents PRE from lifting managed vessels (overload 1).
-    [HarmonyPatch(typeof(Vessel), nameof(Vessel.SetPosition), new Type[] { typeof(Vector3) })]
-    internal static class PreventPreSetPositionPatch1
+    // Prevents PRE from lifting managed vessels.
+    [HarmonyPatch]
+    internal static class PreventPreSetPositionPatch
     {
+        private static IEnumerable<MethodBase> TargetMethods()
+        {
+            return PatchTargets.ByNameAny(typeof(Vessel), nameof(Vessel.SetPosition));
+        }
+
+        private static bool Prepare()
+        {
+            return TargetMethods().Any();
+        }
+
         [HarmonyPrefix]
         private static bool Prefix(Vessel __instance)
         {
@@ -164,145 +272,64 @@ namespace KomUniMunVesselRectifier
         }
     }
 
-    // Prevents PRE from lifting managed vessels (overload 2).
-    [HarmonyPatch(
-        typeof(Vessel),
-        nameof(Vessel.SetPosition),
-        new Type[] { typeof(Vector3), typeof(bool) }
-    )]
-    internal static class PreventPreSetPositionPatch2
+    // Suppresses PRE-triggered screen messages.
+    [HarmonyPatch]
+    internal static class SuppressPreScreenMessagesPatch
     {
-        [HarmonyPrefix]
-        private static bool Prefix(Vessel __instance)
+        private static IEnumerable<MethodBase> TargetMethods()
         {
-            if (__instance == null)
-                return true;
-
-            if (
-                VesselTracking.IsVesselManaged(__instance.id)
-                && __instance.vesselName.IsContractAircraft()
-                && VesselRectifier.IsCallerPhysicsRangeExtender()
-            )
-            {
-                VerboseLogging.Log($"Blocked PRE from lifting {__instance.vesselName}.");
-                return false;
-            }
-
-            return true;
+            return PatchTargets.ByNameAny(
+                typeof(ScreenMessages),
+                nameof(ScreenMessages.PostScreenMessage)
+            );
         }
-    }
 
-    // Suppresses PRE screen messages triggered by managed vessels.
-    [HarmonyPatch(
-        typeof(ScreenMessages),
-        nameof(ScreenMessages.PostScreenMessage),
-        new Type[] { typeof(ScreenMessage) }
-    )]
-    internal static class SuppressPreScreenMessagePatch
-    {
-        [HarmonyPrefix]
-        private static bool Prefix(ScreenMessage message)
+        private static bool Prepare()
         {
-            if (message == null || string.IsNullOrEmpty(message.message))
+            return TargetMethods().Any();
+        }
+
+        [HarmonyPrefix]
+        private static bool Prefix(object[] __args)
+        {
+            string text = ExtractMessageText(__args);
+            if (string.IsNullOrEmpty(text))
                 return true;
 
             if (!VesselRectifier.IsCallerPhysicsRangeExtender())
                 return true;
 
-            if (FlightGlobals.Vessels != null)
+            if (FlightGlobals.Vessels == null)
+                return true;
+
+            for (int i = FlightGlobals.Vessels.Count - 1; i >= 0; i--)
             {
-                for (int i = FlightGlobals.Vessels.Count - 1; i >= 0; i--)
+                Vessel v = FlightGlobals.Vessels[i];
+                if (v == null)
+                    continue;
+                if (!VesselTracking.IsVesselManaged(v.id))
+                    continue;
+                if (text.Contains(v.vesselName))
                 {
-                    Vessel v = FlightGlobals.Vessels[i];
-                    if (
-                        v != null
-                        && VesselTracking.IsVesselManaged(v.id)
-                        && message.message.Contains(v.vesselName)
-                    )
-                    {
-                        VerboseLogging.Log($"Suppressed PRE message: {message.message}");
-                        return false;
-                    }
+                    VerboseLogging.Log($"Suppressed PRE message: {text}");
+                    return false;
                 }
             }
 
             return true;
         }
-    }
 
-    // Suppresses PRE string messages triggered by managed vessels.
-    [HarmonyPatch(
-        typeof(ScreenMessages),
-        nameof(ScreenMessages.PostScreenMessage),
-        new Type[] { typeof(string), typeof(float), typeof(ScreenMessageStyle) }
-    )]
-    internal static class SuppressPreStringMessagePatch
-    {
-        [HarmonyPrefix]
-        private static bool Prefix(string message)
+        private static string ExtractMessageText(object[] args)
         {
-            if (string.IsNullOrEmpty(message))
-                return true;
+            if (args == null || args.Length == 0)
+                return null;
 
-            if (!VesselRectifier.IsCallerPhysicsRangeExtender())
-                return true;
-
-            if (FlightGlobals.Vessels != null)
-            {
-                for (int i = FlightGlobals.Vessels.Count - 1; i >= 0; i--)
-                {
-                    Vessel v = FlightGlobals.Vessels[i];
-                    if (
-                        v != null
-                        && VesselTracking.IsVesselManaged(v.id)
-                        && message.Contains(v.vesselName)
-                    )
-                    {
-                        VerboseLogging.Log($"Suppressed PRE string message: {message}");
-                        return false;
-                    }
-                }
-            }
-
-            return true;
-        }
-    }
-
-    // Suppresses PRE string/bool messages triggered by managed vessels.
-    [HarmonyPatch(
-        typeof(ScreenMessages),
-        nameof(ScreenMessages.PostScreenMessage),
-        new Type[] { typeof(string), typeof(float), typeof(ScreenMessageStyle), typeof(bool) }
-    )]
-    internal static class SuppressPreStringBoolMessagePatch
-    {
-        [HarmonyPrefix]
-        private static bool Prefix(string message)
-        {
-            if (string.IsNullOrEmpty(message))
-                return true;
-
-            if (!VesselRectifier.IsCallerPhysicsRangeExtender())
-                return true;
-
-            if (FlightGlobals.Vessels != null)
-            {
-                for (int i = FlightGlobals.Vessels.Count - 1; i >= 0; i--)
-                {
-                    Vessel v = FlightGlobals.Vessels[i];
-                    if (
-                        v != null
-                        && VesselTracking.IsVesselManaged(v.id)
-                        && message.Contains(v.vesselName)
-                    )
-                    {
-                        VerboseLogging.Log($"Suppressed PRE string/bool message: {message}");
-                        return false;
-                    }
-                }
-            }
-
-            return true;
+            object first = args[0];
+            if (first is string asString)
+                return asString;
+            if (first is ScreenMessage asMessage)
+                return asMessage?.message;
+            return null;
         }
     }
 }

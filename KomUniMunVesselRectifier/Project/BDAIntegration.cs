@@ -20,7 +20,7 @@ namespace KomUniMunVesselRectifier
                     break;
                 }
             }
-            VerboseLogging.Log($"[KUM] BDArmory: {(IsAvailable ? "DETECTED" : "NOT FOUND")}");
+            VerboseLogging.Log($"BDArmory: {(IsAvailable ? "DETECTED" : "NOT FOUND")}");
         }
 
         // Clears the cached reflection fields and methods.

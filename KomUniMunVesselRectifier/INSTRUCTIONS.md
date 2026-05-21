@@ -4,7 +4,7 @@
 
 To build the DLL, install the [.NET SDK][1].
 
-Place these KSP/Harmony assemblies inside `Plugins/Managed/`:
+Place these KSP/Harmony assemblies inside `KomUniMunVesselRectifier/Managed/`:
 
 - `0Harmony.dll` - from `GameData/000_Harmony/`
 - `Assembly-CSharp.dll` - from `KSP_x64_Data/Managed/`
@@ -14,19 +14,21 @@ Place these KSP/Harmony assemblies inside `Plugins/Managed/`:
 ## Layout
 
 ```text
-Plugins
+KomUniMunVesselRectifier
 │   INSTRUCTIONS.md
-│   VesselRectifier.csproj
-│   settings.cfg.example
+│   KomUniMunVesselRectifier.csproj
 │
-├───VesselRectifier
+├───Project
 │       BdaIntegration.cs
-│       Hardening.cs
 │       HarmonyPatches.cs
-│       VesselPositioned.cs
-│       Positioning.cs
+│       ReflectionUtils.cs
 │       Settings.cs
+│       VerboseLogging.cs
 │       VesselClassification.cs
+│       VesselExtensions.cs
+│       VesselFlags.cs
+│       VesselPositioned.cs
+│       VesselPositioning.cs
 │       VesselRectifier.cs
 │       VesselTrack.cs
 │       VesselTracking.cs
@@ -41,10 +43,10 @@ Plugins
 ## Build
 
 ```sh
-dotnet build VesselRectifier\KomUniMunVesselRectifier.csproj -c Release
+dotnet build KomUniMunVesselRectifier\KomUniMunVesselRectifier.csproj -c Release
 ```
 
-The DLL is written to `VesselRectifier\KomUniMunVesselRectifier.dll`.
+The DLL is written to `KomUniMunVesselRectifier\KomUniMunVesselRectifier.dll`.
 
 ## Install
 

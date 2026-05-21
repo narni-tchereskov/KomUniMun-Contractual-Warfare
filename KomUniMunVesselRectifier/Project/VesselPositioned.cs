@@ -50,7 +50,7 @@ namespace KomUniMunVesselRectifier
                     _positionedIds.Add(parsedId);
             }
 
-            VerboseLogging.Log($"[KUM] Scenario loaded {_positionedIds.Count} vessel(s).");
+            VerboseLogging.Log($"Scenario loaded {_positionedIds.Count} vessel(s).");
         }
 
         // Saves the positioned vessels data to the save file.
