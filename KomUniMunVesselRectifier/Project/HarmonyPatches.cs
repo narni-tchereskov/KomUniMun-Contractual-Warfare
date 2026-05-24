@@ -168,7 +168,7 @@ namespace KomUniMunVesselRectifier
             return TargetMethod() != null;
         }
 
-        // Blocks all vessels except aircraft from going on-rails.
+        // Blocks all managed aircraft type vessels from going on-rails.
         [HarmonyPrefix]
         private static bool Prefix(Vessel __instance)
         {
