@@ -97,6 +97,9 @@ namespace KomUniMunVesselRectifier
         // Forces all parts of the vessel to unpack so physics can resume. Kludgy but ok.
         public static void ForceUnpackAllParts(Vessel vessel)
         {
+            if (vessel == null || !vessel.vesselName.IsContractAircraft())
+                return;
+
             VerboseLogging.Log($"Forcing unpack on {vessel.vesselName}.");
             if (vessel.parts != null)
             {
@@ -106,7 +109,12 @@ namespace KomUniMunVesselRectifier
                     {
                         vessel.parts[i]?.Unpack();
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        Debug.LogWarning(
+                            $"[KUM] Failed to unpack part {vessel.parts[i]?.partName} on {vessel.vesselName}: {ex.Message}"
+                        );
+                    }
                 }
             }
             vessel.packed = false;

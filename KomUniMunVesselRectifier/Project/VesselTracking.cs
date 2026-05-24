@@ -42,8 +42,11 @@ namespace KomUniMunVesselRectifier
                 _trackedVessels[vesselId] = tracking;
             }
 
-            tracking.Flags |= flag;
-            VerboseLogging.Log($"Flag {flag} assigned to vessel {vesselId}.");
+            if ((tracking.Flags & flag) != flag)
+            {
+                tracking.Flags |= flag;
+                VerboseLogging.Log($"Flag {flag} assigned to vessel {vesselId}.");
+            }
         }
 
         // Returns the vessel tracking data for a specific vessel.
@@ -81,8 +84,11 @@ namespace KomUniMunVesselRectifier
             )
                 return;
 
-            tracking.Flags &= ~flag;
-            VerboseLogging.Log($"Flag {flag} cleared from vessel {vesselId}.");
+            if ((tracking.Flags & flag) == flag)
+            {
+                tracking.Flags &= ~flag;
+                VerboseLogging.Log($"Flag {flag} cleared from vessel {vesselId}.");
+            }
         }
 
         // Stops tracking for a specific vessel.
