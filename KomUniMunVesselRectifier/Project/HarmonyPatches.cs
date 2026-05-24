@@ -75,8 +75,10 @@ namespace KomUniMunVesselRectifier
         }
 
         [HarmonyPrefix]
-        private static bool Prefix(Vessel __instance)
+        private static bool Prefix(Vessel __instance, out bool __state)
         {
+            __state = false;
+
             if (__instance == null)
                 return true;
 
@@ -87,7 +89,10 @@ namespace KomUniMunVesselRectifier
                 return true;
 
             if (!VesselRectifier.IsSceneSettled)
+            {
+                __state = true;
                 return false;
+            }
 
             if (!__instance.vesselName.IsContractAircraft())
                 return true;
@@ -121,8 +126,11 @@ namespace KomUniMunVesselRectifier
 
         // Applies combat states and forces part unpacking.
         [HarmonyPostfix]
-        private static void Postfix(Vessel __instance)
+        private static void Postfix(Vessel __instance, bool __state)
         {
+            if (__state)
+                return;
+
             if (__instance == null)
                 return;
 
