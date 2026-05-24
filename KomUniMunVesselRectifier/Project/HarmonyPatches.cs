@@ -88,14 +88,14 @@ namespace KomUniMunVesselRectifier
             if (__instance.vesselType == VesselType.Debris)
                 return true;
 
+            if (!__instance.vesselName.IsContractAircraft())
+                return true;
+
             if (!VesselRectifier.IsSceneSettled)
             {
                 __state = true;
                 return false;
             }
-
-            if (!__instance.vesselName.IsContractAircraft())
-                return true;
 
             if (!__instance.IsFullyInitialized())
                 return true;
@@ -124,7 +124,7 @@ namespace KomUniMunVesselRectifier
             return true;
         }
 
-        // Applies combat states and forces part unpacking.
+        // Forces part unpacking for specific vessels.
         [HarmonyPostfix]
         private static void Postfix(Vessel __instance, bool __state)
         {
@@ -141,6 +141,9 @@ namespace KomUniMunVesselRectifier
                 return;
 
             if (!__instance.loaded)
+                return;
+
+            if (!__instance.vesselName.IsContractAircraft())
                 return;
 
             if (__instance.packed)
@@ -165,21 +168,24 @@ namespace KomUniMunVesselRectifier
             return TargetMethod() != null;
         }
 
-        // Blocks managed and non-debris vessels from going on-rails.
+        // Blocks all vessels except aircraft from going on-rails.
         [HarmonyPrefix]
         private static bool Prefix(Vessel __instance)
         {
             if (__instance == null)
                 return true;
 
-            bool isManaged = VesselTracking.IsVesselManaged(__instance.id);
-            bool isDebris = __instance.vesselType == VesselType.Debris;
+            if (!VesselTracking.IsVesselManaged(__instance.id))
+                return true;
 
-            bool blocked = isManaged && !isDebris;
-            if (blocked)
-                VerboseLogging.Log($"Blocked GoOnRails for {__instance.vesselName}.");
+            if (__instance.vesselType == VesselType.Debris)
+                return true;
 
-            return !blocked;
+            if (!__instance.vesselName.IsContractAircraft())
+                return true;
+
+            VerboseLogging.Log($"Blocked GoOnRails for {__instance.vesselName}.");
+            return false;
         }
     }
 
