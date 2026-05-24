@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
@@ -127,8 +128,11 @@ namespace KomUniMunVesselRectifier
                                 null
                             );
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            Debug.LogWarning(
+                                $"[KUM] Failed to invoke ToggleGuardMode: {ex.Message}."
+                            );
                             BdaReflectionCache.MissileFireGuardModeField.SetValue(
                                 weaponManager,
                                 true
@@ -146,38 +150,48 @@ namespace KomUniMunVesselRectifier
         // Forces the BDArmory Pilot AI module to activate.
         private static void EnforcePilotAiState(PartModule pilotAi)
         {
-            if (!BdaReflectionCache.PilotAiFieldsResolved)
-            {
-                Type type = pilotAi.GetType();
-                BdaReflectionCache.PilotAiEnabledField = ReflectionUtils.FindFieldInHierarchy(
+            Type type = pilotAi.GetType();
+
+            // Cache multiple AI types.
+            if (
+                !BdaReflectionCache.AiCache.TryGetValue(
                     type,
-                    "pilotEnabled"
-                );
-                BdaReflectionCache.PilotAiActivatePilotMethod =
-                    ReflectionUtils.FindMethodInHierarchy(type, "ActivatePilot")
-                    ?? ReflectionUtils.FindMethodInHierarchy(type, "EnablePilot");
-                BdaReflectionCache.PilotAiFieldsResolved = true;
+                    out BdaReflectionCache.AiReflectionData cache
+                )
+            )
+            {
+                cache = new BdaReflectionCache.AiReflectionData
+                {
+                    EnabledField = ReflectionUtils.FindFieldInHierarchy(type, "pilotEnabled"),
+                    ActivateMethod =
+                        ReflectionUtils.FindMethodInHierarchy(type, "ActivatePilot")
+                        ?? ReflectionUtils.FindMethodInHierarchy(type, "EnablePilot"),
+                };
+                BdaReflectionCache.AiCache[type] = cache;
             }
 
-            if (BdaReflectionCache.PilotAiEnabledField != null)
+            if (cache.EnabledField != null)
             {
-                if (BdaReflectionCache.PilotAiEnabledField.GetValue(pilotAi) is false)
+                if (cache.EnabledField.GetValue(pilotAi) is false)
                 {
-                    VerboseLogging.Log("Pilot AI activated.");
-                    if (BdaReflectionCache.PilotAiActivatePilotMethod != null)
+                    VerboseLogging.Log($"Pilot AI ({type.Name}) activated.");
+                    if (cache.ActivateMethod != null)
                     {
                         try
                         {
-                            BdaReflectionCache.PilotAiActivatePilotMethod.Invoke(pilotAi, null);
+                            cache.ActivateMethod.Invoke(pilotAi, null);
                         }
-                        catch
+                        catch (Exception ex)
                         {
-                            BdaReflectionCache.PilotAiEnabledField.SetValue(pilotAi, true);
+                            Debug.LogWarning(
+                                $"[KUM] Failed to invoke PilotAiActivate on {type.Name}: {ex.Message}."
+                            );
+                            cache.EnabledField.SetValue(pilotAi, true);
                         }
                     }
                     else
                     {
-                        BdaReflectionCache.PilotAiEnabledField.SetValue(pilotAi, true);
+                        cache.EnabledField.SetValue(pilotAi, true);
                     }
                 }
             }
@@ -191,9 +205,15 @@ namespace KomUniMunVesselRectifier
             public static MethodInfo MissileFireToggleGuardModeMethod;
             public static bool MissileFireFieldsResolved;
 
-            public static FieldInfo PilotAiEnabledField;
-            public static MethodInfo PilotAiActivatePilotMethod;
-            public static bool PilotAiFieldsResolved;
+            // Hold data per AI type.
+            public class AiReflectionData
+            {
+                public FieldInfo EnabledField;
+                public MethodInfo ActivateMethod;
+            }
+
+            public static readonly Dictionary<Type, AiReflectionData> AiCache =
+                new Dictionary<Type, AiReflectionData>();
 
             // Clears all internal cached reflection states.
             public static void Clear()
@@ -203,9 +223,7 @@ namespace KomUniMunVesselRectifier
                 MissileFireToggleGuardModeMethod = null;
                 MissileFireFieldsResolved = false;
 
-                PilotAiEnabledField = null;
-                PilotAiActivatePilotMethod = null;
-                PilotAiFieldsResolved = false;
+                AiCache.Clear();
             }
         }
     }

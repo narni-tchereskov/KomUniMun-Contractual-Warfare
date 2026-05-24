@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace KomUniMunVesselRectifier
@@ -13,7 +14,12 @@ namespace KomUniMunVesselRectifier
             {
                 vessel.IgnoreGForces(frames);
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Debug.LogWarning(
+                    $"[KUM] Failed to apply G-Force hardening on {vessel.vesselName}: {ex.Message}"
+                );
+            }
         }
     }
 }

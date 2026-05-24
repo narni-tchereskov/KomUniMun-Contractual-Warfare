@@ -209,7 +209,14 @@ namespace KomUniMunVesselRectifier
                 Vessel vessel = FlightGlobals.Vessels[i];
 
                 // NullPo begone, yes it needed to be said here and nowhere else.
-                if (vessel == null || vessel.gameObject == null)
+                if (
+                    vessel == null
+                    || vessel.gameObject == null
+                    || vessel.vesselType == VesselType.Debris
+                )
+                    continue;
+
+                if (!VesselTracking.IsVesselManaged(vessel.id))
                     continue;
 
                 ProcessVessel(vessel, sceneSettled);
@@ -241,7 +248,8 @@ namespace KomUniMunVesselRectifier
 
             if (vessel.loaded && !vessel.packed)
             {
-                vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
+                if (vessel.vesselName.IsContractAircraft())
+                    vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
 
                 if (tracking.UnpackedAtTime < 0)
                 {
@@ -257,6 +265,7 @@ namespace KomUniMunVesselRectifier
                     && vesselSettled
                 )
                 {
+                    VerboseLogging.Log($"Applying combat state to {vessel.vesselName}.");
                     BdaIntegration.ForceCombatState(vessel, tracking);
                     VesselTracking.SetVesselFlag(vessel.id, VesselFlags.CombatStateApplied);
                 }

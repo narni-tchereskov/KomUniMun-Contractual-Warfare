@@ -212,6 +212,9 @@ namespace KomUniMunVesselRectifier
             if (!VesselTracking.IsVesselManaged(__instance.id))
                 return;
 
+            if (!__instance.vesselName.IsContractAircraft())
+                return;
+
             VerboseLogging.Log($"Applying hardening to {__instance.vesselName}.");
             __instance.SafeIgnoreGForces(Settings.GHardeningDuration);
         }
