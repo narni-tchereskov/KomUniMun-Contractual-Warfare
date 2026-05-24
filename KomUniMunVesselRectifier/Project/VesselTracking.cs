@@ -72,6 +72,19 @@ namespace KomUniMunVesselRectifier
             VerboseLogging.Log($"Managing new vessel: {vessel.vesselName}");
         }
 
+        // Clears a specific operation flag from a tracked vessel.
+        internal static void ClearVesselFlag(Guid vesselId, VesselFlags flag)
+        {
+            if (
+                !_trackedVessels.TryGetValue(vesselId, out VesselTrack tracking)
+                || tracking == null
+            )
+                return;
+
+            tracking.Flags &= ~flag;
+            VerboseLogging.Log($"Flag {flag} cleared from vessel {vesselId}.");
+        }
+
         // Stops tracking for a specific vessel.
         internal static void StopTracking(Guid vesselId)
         {

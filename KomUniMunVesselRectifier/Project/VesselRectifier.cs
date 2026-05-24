@@ -264,6 +264,7 @@ namespace KomUniMunVesselRectifier
             else
             {
                 tracking.UnpackedAtTime = -1f;
+                VesselTracking.ClearVesselFlag(vessel.id, VesselFlags.CombatStateApplied);
             }
 
             CheckAndUnrailVessel(vessel, sceneSettled);
