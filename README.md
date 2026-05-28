@@ -34,7 +34,9 @@ The pack will feature many missions with locations spread all throught Kerbin an
 
 [Contract Configurator][6]
 
-[Ferram Aerospace Research Continued (FARc Edition Only)][7]
+## Supported mods
+
+[Ferram Aerospace Research Continued][7]
 
 For the pack to work as intended you must untick the Disable Guard Mode on Spawn option found in the BDA+ settings:
 
