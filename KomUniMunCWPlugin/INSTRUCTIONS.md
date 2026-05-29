@@ -4,7 +4,7 @@
 
 To build the DLL, install the [.NET SDK][1].
 
-Place these KSP/Harmony assemblies inside `KomUniMunVesselRectifier/Managed/`:
+Place these KSP/Harmony assemblies inside `KomUniMunCWPlugin/Managed/`:
 
 - `0Harmony.dll` - from `GameData/000_Harmony/`
 - `Assembly-CSharp.dll` - from `KSP_x64_Data/Managed/`
@@ -14,9 +14,9 @@ Place these KSP/Harmony assemblies inside `KomUniMunVesselRectifier/Managed/`:
 ## Layout
 
 ```text
-KomUniMunVesselRectifier
+KomUniMunCWPlugin
 │   INSTRUCTIONS.md
-│   KomUniMunVesselRectifier.csproj
+│   KomUniMunCW.csproj
 │
 ├───Project
 │       BdaIntegration.cs
@@ -29,13 +29,14 @@ KomUniMunVesselRectifier
 │       VesselFlags.cs
 │       VesselPositioned.cs
 │       VesselPositioning.cs
-│       VesselRectifier.cs
+│       CW.cs
 │       VesselTrack.cs
 │       VesselTracking.cs
 │
 └───Managed
         0Harmony.dll
         Assembly-CSharp.dll
+        ContractConfigurator.dll
         UnityEngine.CoreModule.dll
         UnityEngine.dll
 ```
@@ -43,13 +44,13 @@ KomUniMunVesselRectifier
 ## Build
 
 ```sh
-dotnet build KomUniMunVesselRectifier\KomUniMunVesselRectifier.csproj -c Release
+dotnet build KomUniMunCWPlugin\KomUniMunCW.csproj -c Release
 ```
 
-The DLL is written to `KomUniMunVesselRectifier\KomUniMunVesselRectifier.dll`.
+The DLL is written to `KomUniMunCWPlugin\KomUniMunCW.dll`.
 
 ## Install
 
-Copy `KomUniMunVesselRectifier.dll` into `GameData/ContractPacks/KUM/Plugins/`.
+Copy `KomUniMunCW.dll` into `GameData/ContractPacks/KUM/Plugins/`.
 
 [1]: https://dotnet.microsoft.com/en-us/download

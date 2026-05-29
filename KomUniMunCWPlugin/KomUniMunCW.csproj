@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyName>KomUniMunVesselRectifier</AssemblyName>
-    <RootNamespace>KomUniMunVesselRectifier</RootNamespace>
+    <AssemblyName>KomUniMunCW</AssemblyName>
+    <RootNamespace>KomUniMunCW</RootNamespace>
     <Nullable>disable</Nullable>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <KSPManaged>$(MSBuildProjectDirectory)\Managed</KSPManaged>
@@ -23,6 +23,10 @@
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>$(KSPManaged)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ContractConfigurator">
+      <HintPath>$(KSPManaged)\ContractConfigurator.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
