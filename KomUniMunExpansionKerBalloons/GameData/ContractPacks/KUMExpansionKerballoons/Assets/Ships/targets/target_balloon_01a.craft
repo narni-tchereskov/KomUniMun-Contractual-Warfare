@@ -2,7 +2,7 @@ ship = target_balloon_01a
 version = 1.12.5
 description = 
 type = SPH
-size = 1.19644809,0.755853653,1.00000036
+size = 1.55965543,1.22318077,1.20000076
 steamPublishedFileId = 0
 persistentId = 1484323305
 rot = 0,0,0,0
@@ -478,7 +478,7 @@ PART
 	part = rtg_4294435554
 	partName = Part
 	persistentId = 4237177680
-	pos = 0,10,-2.3841875E-07
+	pos = 0,10,-2.38418806E-07
 	attPos = 0,0.3878645,-5.96046306E-08
 	attPos0 = 0,-0.387864619,5.96046448E-08
 	rot = 0.707106829,0,0,0.707106829
@@ -637,7 +637,7 @@ PART
 	part = missileController_4294435494
 	partName = Part
 	persistentId = 214576841
-	pos = 0,10,-4.76837499E-07
+	pos = 0,10,-4.76837613E-07
 	attPos = 2.71050543E-20,-1.13248825E-06,-0.399999648
 	attPos0 = -2.71050543E-20,8.94069672E-07,0.399999648
 	rot = 3.55271368E-15,-1.00000012,1.1920929E-07,4.37113918E-08
@@ -919,7 +919,7 @@ PART
 	part = miniFuselage_4294414492
 	partName = Part
 	persistentId = 2241170177
-	pos = 0,10,-4.76837499E-07
+	pos = 0,10,-4.76837613E-07
 	attPos = 0,0.795552373,-1.19209233E-07
 	attPos0 = 0,-0.795552611,1.19209261E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -941,6 +941,8 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	link = universalBalloonHP_4294427684
+	link = RadialOreTank_4294402150
+	link = RadialOreTank_4294399022
 	attN = top,rtg_4294435554_0|0.46875|0_0|1|0_0|0.46875|0_0|1|0
 	attN = bottom,Null_0_0|-0.46875|0_0|-1|0_0|-0.46875|0_0|-1|0
 	EVENTS
@@ -1317,6 +1319,276 @@ PART
 		name = ElectricCharge
 		amount = 60
 		maxAmount = 60
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = RadialOreTank_4294402150
+	partName = Part
+	persistentId = 3643171324
+	pos = -0.200000003,9.80000019,-4.76837158E-07
+	attPos = 0.0142688751,-0.0446710885,-0.0142688751
+	attPos0 = -0.214268878,0.0446711183,0.214268714
+	rot = 0.65328151,-0.270598054,-0.270598114,0.65328151
+	attRot = 0,0,0,1
+	attRot0 = 0,-0.382683456,-4.470348E-08,0.923879504
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = RadialOreTank_4294399022
+	srfN = srfAttach,miniFuselage_4294414492,CYLCOL,0|0|0,0|0|1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleFuelJettison
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			FuelJettisonAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 275
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 25
+		armorVolume = 1.60439968
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Ore
+		amount = 40
+		maxAmount = 75
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = RadialOreTank_4294399022
+	partName = Part
+	persistentId = 2974426438
+	pos = 0.200000003,9.80000019,-4.91738319E-07
+	attPos = -0.0142688751,-0.0446711034,-0.0142688751
+	attPos0 = 0.214268878,0.0446711183,0.214268714
+	rot = 0.653281629,0.270598024,0.270598084,0.65328151
+	attRot = 0,0,0,1
+	attRot0 = 8.94069672E-08,0.382683396,4.47034836E-08,0.923879623
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = RadialOreTank_4294402150
+	srfN = srfAttach,miniFuselage_4294414492,CYLCOL,0|0|0,0|0|1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleFuelJettison
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			FuelJettisonAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 275
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 25
+		armorVolume = 1.60439968
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Ore
+		amount = 40
+		maxAmount = 75
 		flowState = True
 		isTweakable = True
 		hideFlow = False
