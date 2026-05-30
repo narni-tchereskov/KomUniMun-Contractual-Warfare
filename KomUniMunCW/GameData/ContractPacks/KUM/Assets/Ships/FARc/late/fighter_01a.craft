@@ -2,7 +2,7 @@ ship = fighter_01a
 version = 1.12.5
 description = 
 type = SPH
-size = 6.69605684,3.89949036,13.6696568
+size = 6.69606018,3.84766388,13.6696634
 steamPublishedFileId = 0
 persistentId = 2821535224
 rot = 0,0,0,1
@@ -14,9 +14,9 @@ OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 PART
 {
-	part = probeStackSmall_4293912696
+	part = probeStackSmall_4294389776
 	partName = Part
-	persistentId = 3551589941
+	persistentId = 178003515
 	pos = 0,10,0
 	attPos = 0,0.0749999434,0
 	attPos0 = 0,10,0
@@ -38,11 +38,11 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = rtg_4293912646
-	link = missileController_4293912612
-	link = bdPilotAI_4293912568
-	link = batteryPack_4293912542
-	link = SurfAntenna_4293912504
+	link = rtg_4294389716
+	link = missileController_4294389676
+	link = bdPilotAI_4294389626
+	link = batteryPack_4294389594
+	link = SurfAntenna_4294389550
 	link = Mark2Cockpit_4293911924
 	link = bdRadome1inline_4293642818
 	attN = bottom,Mark2Cockpit_4293911924_0|-0.100000001|0_0|-1|0_0|-0.100000001|0_0|-1|0
@@ -360,9 +360,9 @@ PART
 }
 PART
 {
-	part = rtg_4293912646
+	part = rtg_4294389716
 	partName = Part
-	persistentId = 3964707516
+	persistentId = 1620706368
 	pos = 0,10.4000006,-2.68220901E-07
 	attPos = -0.326802522,0.0999999046,0.0747193992
 	attPos0 = 0.326802522,-0.100000203,-0.474719554
@@ -384,7 +384,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeStackSmall_4293912696,collider,0|-0.326802492|0,0|-1|0,0|-0.326802492|0
+	srfN = srfAttach,probeStackSmall_4294389776,collider,0|-0.326802492|0,0|-1|0,0|-0.326802492|0
 	attN = top,Null_0_0|0.326802492|0_0|1|0_0|0.326802492|0_0|1|0
 	attN = bottom,Null_0_0|-0.326802492|0_0|-1|0_0|-0.326802492|0_0|-1|0
 	EVENTS
@@ -563,10 +563,10 @@ PART
 }
 PART
 {
-	part = missileController_4293912612
+	part = missileController_4294389676
 	partName = Part
-	persistentId = 2153477807
-	pos = 0,10,-1.19209489E-07
+	persistentId = 1547919144
+	pos = 0,10,-1.19209375E-07
 	attPos = 3.26080407E-09,0.0640008748,-0.386042207
 	attPos0 = -3.26080407E-09,-0.064000994,0.386042207
 	rot = 0.704378664,8.73146888E-10,6.29365644E-08,-0.709824502
@@ -587,7 +587,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeStackSmall_4293912696,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
+	srfN = srfAttach,probeStackSmall_4294389776,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
 	EVENTS
 	{
 	}
@@ -650,6 +650,7 @@ PART
 		targetWeightProtectTeammate = 0.5
 		targetWeightProtectVIP = 1
 		targetWeightAttackVIP = 0.699999988
+		targetWeightUncontrolled = 0
 		evadeThreshold = 5
 		cmThreshold = 5
 		cmRepetition = 3
@@ -776,7 +777,6 @@ PART
 	{
 		name = ModuleWingCommander
 		isEnabled = True
-		savedWingmen = 
 		spread = 100
 		lag = 7
 		commandSelf = False
@@ -890,9 +890,9 @@ PART
 }
 PART
 {
-	part = bdPilotAI_4293912568
+	part = bdPilotAI_4294389626
 	partName = Part
-	persistentId = 2625682671
+	persistentId = 1033618633
 	pos = 0,10.1999998,-1.04308128E-07
 	attPos = -2.88248714E-09,0.120692253,-0.650676847
 	attPos0 = 2.88248714E-09,-0.120692402,0.450677037
@@ -914,7 +914,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeStackSmall_4293912696,collider,0|-0.0206965208|0,0|-1|0,0|-0.0206965208|0
+	srfN = srfAttach,probeStackSmall_4294389776,collider,0|-0.0206965208|0,0|-1|0,0|-0.0206965208|0
 	EVENTS
 	{
 	}
@@ -1016,8 +1016,6 @@ PART
 		hardMinAltitude = True
 		maxAltitude = 6000
 		maxAltitudeToggle = True
-		bombingAltitude = 500
-		divebombing = False
 		maxSpeed = 360
 		takeOffSpeed = 70
 		minSpeed = 70
@@ -1040,6 +1038,10 @@ PART
 		postStallAoA = 30
 		ImmelmannTurnAngle = 30
 		ImmelmannPitchUpBias = 10
+		divebombing = False
+		bombingAltitude = 500
+		divebombingAngle = 60
+		extendDistanceBombing = 1000
 		minEvasionTime = 0.200000003
 		evasionThreshold = 25
 		evasionTimeThreshold = 0.100000001
@@ -1047,14 +1049,16 @@ PART
 		evasionNonlinearity = 2
 		evasionIgnoreMyTargetTargetingMe = False
 		evasionMissileKinematic = True
+		evasionMissileEmergencyNotchVel = 0
 		collisionAvoidanceThreshold = 20
 		vesselCollisionAvoidanceLookAheadPeriod = 1.5
 		vesselCollisionAvoidanceStrength = 2
+		AvoidMass = 0
 		vesselStandoffDistance = 200
+		retreatDistance = 4000
 		extendDistanceAirToAir = 300
 		extendAngleAirToAir = 0
 		extendDistanceAirToGroundGuns = 1500
-		extendDistanceAirToGround = 2000
 		extendTargetVel = 0.800000012
 		extendTargetAngle = 78
 		extendTargetDist = 300
@@ -1074,6 +1078,8 @@ PART
 		ClockwiseOrbit = True
 		upToEleven = False
 		standbyMode = False
+		divebombCorrectionPIDConfig = "P":5.0,"I":0.5,"D":0.5,"TimeStep":0.019999999552965165,"ILimit":1000.0,"SetPoint":0.0,"smoothInput":true,"smoothingHalflife":0.10000000149011612,"IntegralRescaling":2.0
+		bombingLateralCorrectionPIDConfig = "P":1.0,"I":0.30000001192092898,"D":0.5,"TimeStep":0.019999999552965165,"ILimit":100.0,"SetPoint":0.0,"smoothInput":true,"smoothingHalflife":0.10000000149011612,"IntegralRescaling":2.0
 		pilotOn = True
 		stagingEnabled = True
 		EVENTS
@@ -1215,10 +1221,10 @@ PART
 }
 PART
 {
-	part = batteryPack_4293912542
+	part = batteryPack_4294389594
 	partName = Part
-	persistentId = 1502017348
-	pos = 0,10,-1.78814332E-07
+	persistentId = 2256702601
+	pos = 0,10,-1.78814105E-07
 	attPos = 0,0.100000754,-0.519243836
 	attPos0 = 0,-0.100000933,0.519243836
 	rot = 0,0,4.21468478E-08,1.00000012
@@ -1239,7 +1245,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeStackSmall_4293912696,collider,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,probeStackSmall_4294389776,collider,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -1374,10 +1380,10 @@ PART
 }
 PART
 {
-	part = SurfAntenna_4293912504
+	part = SurfAntenna_4294389550
 	partName = Part
-	persistentId = 682121202
-	pos = 0,10,-1.3411065E-07
+	persistentId = 3770415547
+	pos = 0,10,-1.34110536E-07
 	attPos = -7.0845104E-08,0.0070194006,0.587523937
 	attPos0 = 7.0845104E-08,-0.00701953471,-0.587523937
 	rot = 1.00000012,-1.68703139E-07,-3.79321534E-07,3.27825546E-07
@@ -1398,7 +1404,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeStackSmall_4293912696,collider,0|-0.0500000007|0,0|-1|0,0|-0.0500000007|0
+	srfN = srfAttach,probeStackSmall_4294389776,collider,0|-0.0500000007|0,0|-1|0,0|-0.0500000007|0
 	EVENTS
 	{
 	}
@@ -1546,7 +1552,7 @@ PART
 	part = Mark2Cockpit_4293911924
 	partName = Part
 	persistentId = 4098672044
-	pos = 0,10,-1.00000191
+	pos = 0,10,-1.00000095
 	attPos = 0,0.0374996662,0
 	attPos0 = 0,-1.03750002,1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -1564,11 +1570,11 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1600
+	modMass = 0.906000018
 	modSize = 0,0,0
 	link = Mk1FuselageStructural_4293251284
-	attN = top,probeStackSmall_4293912696_0|0.9375|0_0|1|0_0|0.9375|0_0|1|0
+	attN = top,probeStackSmall_4294389776_0|0.9375|0_0|1|0_0|0.9375|0_0|1|0
 	attN = bottom,Mk1FuselageStructural_4293251284_0|-0.9375|0_0|-1|0_0|-0.9375|0_0|-1|0
 	EVENTS
 	{
@@ -1792,12 +1798,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 900
+		Hitpoints = 1575
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 3
+		hullType = Steel
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -1822,9 +1828,9 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 44
+		maxTorque = 44
+		maxG = 100
 		maxSupportedArmor = 65
 		armorVolume = 11.8303137
 		ignitionTemp = -1
@@ -1848,6 +1854,22 @@ PART
 		armoredCockpit = False
 		FireBottles = 0
 		FBRemaining = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleHMD
+		isEnabled = True
+		HMD = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1906,6 +1928,22 @@ PART
 	}
 	MODULE
 	{
+		name = KerbalSuitSelector
+		isEnabled = True
+		suit = Default
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -1951,7 +1989,7 @@ PART
 	part = Mk1FuselageStructural_4293251284
 	partName = Part
 	persistentId = 1330104445
-	pos = 0,10,-2.87500381
+	pos = 0,10,-2.87500405
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500036,1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2101,7 +2139,7 @@ PART
 	part = MK1Fuselage_4293717726
 	partName = Part
 	persistentId = 1982557858
-	pos = 0,10,-4.75000954
+	pos = 0,10,-4.75001192
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500072,2.38418579E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2284,7 +2322,7 @@ PART
 	part = MK1Fuselage_4293718214
 	partName = Part
 	persistentId = 100136641
-	pos = 0,10,-6.62502146
+	pos = 0,10,-6.62502718
 	attPos = 0,0,0
 	attPos0 = 0,-1.875,2.38418366E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2468,7 +2506,7 @@ PART
 	part = Mk1FuselageStructural_4293690582
 	partName = Part
 	persistentId = 1365507334
-	pos = 0,10,-8.50002861
+	pos = 0,10,-8.50003433
 	attPos = 0,0,0
 	attPos0 = 0,-1.8750006,0
 	rot = 0.707106829,0,0,0.707106829
@@ -2625,7 +2663,7 @@ PART
 	part = turboJet_4293692646
 	partName = Part
 	persistentId = 2751758835
-	pos = 0,10,-9.43753433
+	pos = 0,10,-9.43754005
 	attPos = 0,0,0
 	attPos0 = 0,-0.937502027,4.76836874E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -3164,7 +3202,7 @@ PART
 	part = tailfin_4293633386
 	partName = Part
 	persistentId = 2634557251
-	pos = -0.5,10.1000004,-9.05004501
+	pos = -0.5,9.79999924,-9.15006638
 	attPos = 0.118608773,0.338807642,-0.10000027
 	attPos0 = -0.618608773,-0.83881098,4.76836533E-07
 	rot = -0.0370070823,0.706137717,0.706676185,0.0246776287
@@ -3268,7 +3306,7 @@ PART
 		isEnabled = True
 		pitchaxis = 100
 		yawaxis = 0
-		rollaxis = 0
+		rollaxis = 50
 		pitchaxisDueToAoA = 0
 		brakeRudder = 0
 		maxdeflect = 20
@@ -3280,7 +3318,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -3344,7 +3382,7 @@ PART
 	part = tailfin_4293633060
 	partName = Part
 	persistentId = 4111400733
-	pos = 0.5,10.1000004,-9.05004692
+	pos = 0.5,9.79999924,-9.15006828
 	attPos = -0.118608773,0.338804781,-0.10000027
 	attPos0 = 0.618608773,-0.83881098,4.76836533E-07
 	rot = -0.706676543,-0.0246767551,0.0370079502,-0.706137359
@@ -3448,7 +3486,7 @@ PART
 		isEnabled = True
 		pitchaxis = 100
 		yawaxis = 0
-		rollaxis = 0
+		rollaxis = 50
 		pitchaxisDueToAoA = 0
 		brakeRudder = 0
 		maxdeflect = 20
@@ -3460,7 +3498,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -3524,10 +3562,10 @@ PART
 	part = structuralWing_4293629330
 	partName = Part
 	persistentId = 2494683055
-	pos = 0,10.3000002,-8.30005264
+	pos = 0,10.3000002,-8.30005836
 	attPos = -7.27168725E-08,0.88922739,0.353607297
 	attPos0 = 7.27168725E-08,-0.689230025,-0.65360713
-	rot = -0.54167515,0.4545196,0.54167515,-0.454519629
+	rot = -0.54167515,0.454519629,0.54167515,-0.454519659
 	attRot = 1.74000938E-08,-1.60383692E-10,-0.0871555805,0.996194839
 	attRot0 = -0.0616283119,0.704416096,0.0616282821,-0.704416037
 	mir = 1,1,1
@@ -3626,7 +3664,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -3675,7 +3713,7 @@ PART
 	part = elevon3_4293629282
 	partName = Part
 	persistentId = 1888341974
-	pos = 2.77307095E-07,11.5006638,-9.91280651
+	pos = 3.88885226E-08,11.5006647,-9.91281223
 	attPos = 0,0,0
 	attPos0 = -0.902367592,-1.79674208,-2.86879015E-07
 	rot = 0.54167527,0.454519689,0.541675091,0.45451951
@@ -3790,7 +3828,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -3854,7 +3892,7 @@ PART
 	part = bahaCmPod_4293556778
 	partName = Part
 	persistentId = 3434566430
-	pos = -0.400000006,9.39999962,-9.18003654
+	pos = -0.400000006,9.39999962,-9.18004227
 	attPos = -0.0397495031,0.0443296432,-0.0239715576
 	attPos0 = -0.360250503,-0.744332373,0.623971701
 	rot = 0.965925932,-0.258819044,-1.49011612E-08,8.94069672E-08
@@ -4036,7 +4074,7 @@ PART
 	part = bahaCmPod_4293554296
 	partName = Part
 	persistentId = 2013859483
-	pos = 0.400000006,9.39999962,-9.18003845
+	pos = 0.400000006,9.39999962,-9.18004417
 	attPos = 0.0397495031,0.0443277359,-0.0239715576
 	attPos0 = 0.360250503,-0.744332373,0.623971701
 	rot = 0.965926051,0.258818984,1.49011612E-08,8.94069672E-08
@@ -4218,7 +4256,7 @@ PART
 	part = bahaChaffPod_4293557206
 	partName = Part
 	persistentId = 1415717389
-	pos = -0.400000006,9.39999866,-8.90003395
+	pos = -0.400000006,9.39999866,-8.90003967
 	attPos = -0.0360581577,0.0482816994,-0.0303650498
 	attPos0 = -0.363941848,-0.448284626,0.630365193
 	rot = 0.965925932,-0.258819044,-1.49011612E-08,8.94069672E-08
@@ -4400,7 +4438,7 @@ PART
 	part = bahaChaffPod_4293554110
 	partName = Part
 	persistentId = 2271001235
-	pos = 0.400000006,9.39999866,-8.90003586
+	pos = 0.400000006,9.39999866,-8.90004158
 	attPos = 0.0360581577,0.0482797921,-0.0303650498
 	attPos0 = 0.363941848,-0.448284626,0.630365193
 	rot = 0.965926051,0.258818984,1.49011612E-08,8.94069672E-08
@@ -4582,7 +4620,7 @@ PART
 	part = airbrake1_4293499752
 	partName = Part
 	persistentId = 1637213123
-	pos = 0,9.39999962,-6.82502317
+	pos = 0,9.39999962,-6.8250289
 	attPos = -5.02731523E-10,0.0533261299,-0.0421103835
 	attPos0 = 5.02731523E-10,-0.253328085,0.642109931
 	rot = 0.70710665,7.10969594E-09,7.10970127E-09,0.707107008
@@ -4895,10 +4933,10 @@ PART
 	part = wingConnector_4293298236
 	partName = Part
 	persistentId = 4172211515
-	pos = 0.400000006,9.89999962,-5.22508383
+	pos = 0.400000006,9.94999886,-4.92509747
 	attPos = 1.01821613,-0.0590586662,0
 	attPos0 = -0.618216097,0.859057426,-2.38418579E-07
-	rot = 0.694552481,0.012123459,0.0125542497,0.719230473
+	rot = 0.700802386,0.0120134354,0.0126595628,0.713142097
 	attRot = 0,0,0,1
 	attRot0 = 5.96046448E-08,2.98023224E-08,2.98023224E-08,1
 	mir = 1,1,1
@@ -4948,7 +4986,7 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 2825
+		Hitpoints = 4800
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
@@ -4999,7 +5037,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -5048,10 +5086,10 @@ PART
 	part = structuralWing_4293677406
 	partName = Part
 	persistentId = 3967320055
-	pos = -1.50782788,9.83311462,-5.23257399
+	pos = -1.50782788,9.883255,-4.93375397
 	attPos = -0.0910798311,0.003056532,-5.7931473E-09
 	attPos0 = -1.90892017,-0.00305736647,-1.13416043E-07
-	rot = 0.69455266,0.0121235885,0.0125543326,0.719230294
+	rot = 0.700802565,0.0120135676,0.0126596503,0.713141918
 	attRot = 0,0,0,1
 	attRot0 = 1.49011598E-07,1.49011626E-07,-2.98023259E-08,1
 	mir = 1,1,1
@@ -5154,7 +5192,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -5203,10 +5241,10 @@ PART
 	part = bahaAdjustableRail_4293605654
 	partName = Part
 	persistentId = 3952203645
-	pos = -2.20291996,9.68034935,-5.32815552
+	pos = -2.20291948,9.7321806,-5.03198719
 	attPos = 0.371004879,0.644943416,0.157999516
 	attPos0 = -1.07100499,-0.644945264,0.0419999622
-	rot = -0.00872665644,-2.02687659E-07,-2.20097945E-07,-0.999962032
+	rot = -0.00872632861,-2.00506236E-07,-2.20962278E-07,-0.999961972
 	attRot = 0,0,-0.707106709,-0.707106709
 	attRot0 = 0.707106769,-1.77316281E-07,1.17711672E-07,-0.707106888
 	mir = 1,1,1
@@ -5374,10 +5412,10 @@ PART
 	part = bahaAdjustableRail_4293600038
 	partName = Part
 	persistentId = 2079222583
-	pos = -2.20291972,9.56849098,-5.33010864
+	pos = -2.20291948,9.62032223,-5.03394032
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = 1.4831312E-07,-0.11187499,-8.56816996E-07
-	rot = -0.00872686505,-4.60980942E-09,-2.17978254E-07,-0.999962091
+	rot = -0.00872671604,-3.94097555E-09,-2.18647074E-07,-0.999962091
 	attRot = 0.707106709,-9.00631534E-08,-7.89889754E-08,-0.707106709
 	attRot0 = 5.96046448E-08,-1.97440386E-07,-2.79396772E-09,1
 	mir = 1,1,1
@@ -5545,10 +5583,10 @@ PART
 	part = bahaAdjustableRail_4293602856
 	partName = Part
 	persistentId = 3490845201
-	pos = -2.28921127,9.38411713,-5.33330536
+	pos = -2.28921127,9.43594837,-5.03713655
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = -0.0862917155,-0.18440266,2.20516013E-05
-	rot = 0.00617107749,0.00617051125,-0.707080126,0.707079768
+	rot = 0.00617092848,0.00617039204,-0.707080245,0.707079828
 	attRot = -0.49999997,-0.50000006,-0.5,0.50000006
 	attRot0 = 0.0185099039,0.0185100064,0.706864715,-0.706864297
 	mir = 1,1,1
@@ -5715,10 +5753,10 @@ PART
 	part = bahaAim9_4293596964
 	partName = Part
 	persistentId = 3170596876
-	pos = -2.58096766,9.38382339,-5.3165102
+	pos = -2.58096719,9.43565464,-5.0203414
 	attPos = 0,0,0
 	attPos0 = 7.50916662E-09,-0.291756123,0.0167994928
-	rot = 0.00617095828,0.00617030263,-0.70707953,0.707080483
+	rot = 0.00617107749,0.00617018342,-0.707079411,0.707080722
 	attRot = 0.500000119,0.499999821,0.499999791,-0.500000179
 	attRot0 = 4.21468833E-08,8.5265108E-14,3.27825489E-07,1
 	mir = 1,1,1
@@ -5768,6 +5806,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -5789,7 +5828,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -5827,7 +5869,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -5971,10 +6012,10 @@ PART
 	part = bahaAdjustableRail_4293213702
 	partName = Part
 	persistentId = 2515280524
-	pos = -2.20291948,9.29665756,-5.3348546
+	pos = -2.20291948,9.34848881,-5.0386858
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = 5.46769101E-08,-0.271874815,-8.58493081E-07
-	rot = -0.00872686505,-7.69982691E-08,-2.14078426E-07,-0.999962091
+	rot = -0.00872671604,-7.60155956E-08,-2.13744016E-07,-0.999962091
 	attRot = 0.707106769,0,2.10734239E-08,-0.707106769
 	attRot0 = 2.98023188E-08,7.45060831E-08,-9.5714452E-14,1
 	mir = 1,1,1
@@ -6141,10 +6182,10 @@ PART
 	part = bahaAim9_4293213644
 	partName = Part
 	persistentId = 3232799123
-	pos = -2.20291948,9.00465202,-5.32315302
+	pos = -2.20291924,9.05648232,-5.02698517
 	attPos = 0,0,0
 	attPos0 = 7.50916662E-09,-0.291756123,0.0167994928
-	rot = -0.00872686505,-6.97542646E-08,-6.04595357E-07,-0.999962091
+	rot = -0.00872665644,-6.91163109E-08,-6.05233311E-07,-0.999962032
 	attRot = 0.500000119,0.499999821,0.499999791,-0.500000179
 	attRot0 = 4.21468833E-08,8.5265108E-14,3.27825489E-07,1
 	mir = 1,1,1
@@ -6194,6 +6235,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -6215,7 +6257,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -6253,7 +6298,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -6397,10 +6441,10 @@ PART
 	part = smallCtrlSrf_4293290882
 	partName = Part
 	persistentId = 417475187
-	pos = -2.89479065,9.72182274,-7.03148651
+	pos = -2.89479136,9.80337524,-6.73433781
 	attPos = -0.0115737915,-0.00325965881,-2.77907475E-09
 	attPos0 = -1.38842618,-1.7967416,4.91537605E-07
-	rot = -0.0125542115,0.719230473,0.694552481,-0.01212346
+	rot = -0.0126595274,0.713142097,0.700802386,-0.0120134391
 	attRot = 0.49999994,0.49999994,-0.49999994,0.49999994
 	attRot0 = 8.88178314E-16,1,-2.08616228E-07,1.78813949E-07
 	mir = 1,1,1
@@ -6513,7 +6557,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -6577,10 +6621,10 @@ PART
 	part = bahaAdjustableRail_4293604634
 	partName = Part
 	persistentId = 3522849557
-	pos = -1.39648354,9.76787758,-3.62915659
+	pos = -1.39648354,9.79004478,-3.33171892
 	attPos = -0.508999705,0.407494485,-0.0650013685
 	attPos0 = 0.108999833,1.60002744,0.124999076
-	rot = -0.00872686505,-1.97367854E-07,-2.2541775E-07,-0.999962091
+	rot = -0.00872677565,-1.95752364E-07,-2.24399059E-07,-0.999962032
 	attRot = 0,0,-0.707106709,-0.707106709
 	attRot0 = 0.688354552,-1.73717225E-07,1.06410155E-07,-0.72537452
 	mir = 1,1,1
@@ -6748,10 +6792,10 @@ PART
 	part = bahaAim9_4293594586
 	partName = Part
 	persistentId = 4288673084
-	pos = -1.39648414,9.47587013,-3.61745501
+	pos = -1.39648414,9.49803638,-3.32001734
 	attPos = 0,0,0
 	attPos0 = -1.8115518E-08,-0.131755933,0.0167996138
-	rot = -0.00872656703,6.08021793E-08,-1.75388934E-07,-0.999961972
+	rot = -0.00872650743,5.97114678E-08,-1.71664041E-07,-0.999962091
 	attRot = 0.707106709,0,0,-0.707106709
 	attRot0 = -2.08616228E-07,-2.68220901E-07,-4.21468336E-08,1
 	mir = 1,1,1
@@ -6801,6 +6845,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -6822,7 +6867,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -6860,7 +6908,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -7004,10 +7051,10 @@ PART
 	part = elevon3_4293636318
 	partName = Part
 	persistentId = 498212531
-	pos = -1.53962123,9.76935768,-7.02548695
+	pos = -1.53962111,9.85079765,-6.7275095
 	attPos = 1.10236776,-0.00325918198,1.34784204E-06
 	attPos0 = -0.0339998119,-1.79399753,7.36354707E-07
-	rot = -0.694552541,-0.0121235363,-0.0125543699,-0.719230413
+	rot = -0.700802445,-0.0120135127,-0.0126596829,-0.713142037
 	attRot = 0.49999994,0.49999994,0.49999994,-0.49999994
 	attRot0 = 8.94069672E-08,-4.26325608E-14,-5.9604659E-08,-1
 	mir = 1,1,1
@@ -7120,7 +7167,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -7184,10 +7231,10 @@ PART
 	part = structuralWing4_4293293968
 	partName = Part
 	persistentId = 464758718
-	pos = -0.538561583,9.95700645,-2.65564609
+	pos = -0.538561583,9.96215439,-2.35505271
 	attPos = 0.250562966,0.653723121,-1.10607652E-06
 	attPos0 = -1.25056279,1.94627702,5.27911482E-07
-	rot = -0.694552481,-0.0121234553,-0.0125542087,-0.719230473
+	rot = -0.700802386,-0.0120134335,-0.0126595236,-0.713142097
 	attRot = -0.49999994,0.49999994,-0.49999994,-0.49999994
 	attRot0 = 5.96046448E-08,2.98023224E-08,2.98023224E-08,-1
 	mir = 1,1,1
@@ -7286,7 +7333,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -7335,10 +7382,10 @@ PART
 	part = wingConnector_4293298032
 	partName = Part
 	persistentId = 224108422
-	pos = -0.400000006,9.89999962,-5.22508478
+	pos = -0.400000006,9.94999886,-4.92509842
 	attPos = -1.01821613,-0.0590591431,0
 	attPos0 = 0.618216097,0.859057426,-2.38418579E-07
-	rot = 0.012556036,0.719231844,0.694550872,0.0121251186
+	rot = 0.0126613844,0.713142693,0.70080179,0.0120150708
 	attRot = 0,0,0,1
 	attRot0 = 2.98023117E-08,1,0,-1.39090748E-08
 	mir = 1,1,1
@@ -7388,7 +7435,7 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 2825
+		Hitpoints = 4800
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
@@ -7439,7 +7486,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -7488,10 +7535,10 @@ PART
 	part = structuralWing_4293297136
 	partName = Part
 	persistentId = 1010597368
-	pos = 1.50782847,9.83310509,-5.23257494
+	pos = 1.5078311,9.88324547,-4.93375492
 	attPos = -0.0910798311,0.0030560547,-1.44074264E-09
 	attPos0 = -1.90891969,-0.00305712759,-5.4195965E-08
-	rot = 0.0125561133,0.719231665,0.694551051,0.0121252462
+	rot = 0.0126614626,0.713142514,0.700801969,0.0120151974
 	attRot = 0,0,0,1
 	attRot0 = -8.94069387E-08,-1.49011584E-07,-2.98023402E-08,1
 	mir = 1,1,1
@@ -7594,7 +7641,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -7643,10 +7690,10 @@ PART
 	part = bahaAdjustableRail_4293297048
 	partName = Part
 	persistentId = 130782939
-	pos = 2.20291781,9.680336,-5.32815599
+	pos = 2.20292187,9.7321682,-5.03198814
 	attPos = 0.371004939,0.644941509,-0.166999742
 	attPos0 = -1.07100499,-0.644945264,0.0419999622
-	rot = 0.00872454047,-2.13841759E-07,-2.31334354E-07,0.999961972
+	rot = 0.00872454047,-2.13183213E-07,-2.35944171E-07,0.999962091
 	attRot = 0,0,-0.707106709,-0.707106709
 	attRot0 = 0.707106769,-1.77316281E-07,1.17711672E-07,-0.707106888
 	mir = 1,1,1
@@ -7814,10 +7861,10 @@ PART
 	part = bahaAdjustableRail_4293184150
 	partName = Part
 	persistentId = 425163772
-	pos = 2.20291758,9.56847763,-5.33010864
+	pos = 2.20292091,9.62030983,-5.03394127
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = -2.14204192E-07,-0.11187496,-1.02072977E-06
-	rot = 0.00872710347,-1.75852009E-08,-2.12905405E-07,0.999961972
+	rot = 0.00872728229,-2.11351647E-08,-2.17257963E-07,0.999962091
 	attRot = 0.707106709,-9.00631534E-08,-7.89889754E-08,-0.707106709
 	attRot0 = 2.47775461E-06,1.94646418E-07,7.4505806E-09,1
 	mir = 1,1,1
@@ -7985,10 +8032,10 @@ PART
 	part = bahaAdjustableRail_4293184092
 	partName = Part
 	persistentId = 4230379875
-	pos = 2.28920794,9.38410378,-5.33330536
+	pos = 2.28921127,9.43593407,-5.03713751
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = -0.0862917155,-0.18440266,2.20516013E-05
-	rot = 0.00617098808,-0.00617107749,0.707080126,0.707079768
+	rot = 0.00617110729,-0.0061712265,0.707080424,0.707079709
 	attRot = -0.49999997,-0.50000006,-0.5,0.50000006
 	attRot0 = 0.0185099039,0.0185100064,0.706864715,-0.706864297
 	mir = 1,1,1
@@ -8155,10 +8202,10 @@ PART
 	part = bahaAim9_4293184034
 	partName = Part
 	persistentId = 1820372899
-	pos = 2.5809679,9.38381004,-5.31651115
+	pos = 2.58097386,9.43564034,-5.0203433
 	attPos = 0,0,0
 	attPos0 = 7.50916662E-09,-0.291756123,0.0167994928
-	rot = 0.00617107749,-0.00617101789,0.707079887,0.707079887
+	rot = 0.0061712563,-0.00617110729,0.707080066,0.707080126
 	attRot = 0.500000119,0.499999821,0.499999791,-0.500000179
 	attRot0 = 4.21468833E-08,8.5265108E-14,3.27825489E-07,1
 	mir = 1,1,1
@@ -8208,6 +8255,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -8229,7 +8277,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -8267,7 +8318,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -8411,10 +8461,10 @@ PART
 	part = bahaAdjustableRail_4293183968
 	partName = Part
 	persistentId = 527137483
-	pos = 2.20291734,9.29664421,-5.33485508
+	pos = 2.20292139,9.3484745,-5.03868723
 	attPos = -0.128994942,0.0449442863,0.0580005459
 	attPos0 = 5.46769101E-08,-0.271874815,-8.58493081E-07
-	rot = 0.00872719288,-9.59622923E-08,-2.13553648E-07,0.999961972
+	rot = 0.00872728229,-9.98518175E-08,-2.18883756E-07,0.999962091
 	attRot = 0.707106769,0,2.10734239E-08,-0.707106769
 	attRot0 = 2.98023188E-08,7.45060831E-08,-9.5714452E-14,1
 	mir = 1,1,1
@@ -8581,10 +8631,10 @@ PART
 	part = bahaAim9_4293183904
 	partName = Part
 	persistentId = 1847724446
-	pos = 2.20291734,9.00463676,-5.32315063
+	pos = 2.20292091,9.05646515,-5.02698278
 	attPos = 0,0,0
 	attPos0 = 7.50916662E-09,-0.291756123,0.0167994928
-	rot = 0.00872719288,-9.00147938E-08,-6.01456975E-07,0.999961972
+	rot = 0.00872728229,-9.22785546E-08,-6.04461547E-07,0.999962091
 	attRot = 0.500000119,0.499999821,0.499999791,-0.500000179
 	attRot0 = 4.21468833E-08,8.5265108E-14,3.27825489E-07,1
 	mir = 1,1,1
@@ -8634,6 +8684,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -8655,7 +8706,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -8693,7 +8747,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -8837,10 +8890,10 @@ PART
 	part = smallCtrlSrf_4293290348
 	partName = Part
 	persistentId = 231347534
-	pos = 2.8947854,9.72179794,-7.03148937
+	pos = 2.89479017,9.80335426,-6.73434162
 	attPos = -0.0115737915,-0.00326061249,1.378055E-09
 	attPos0 = -1.3884263,-1.79674196,-8.27106192E-07
-	rot = -0.694550872,0.0121251186,0.0125559876,-0.719231844
+	rot = -0.70080179,0.0120150726,0.0126613379,-0.713142693
 	attRot = 0.49999994,0.49999994,-0.49999994,0.49999994
 	attRot0 = -3.10862447E-14,1,8.94069316E-08,-1.7881392E-07
 	mir = 1,1,1
@@ -8953,7 +9006,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -9017,10 +9070,10 @@ PART
 	part = bahaAdjustableRail_4293296742
 	partName = Part
 	persistentId = 4178548900
-	pos = 1.39648199,9.76787663,-3.62915659
+	pos = 1.39648509,9.79003906,-3.33171916
 	attPos = -0.508999944,0.407495141,0.065002352
 	attPos0 = 0.108999856,1.60002828,-0.124998912
-	rot = 0.00872454047,-2.13841759E-07,-2.31334354E-07,0.999961972
+	rot = 0.00872454047,-2.13841759E-07,-2.36602716E-07,0.999962091
 	attRot = 0,0,-0.707106709,-0.707106709
 	attRot0 = -7.63212427E-08,-0.72537452,-0.688354552,-2.05424271E-07
 	mir = 1,1,1
@@ -9188,10 +9241,10 @@ PART
 	part = bahaAim9_4293296684
 	partName = Part
 	persistentId = 2327778611
-	pos = 1.39648092,9.47586823,-3.61745358
+	pos = 1.39648402,9.49802971,-3.32001591
 	attPos = 0,0,0
 	attPos0 = -1.8115518E-08,-0.131755933,0.0167996138
-	rot = 0.00872430205,5.63570097E-08,-1.69626674E-07,0.999961972
+	rot = 0.00872427225,5.75197561E-08,-1.77374858E-07,0.999962151
 	attRot = 0.707106709,0,0,-0.707106709
 	attRot0 = -2.08616228E-07,-2.68220901E-07,-4.21468336E-08,1
 	mir = 1,1,1
@@ -9241,6 +9294,7 @@ PART
 		isEnabled = True
 		decoupleForward = False
 		decoupleSpeed = 5
+		useSymCounterpart = False
 		maxAltitude = 0
 		terminalGuidanceShouldActivate = False
 		DetonationOffset = 0.100000001
@@ -9262,7 +9316,10 @@ PART
 		CruiseAltitude = 500
 		CruiseSpeed = 300
 		CruisePredictionTime = 5
+		CruisePopup = False
 		customTurretID = 0
+		customTurretLoft = False
+		customTurretLoftFac = 0.5
 		gpsSet = False
 		assignedGPSCoords = (0, 0, 0)
 		gpsTargetName = Unknown
@@ -9300,7 +9357,6 @@ PART
 	{
 		name = BDExplosivePart
 		isEnabled = True
-		tntMass = 15
 		detonationRange = -1
 		detonateAtMinimumDistance = False
 		Armed = True
@@ -9444,10 +9500,10 @@ PART
 	part = elevon3_4293297088
 	partName = Part
 	persistentId = 3264806556
-	pos = 1.539621,9.76933861,-7.0254879
+	pos = 1.53962433,9.85078335,-6.72751093
 	attPos = 1.10236776,-0.00326001644,-9.7117686E-07
 	attPos0 = -0.0339998193,-1.79399884,-9.53188987E-07
-	rot = 0.0125561561,0.719231844,0.694550872,0.0121252052
+	rot = 0.0126615036,0.713142693,0.70080179,0.0120151546
 	attRot = 0.49999994,0.49999994,0.49999994,-0.49999994
 	attRot0 = 5.96046519E-08,-4.26325608E-14,5.96046519E-08,1
 	mir = 1,1,1
@@ -9560,7 +9616,7 @@ PART
 		dynamicControlStartSpeed = 200
 		exponent = 2
 		minControl = 0.100000001
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -9624,10 +9680,10 @@ PART
 	part = structuralWing4_4293293634
 	partName = Part
 	persistentId = 2445599093
-	pos = 0.538561463,9.95701408,-2.65564704
+	pos = 0.538562894,9.96215534,-2.35505462
 	attPos = 0.250562847,0.653723598,1.28384136E-06
 	attPos0 = -1.25056243,1.94627678,-1.73210594E-07
-	rot = 0.0125559922,0.719231844,0.694550872,0.012125114
+	rot = 0.0126613388,0.713142693,0.70080179,0.0120150661
 	attRot = 0,0,0,1
 	attRot0 = 1.78813934E-07,2.98023153E-08,-2.98023064E-08,1
 	mir = 1,1,1
@@ -9726,7 +9782,7 @@ PART
 	{
 		name = FARWingAerodynamicModel
 		isEnabled = True
-		massMultiplier = 1.3
+		massMultiplier = 1.29999995
 		massOverride = -3.40282347E+38
 		stagingEnabled = True
 		EVENTS
@@ -9775,7 +9831,7 @@ PART
 	part = bahaHiddenVulcan_4293562548
 	partName = Part
 	persistentId = 59782846
-	pos = 0,9.36999893,-5.05001259
+	pos = 0,9.36999893,-5.05001497
 	attPos = -2.01092629E-10,-0.107633442,-0.0210485458
 	attPos0 = 2.01092629E-10,-0.192367047,0.621048093
 	rot = 1.00000012,1.00546327E-08,3.55271368E-15,2.38418579E-07
@@ -10006,7 +10062,7 @@ PART
 	part = baha20mmAmmo_4293559506
 	partName = Part
 	persistentId = 2370371066
-	pos = 0,9.59999847,-4.75001097
+	pos = 0,9.59999847,-4.75001335
 	attPos = -2.2703357E-09,-0.858154774,-0.331953406
 	attPos0 = 2.2703357E-09,0.85815382,0.731953442
 	rot = 1.00000012,1.00546327E-08,3.55271368E-15,2.38418579E-07
@@ -10197,7 +10253,7 @@ PART
 	part = bdRadome1inline_4293642818
 	partName = Part
 	persistentId = 452204926
-	pos = 0,10,0.700001061
+	pos = 0,10,0.700000584
 	attPos = 0,-0.0597997904,5.96046448E-08
 	attPos0 = 0,0.759800076,-1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -10219,7 +10275,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	link = shockConeIntake_4293730776
-	attN = bottom01,probeStackSmall_4293912696_0|-0.659799993|0_0|-1|0_0|-0.659799993|0_0|-1|0
+	attN = bottom01,probeStackSmall_4294389776_0|-0.659799993|0_0|-1|0_0|-0.659799993|0_0|-1|0
 	attN = top,shockConeIntake_4293730776_0|0.659799993|0_0|1|0_0|0.659799993|0_0|1|0
 	EVENTS
 	{
@@ -10382,7 +10438,7 @@ PART
 	part = shockConeIntake_4293730776
 	partName = Part
 	persistentId = 926956625
-	pos = 0,10,1.99000812
+	pos = 0,10,1.99000907
 	attPos = 0,0.0152007341,-2.38418522E-07
 	attPos0 = 0,1.28480053,0
 	rot = 0.707106829,0,0,0.707106829
