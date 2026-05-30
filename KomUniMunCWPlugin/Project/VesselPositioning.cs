@@ -11,7 +11,7 @@ namespace KomUniMunVesselRectifier
             VerboseLogging.Log($"Marking vessel {vessel.vesselName} as FLYING.");
             ProtoVessel protoVessel = vessel.protoVessel;
 
-            // This shouldn't be necessary, right?
+            // This shouldn't be necessary, right? It works so...
             if (protoVessel != null)
             {
                 protoVessel.situation = Vessel.Situations.FLYING;
@@ -78,8 +78,24 @@ namespace KomUniMunVesselRectifier
             float altitudeAboveGround = UnityEngine.Random.Range(Settings.MinAGL, Settings.MaxAGL);
             Vector3d newPosition =
                 vessel.mainBody.position + upDirection * (terrainRadius + altitudeAboveGround);
-            Vector3d newVelocity =
-                vessel.mainBody.getRFrmVel(newPosition) + northTangent * Settings.SpawnSpeed;
+
+            // Determine relative velocity vector based on vessel type
+            Vector3d relativeVelocity = Vector3d.zero;
+
+            if (vessel.vesselName.IsContractHelicopter())
+            {
+                relativeVelocity = upDirection * Settings.HelicopterSpawnSpeed;
+            }
+            else if (vessel.vesselName.IsContractAircraft())
+            {
+                relativeVelocity = northTangent * Settings.AircraftSpawnSpeed;
+            }
+            else
+            {
+                relativeVelocity = northTangent * Settings.SpawnSpeed;
+            }
+
+            Vector3d newVelocity = vessel.mainBody.getRFrmVel(newPosition) + relativeVelocity;
 
             vessel.SetPosition(newPosition);
             vessel.SetWorldVelocity(newVelocity);
@@ -97,7 +113,13 @@ namespace KomUniMunVesselRectifier
         // Forces all parts of the vessel to unpack so physics can resume. Kludgy but ok.
         public static void ForceUnpackAllParts(Vessel vessel)
         {
-            if (vessel == null || !vessel.vesselName.IsContractAircraft())
+            if (
+                vessel == null
+                || (
+                    !vessel.vesselName.IsContractAircraft()
+                    && !vessel.vesselName.IsContractHelicopter()
+                )
+            )
                 return;
 
             VerboseLogging.Log($"Forcing unpack on {vessel.vesselName}.");
