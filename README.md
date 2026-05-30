@@ -38,10 +38,6 @@ The pack will feature many missions with locations spread all throught Kerbin an
 
 [Ferram Aerospace Research Continued][7]
 
-For the pack to work as intended you must untick the Disable Guard Mode on Spawn option found in the BDA+ settings:
-
-<p align="center"><img src="https://i.imgur.com/rJe8icW.png" alt="Guide Image"/></p>
-
 [1]: https://forum.kerbalspaceprogram.com/topic/229136-1125-komunimun-contractual-warfare
 [2]: https://github.com/narni-tchereskov/KomUniMun-Contractual-Warfare/releases/latest
 [3]: https://spacedock.info/mod/4018/Contract%20Pack:%20KomUniMun%20Contractual%20Warfare
