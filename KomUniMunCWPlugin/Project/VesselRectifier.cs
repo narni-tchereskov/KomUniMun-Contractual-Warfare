@@ -248,7 +248,10 @@ namespace KomUniMunVesselRectifier
 
             if (vessel.loaded && !vessel.packed)
             {
-                if (vessel.vesselName.IsContractAircraft())
+                if (
+                    vessel.vesselName.IsContractAircraft()
+                    || vessel.vesselName.IsContractHelicopter()
+                )
                     vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
 
                 if (tracking.UnpackedAtTime < 0)
@@ -297,7 +300,7 @@ namespace KomUniMunVesselRectifier
                 return;
             }
 
-            if (vessel.vesselName.IsContractAircraft())
+            if (vessel.vesselName.IsContractAircraft() || vessel.vesselName.IsContractHelicopter())
             {
                 try
                 {
