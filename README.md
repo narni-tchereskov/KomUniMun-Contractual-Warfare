@@ -39,7 +39,7 @@ The pack will feature many missions with locations spread all throught Kerbin an
 [Ferram Aerospace Research Continued][7]
 
 [1]: https://forum.kerbalspaceprogram.com/topic/229136-1125-komunimun-contractual-warfare
-[2]: https://github.com/narni-tchereskov/KomUniMun-Contractual-Warfare/releases/latest
+[2]: https://github.com/narni-tchereskov/KomUniMun-Contractual-Warfare/releases
 [3]: https://spacedock.info/mod/4018/Contract%20Pack:%20KomUniMun%20Contractual%20Warfare
 [4]: https://forum.kerbalspaceprogram.com/topic/209092-19x-112x-bdarmory-plus-bda-v11110-2025-10-18
 [5]: https://forum.kerbalspaceprogram.com/topic/50533-18x-112x-module-manager-423-july-03th-2023-fireworks-season
