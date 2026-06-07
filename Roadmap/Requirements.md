@@ -7,9 +7,8 @@ This is a list of useful requirements for all the missions contained in this pac
 Partmodule Unlocked
 Completed Contract
 
-Flyby
+Orbit
 Landed/Splashdown
-Rendezvous
 
 Spacewalk
 Surface EVA
