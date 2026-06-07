@@ -9,9 +9,6 @@ TargetDestroyed
 HasPassengers
 KerbalDeaths
 
-Timer
-Duration
-
 ReachState
 
 ReturnHome
@@ -21,3 +18,4 @@ RecoverVessel
 PartTest
 PartValidation
 Rendezvous
+Duration

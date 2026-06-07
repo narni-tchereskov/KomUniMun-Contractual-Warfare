@@ -14,7 +14,6 @@ Spacewalk
 Surface EVA
 
 SCANsat Location Coverage
-RemoteTech Coverage
 
 ValidVessel
 Expression
