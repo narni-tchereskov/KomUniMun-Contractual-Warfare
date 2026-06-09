@@ -2,7 +2,7 @@ ship = awacs_01a
 version = 1.12.5
 description = 
 type = SPH
-size = 9.30324554,3.29078674,11.6933098
+size = 9.30324554,3.29078674,11.6933136
 steamPublishedFileId = 0
 persistentId = 2013100904
 rot = 0,0,0,1
@@ -63,6 +63,36 @@ PART
 			wasActiveBeforePartWasAdjusted = False
 		}
 		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
 		{
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
@@ -233,6 +263,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 400
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 250
@@ -362,6 +411,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -409,6 +490,25 @@ PART
 		CoreThermalEnergy = 0
 		stagingEnabled = True
 		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 90
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -476,7 +576,7 @@ PART
 	part = missileController_4294013716
 	partName = Part
 	persistentId = 1448145098
-	pos = 0,10,-1.19209318E-07
+	pos = 0,10,-1.19209346E-07
 	attPos = 3.26080407E-09,0.0640008748,-0.386042207
 	attPos0 = -3.26080407E-09,-0.064000994,0.386042207
 	rot = 0.704378664,8.73146888E-10,6.29365644E-08,-0.709824502
@@ -516,6 +616,42 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -560,6 +696,7 @@ PART
 		targetWeightProtectTeammate = 0.5
 		targetWeightProtectVIP = 1
 		targetWeightAttackVIP = 0.699999988
+		targetWeightUncontrolled = 0
 		evadeThreshold = 5
 		cmThreshold = 5
 		cmRepetition = 3
@@ -686,7 +823,6 @@ PART
 	{
 		name = ModuleWingCommander
 		isEnabled = True
-		savedWingmen = 
 		spread = 100
 		lag = 7
 		commandSelf = False
@@ -800,6 +936,42 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -881,8 +1053,6 @@ PART
 		hardMinAltitude = True
 		maxAltitude = 6000
 		maxAltitudeToggle = True
-		bombingAltitude = 500
-		divebombing = False
 		maxSpeed = 360
 		takeOffSpeed = 70
 		minSpeed = 70
@@ -905,6 +1075,10 @@ PART
 		postStallAoA = 30
 		ImmelmannTurnAngle = 30
 		ImmelmannPitchUpBias = 10
+		divebombing = False
+		bombingAltitude = 500
+		divebombingAngle = 60
+		extendDistanceBombing = 1000
 		minEvasionTime = 0.200000003
 		evasionThreshold = 25
 		evasionTimeThreshold = 0.100000001
@@ -912,14 +1086,16 @@ PART
 		evasionNonlinearity = 2
 		evasionIgnoreMyTargetTargetingMe = False
 		evasionMissileKinematic = True
+		evasionMissileEmergencyNotchVel = 0
 		collisionAvoidanceThreshold = 20
 		vesselCollisionAvoidanceLookAheadPeriod = 1.5
 		vesselCollisionAvoidanceStrength = 2
+		AvoidMass = 0
 		vesselStandoffDistance = 200
+		retreatDistance = 4000
 		extendDistanceAirToAir = 300
 		extendAngleAirToAir = 0
 		extendDistanceAirToGroundGuns = 1500
-		extendDistanceAirToGround = 2000
 		extendTargetVel = 0.800000012
 		extendTargetAngle = 78
 		extendTargetDist = 300
@@ -939,6 +1115,8 @@ PART
 		ClockwiseOrbit = True
 		upToEleven = False
 		standbyMode = False
+		divebombCorrectionPIDConfig = "P":5.0,"I":0.5,"D":0.5,"TimeStep":0.019999999552965165,"ILimit":1000.0,"SetPoint":0.0,"smoothInput":true,"smoothingHalflife":0.10000000149011612,"IntegralRescaling":1.0
+		bombingLateralCorrectionPIDConfig = "P":1.0,"I":0.30000001192092898,"D":0.5,"TimeStep":0.019999999552965165,"ILimit":100.0,"SetPoint":0.0,"smoothInput":true,"smoothingHalflife":0.10000000149011612,"IntegralRescaling":1.0
 		pilotOn = True
 		stagingEnabled = True
 		EVENTS
@@ -1038,7 +1216,7 @@ PART
 	part = batteryPack_4294013646
 	partName = Part
 	persistentId = 1732464507
-	pos = 0,10,-1.78813991E-07
+	pos = 0,10,-1.78814048E-07
 	attPos = 0,0.100000754,-0.519243836
 	attPos0 = 0,-0.100000933,0.519243836
 	rot = 0,0,4.21468478E-08,1.00000012
@@ -1080,9 +1258,62 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 35
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -1152,7 +1383,7 @@ PART
 	part = SurfAntenna_4294013608
 	partName = Part
 	persistentId = 3781965242
-	pos = 0,10,-1.34110479E-07
+	pos = 0,10,-1.34110508E-07
 	attPos = -7.0845104E-08,0.0070194006,0.587523937
 	attPos0 = 7.0845104E-08,-0.00701953471,-0.587523937
 	rot = 1.00000012,-1.68703139E-07,-3.79321534E-07,3.27825546E-07
@@ -1194,6 +1425,42 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -1214,6 +1481,25 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 5
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -1276,7 +1562,7 @@ PART
 	part = Mark1Cockpit_4294013052
 	partName = Part
 	persistentId = 3744089193
-	pos = 0,10,0.200000122
+	pos = 0,10,0.200000182
 	attPos = 0,-0.0749999434,0
 	attPos0 = 0,0.275000036,-2.98023224E-08
 	rot = 0.707106829,0,0,0.707106829
@@ -1314,6 +1600,36 @@ PART
 			wasActiveBeforePartWasAdjusted = False
 		}
 		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
 		{
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
@@ -1500,6 +1816,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleInventoryPart
 		isEnabled = True
 		stagingEnabled = True
@@ -1589,6 +1924,83 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleHMD
+		isEnabled = True
+		HMD = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = ServiceModule
+		utilization = 86
+		volume = 37.549999999999997
+		mass = 0
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 0.59964158739484819
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = ElectricCharge
+			note = (pressurized)
+			utilization = 1000
+			mass = 0.00288999989
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 37550
+			maxAmount = 37550
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
+	MODULE
+	{
+		name = KerbalSuitSelector
+		isEnabled = True
+		suit = Default
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -1609,20 +2021,9 @@ PART
 	RESOURCE
 	{
 		name = ElectricCharge
-		amount = 50
-		maxAmount = 50
+		amount = 37550
+		maxAmount = 37550
 		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = MonoPropellant
-		amount = 0
-		maxAmount = 7.5
-		flowState = False
 		isTweakable = True
 		hideFlow = False
 		isVisible = True
@@ -1634,7 +2035,7 @@ PART
 	part = MK1CrewCabin_4291203320
 	partName = Part
 	persistentId = 1273960074
-	pos = 0,10,-1.00000048
+	pos = 0,10,-1.00000072
 	attPos = 0,0.0374996662,0
 	attPos0 = 0,-1.03750002,1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -1677,6 +2078,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -1769,6 +2202,25 @@ PART
 				actionGroup = Light
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -1911,6 +2363,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -2001,7 +2485,7 @@ PART
 	part = MK1Fuselage_4292943762
 	partName = Part
 	persistentId = 2164155348
-	pos = 0,10,-2.87500668
+	pos = 0,10,-2.87500715
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500048,3.57627641E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2020,7 +2504,7 @@ PART
 	attm = 0
 	sameVesselCollision = False
 	modCost = 0
-	modMass = 0
+	modMass = -0.0175372213
 	modSize = 0,0,0
 	link = wingConnector4_4293049002
 	link = Mk1FuselageStructural_4291156658
@@ -2048,9 +2532,58 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -2123,11 +2656,56 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Fuselage
+		utilization = 86
+		volume = 1900
+		mass = 0.232462779
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 8.2032803147699127
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = Kerosene
+			note = (pressurized)
+			utilization = 1
+			mass = 7.6999997E-05
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 1900
+			maxAmount = 1900
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 400
-		maxAmount = 400
+		name = Kerosene
+		amount = 1900
+		maxAmount = 1900
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -2140,7 +2718,7 @@ PART
 	part = wingConnector4_4293049002
 	partName = Part
 	persistentId = 2020429475
-	pos = -5.40438378E-08,10.6181898,-2.49234533
+	pos = -5.40438378E-08,10.6181898,-2.49234581
 	attPos = 0,0,0
 	attPos0 = -5.40438378E-08,-0.117340289,-0.618189812
 	rot = -0.500000238,0.499999881,0.500000238,-0.499999881
@@ -2186,6 +2764,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -2194,6 +2804,25 @@ PART
 	{
 		name = ModuleLiftingSurface
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 600
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2262,7 +2891,7 @@ PART
 	part = bdRadome1snub_4293012986
 	partName = Part
 	persistentId = 304282513
-	pos = 0.485001624,11.4182024,-2.49235821
+	pos = 0.485001683,11.4182034,-2.49235868
 	attPos = -0.200006485,-5.85692624E-06,0.315000653
 	attPos0 = -0.600005627,-7.55717838E-06,-0.800001621
 	rot = 0.5,0.500000179,-0.500000179,0.49999994
@@ -2304,6 +2933,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2402,10 +3063,10 @@ PART
 	part = bdRadome1snub_4293013236
 	partName = Part
 	persistentId = 3150852
-	pos = -0.485000312,11.4182014,-2.49235725
+	pos = -0.485000432,11.4182014,-2.49235773
 	attPos = -0.199997067,3.67983375E-06,-0.300000906
 	attPos0 = -0.600004435,-6.6035027E-06,0.800001264
-	rot = 0.49999994,-0.500000179,0.500000298,0.5
+	rot = 0.49999997,-0.500000179,0.500000298,0.49999997
 	attRot = 0.707106471,1.9221747E-07,0.707106888,4.6745896E-09
 	attRot0 = -0.499999881,-0.500000179,-0.500000238,-0.499999702
 	mir = 1,1,1
@@ -2444,6 +3105,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2542,7 +3235,7 @@ PART
 	part = bdRadome1_4293009884
 	partName = Part
 	persistentId = 1699861280
-	pos = 5.42002681E-07,11.4181948,-1.55235159
+	pos = 5.42002681E-07,11.4181957,-1.55235255
 	attPos = -0.199998498,-0.597997487,5.96046519E-08
 	attPos0 = -0.600003004,1.59799564,5.96046519E-08
 	rot = -0.707106888,0,0,-0.707106888
@@ -2583,6 +3276,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2698,10 +3423,10 @@ PART
 	part = bdRadome1_4293007710
 	partName = Part
 	persistentId = 2887913645
-	pos = 5.42002681E-07,11.4181929,-3.43236923
+	pos = 5.42002681E-07,11.4181938,-3.43237114
 	attPos = -0.199998796,1.91560733,5.96046519E-08
 	attPos0 = -0.600001037,-2.91561055,5.96046519E-08
-	rot = -3.01457772E-14,-0.707106888,0.707106888,5.02429621E-14
+	rot = -4.01943696E-14,-0.707106888,0.707106888,4.01943696E-14
 	attRot = 0,0,0.999999881,0
 	attRot0 = -0.707106829,-2.38418579E-07,-0.707106829,2.38418579E-07
 	mir = 1,1,1
@@ -2739,6 +3464,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -2854,7 +3611,7 @@ PART
 	part = Mk1FuselageStructural_4291156658
 	partName = Part
 	persistentId = 1088142783
-	pos = 0,10,-4.75000906
+	pos = 0,10,-4.75001001
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500131,0
 	rot = 0.707106829,0,0,0.707106829
@@ -2902,9 +3659,60 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -2963,7 +3771,7 @@ PART
 	part = pointyNoseConeB_4291160658
 	partName = Part
 	persistentId = 3209666592
-	pos = 0,10,-6.31252623
+	pos = 0,10,-6.31253004
 	attPos = 0,0,0
 	attPos0 = 0,-1.56250143,4.76836846E-07
 	rot = 0,-0.707106829,0.707106829,0
@@ -3006,6 +3814,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -3030,6 +3870,25 @@ PART
 		name = ModulePartVariants
 		isEnabled = True
 		useVariantMass = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3098,7 +3957,7 @@ PART
 	part = winglet3_4292981172
 	partName = Part
 	persistentId = 1037650055
-	pos = 0,11.1000023,-6.41255951
+	pos = 0,11.1000023,-6.41256332
 	attPos = 1.39935139E-07,0.260978818,0.00089263916
 	attPos0 = -1.39935139E-07,0.539025307,-1.10089254
 	rot = 0.500001073,-0.499999076,-0.500001311,0.499998778
@@ -3140,6 +3999,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -3268,6 +4159,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 800
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 400
@@ -3323,7 +4233,7 @@ PART
 	part = tailfin_4292978884
 	partName = Part
 	persistentId = 2095240759
-	pos = 0.0699992701,12.1200037,-7.2625761
+	pos = 0.0699992701,12.1200037,-7.26257992
 	attPos = 0.0567509979,0.643302679,-0.0149974227
 	attPos0 = -1.01999509,-0.850018799,-0.0699994713
 	rot = -0.706434131,0.030843582,0.0308435187,-0.706433535
@@ -3364,6 +4274,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -3484,6 +4426,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 450
@@ -3539,7 +4500,7 @@ PART
 	part = tailfin_4292979078
 	partName = Part
 	persistentId = 1652293605
-	pos = -0.0700006858,12.1200037,-7.2625742
+	pos = -0.0700006261,12.1200037,-7.26257801
 	attPos = -0.0567509979,0.643299818,-0.0149974227
 	attPos0 = -1.01999509,-0.850016892,0.0700004846
 	rot = 0.0308435187,-0.706433892,-0.706433892,0.030843582
@@ -3580,6 +4541,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -3708,6 +4701,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 450
@@ -3763,7 +4775,7 @@ PART
 	part = miniFuselage_4291180938
 	partName = Part
 	persistentId = 59560018
-	pos = -0.49000001,10.7399998,-5.45001554
+	pos = -0.49000001,10.7399998,-5.4500165
 	attPos = 0.14833957,-0.00650787354,-0.0516576767
 	attPos0 = -0.64833957,-0.693493843,-0.648342133
 	rot = -0.653280914,0.270599484,0.270599544,-0.653280914
@@ -3782,7 +4794,7 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
-	modMass = 0
+	modMass = 0.00558720715
 	modSize = 0,0,0
 	link = miniIntake_4291175148
 	link = miniJetEngine_4291170132
@@ -3810,9 +4822,58 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 400
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -3885,11 +4946,56 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Fuselage
+		utilization = 86
+		volume = 250
+		mass = 0.0305872075
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 2.1221617039340246
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = Kerosene
+			note = (pressurized)
+			utilization = 1
+			mass = 7.6999997E-05
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 250
+			maxAmount = 250
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 50
-		maxAmount = 50
+		name = Kerosene
+		amount = 250
+		maxAmount = 250
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -3902,7 +5008,7 @@ PART
 	part = miniIntake_4291175148
 	partName = Part
 	persistentId = 947532862
-	pos = -0.489999861,10.7399998,-4.98126841
+	pos = -0.489999861,10.7399998,-4.98126936
 	attPos = 0,0,0
 	attPos0 = -1.76952906E-08,0.468748212,-9.53916768E-08
 	rot = 0.653280854,-0.270599455,-0.270599633,0.653280973
@@ -3945,6 +5051,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -3965,6 +5103,25 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 125
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -4038,7 +5195,7 @@ PART
 	part = miniJetEngine_4291170132
 	partName = Part
 	persistentId = 3459755618
-	pos = -0.490000099,10.7399998,-5.91878605
+	pos = -0.490000099,10.7399998,-5.918787
 	attPos = 0,0,0
 	attPos0 = 1.76949602E-08,-0.468751907,9.53924228E-08
 	rot = 0.653280854,-0.270599455,-0.270599633,0.653280973
@@ -4079,6 +5236,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -4189,6 +5378,25 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 220
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4288,7 +5496,7 @@ PART
 	part = miniFuselage_4294329440
 	partName = Part
 	persistentId = 2689230231
-	pos = 0.49000001,10.7399998,-5.4500165
+	pos = 0.49000001,10.7399998,-5.45001745
 	attPos = -0.14833957,-0.00650882721,-0.0516576767
 	attPos0 = 0.64833957,-0.693493843,-0.648342133
 	rot = -0.270599484,0.653280914,0.653280914,-0.270599484
@@ -4307,7 +5515,7 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
-	modMass = 0
+	modMass = 0.00558720715
 	modSize = 0,0,0
 	link = miniIntake_4294329396
 	link = miniJetEngine_4294329348
@@ -4335,9 +5543,60 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 400
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -4410,11 +5669,56 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Fuselage
+		utilization = 86
+		volume = 250
+		mass = 0.0305872075
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 2.1221617039340246
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = Kerosene
+			note = (pressurized)
+			utilization = 1
+			mass = 7.6999997E-05
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 250
+			maxAmount = 250
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 50
-		maxAmount = 50
+		name = Kerosene
+		amount = 250
+		maxAmount = 250
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -4427,7 +5731,7 @@ PART
 	part = miniIntake_4294329396
 	partName = Part
 	persistentId = 3060670197
-	pos = 0.489999861,10.7399998,-4.98126936
+	pos = 0.489999861,10.7399998,-4.98127031
 	attPos = 0,0,0
 	attPos0 = -1.76952906E-08,0.468748212,-9.53916768E-08
 	rot = 0.653280914,0.270599365,0.270599604,0.653280914
@@ -4470,6 +5774,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -4490,6 +5826,25 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 125
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -4563,7 +5918,7 @@ PART
 	part = miniJetEngine_4294329348
 	partName = Part
 	persistentId = 201949173
-	pos = 0.490000069,10.7400007,-5.91878796
+	pos = 0.490000069,10.7400007,-5.91878891
 	attPos = 0,0,0
 	attPos0 = 1.76949602E-08,-0.468751907,9.53924228E-08
 	rot = 0.653280914,0.270599365,0.270599604,0.653280914
@@ -4604,6 +5959,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -4706,6 +6093,25 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 220
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4805,7 +6211,7 @@ PART
 	part = miniFuselage_4294330756
 	partName = Part
 	persistentId = 3029797948
-	pos = -0.850000024,10.25,-5.45001268
+	pos = -0.850000024,10.25,-5.45001364
 	attPos = 0.0857505202,0.0313167572,0.0373382568
 	attPos0 = -0.885750532,-0.731318951,-0.237338066
 	rot = -0.701057196,0.0922980532,0.0922979638,-0.701057076
@@ -4824,7 +6230,7 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
-	modMass = 0
+	modMass = 0.00558720715
 	modSize = 0,0,0
 	link = miniIntake_4294330708
 	link = miniJetEngine_4294330656
@@ -4852,9 +6258,58 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 400
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -4927,11 +6382,56 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Fuselage
+		utilization = 86
+		volume = 250
+		mass = 0.0305872075
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 2.1221617039340246
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = Kerosene
+			note = (pressurized)
+			utilization = 1
+			mass = 7.6999997E-05
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 250
+			maxAmount = 250
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 50
-		maxAmount = 50
+		name = Kerosene
+		amount = 250
+		maxAmount = 250
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -4944,10 +6444,10 @@ PART
 	part = miniIntake_4294330708
 	partName = Part
 	persistentId = 767634253
-	pos = -0.850000083,10.25,-4.98126602
+	pos = -0.850000083,10.25,-4.98126698
 	attPos = 0,0,0
 	attPos0 = -1.76952906E-08,0.468748212,-9.53916768E-08
-	rot = 0.701057136,-0.0922980011,-0.0922980011,0.701057136
+	rot = 0.701057136,-0.0922979936,-0.0922979936,0.701057136
 	attRot = 0,0,0,1
 	attRot0 = -8.42937027E-08,-1.49011603E-08,-4.470348E-08,1
 	mir = 1,1,1
@@ -4987,6 +6487,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -5007,6 +6539,25 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 125
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -5080,10 +6631,10 @@ PART
 	part = miniJetEngine_4294330656
 	partName = Part
 	persistentId = 1417789804
-	pos = -0.849999905,10.25,-5.91878462
+	pos = -0.849999905,10.25,-5.91878557
 	attPos = 0,0,0
 	attPos0 = 1.76949602E-08,-0.468751907,9.53924228E-08
-	rot = 0.701057136,-0.0922980011,-0.0922980011,0.701057136
+	rot = 0.701057136,-0.0922979936,-0.0922979936,0.701057136
 	attRot = 0,0,0,1
 	attRot0 = 0,-1.49011603E-08,-4.470348E-08,1
 	mir = 1,1,1
@@ -5121,6 +6672,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -5223,6 +6806,25 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 220
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5322,7 +6924,7 @@ PART
 	part = miniFuselage_4294328966
 	partName = Part
 	persistentId = 4053515923
-	pos = 0.850000024,10.25,-5.45001364
+	pos = 0.850000024,10.25,-5.45001459
 	attPos = -0.0857505202,0.0313158035,0.0373382568
 	attPos0 = 0.885750532,-0.731318951,-0.237338066
 	rot = -0.0922979861,0.701057076,0.701057196,-0.0922980756
@@ -5341,7 +6943,7 @@ PART
 	attm = 1
 	sameVesselCollision = False
 	modCost = 0
-	modMass = 0
+	modMass = 0.00558720715
 	modSize = 0,0,0
 	link = miniIntake_4294328912
 	link = miniJetEngine_4294328854
@@ -5369,9 +6971,60 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 400
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -5444,11 +7097,56 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleFuelTanks
+		isEnabled = True
+		type = Fuselage
+		utilization = 86
+		volume = 250
+		mass = 0.0305872075
+		_numberOfAddedMLILayers = 0
+		totalTankArea = 2.1221617039340246
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		TANK
+		{
+			name = Kerosene
+			note = (pressurized)
+			utilization = 1
+			mass = 7.6999997E-05
+			cost = 0
+			loss_rate = 0
+			wallThickness = 0.10000000000000001
+			wallConduction = 205
+			insulationThickness = 0
+			insulationConduction = 1
+			isDewar = False
+			temperature = 300
+			fillable = True
+			techRequired = 
+			amount = 250
+			maxAmount = 250
+		}
+		UPGRADESAPPLIED
+		{
+			upgrade = MLI.Upgrade1
+			upgrade = MLI.Upgrade2
+			upgrade = MLI.Upgrade3
+			upgrade = MLI.Upgrade4
+			upgrade = MLI.Upgrade5
+		}
+	}
 	RESOURCE
 	{
-		name = LiquidFuel
-		amount = 50
-		maxAmount = 50
+		name = Kerosene
+		amount = 250
+		maxAmount = 250
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -5461,7 +7159,7 @@ PART
 	part = miniIntake_4294328912
 	partName = Part
 	persistentId = 3734531095
-	pos = 0.850000083,10.25,-4.98126698
+	pos = 0.850000083,10.25,-4.98126793
 	attPos = 0,0,0
 	attPos0 = -1.76952906E-08,0.468748212,-9.53916768E-08
 	rot = 0.701057196,0.092298016,0.0922980011,0.701057076
@@ -5504,6 +7202,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -5524,6 +7254,25 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 125
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -5597,7 +7346,7 @@ PART
 	part = miniJetEngine_4294328854
 	partName = Part
 	persistentId = 3410644244
-	pos = 0.849999905,10.25,-5.91878653
+	pos = 0.849999905,10.25,-5.91878748
 	attPos = 0,0,0
 	attPos0 = 1.76949602E-08,-0.468751907,9.53924228E-08
 	rot = 0.701057196,0.092298016,0.0922980011,0.701057076
@@ -5638,6 +7387,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -5753,6 +7534,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 220
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 450
@@ -5839,7 +7639,7 @@ PART
 	part = sweptWing_4288913376
 	partName = Part
 	persistentId = 2190322298
-	pos = -0.150000006,9.60000038,-3.27501416
+	pos = -0.150000006,9.60000038,-3.27501488
 	attPos = 0.0342001989,0.0225629508,-0.0797150135
 	attPos0 = -0.150000006,-0.400007069,0.399999648
 	rot = -0.119721338,-0.715426326,-0.685185671,0.0659758747
@@ -5885,6 +7685,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -5893,6 +7725,25 @@ PART
 	{
 		name = ModuleLiftingSurface
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5961,10 +7812,10 @@ PART
 	part = StandardCtrlSrf_4288911692
 	partName = Part
 	persistentId = 2079040356
-	pos = -3.56666803,9.76273727,-4.54134607
+	pos = -3.56666994,9.76273727,-4.54134703
 	attPos = 0,0,0
 	attPos0 = 2.97481799,-2.11042309,-0.00961498637
-	rot = 0.0513071045,-0.723557591,-0.681561708,-0.0964666829
+	rot = 0.0513071194,-0.723557651,-0.681561768,-0.0964666978
 	attRot = 0,0,-0.707106709,0.707106709
 	attRot0 = -1.32567806E-07,2.35547503E-07,-0.234395996,0.972141325
 	mir = 1,1,1
@@ -6002,6 +7853,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -6130,6 +8013,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 270
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 175
@@ -6185,10 +8087,10 @@ PART
 	part = StandardCtrlSrf_4288911450
 	partName = Part
 	persistentId = 249012774
-	pos = -1.80004609,9.67373848,-4.16310787
+	pos = -1.80004716,9.67373848,-4.16310883
 	attPos = 0,0,0
 	attPos0 = 1.36479497,-1.28610599,0.0049938201
-	rot = 0.0513071045,-0.723557591,-0.681561708,-0.0964666829
+	rot = 0.0513071194,-0.723557651,-0.681561768,-0.0964666978
 	attRot = 0,0,-0.707106709,0.707106709
 	attRot0 = -1.32567806E-07,2.35547503E-07,-0.234395996,0.972141325
 	mir = 1,1,1
@@ -6226,6 +8128,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -6354,6 +8288,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 270
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 175
@@ -6409,7 +8362,7 @@ PART
 	part = basicFin_4293087726
 	partName = Part
 	persistentId = 3442748104
-	pos = -4.45036507,9.85095501,-4.96736193
+	pos = -4.45036745,9.85095501,-4.9673624
 	attPos = -0.0902636051,-0.25078392,0.0390039347
 	attPos0 = 3.81278872,-2.4989953,6.55651036E-07
 	rot = 0.560985625,-0.43045941,-0.43045941,0.560985625
@@ -6452,6 +8405,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -6460,6 +8445,25 @@ PART
 	{
 		name = ModuleLiftingSurface
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 90
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6528,7 +8532,7 @@ PART
 	part = sweptWing_4288914378
 	partName = Part
 	persistentId = 1918500891
-	pos = 0.150000006,9.60000038,-3.27501559
+	pos = 0.150000006,9.60000038,-3.27501631
 	attPos = -0.0342001989,0.0225627124,-0.0797150135
 	attPos0 = 0.150000006,-0.400008261,0.399999648
 	rot = -0.685185909,0.0659757853,-0.119721383,-0.715426087
@@ -6574,6 +8578,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -6582,6 +8618,25 @@ PART
 	{
 		name = ModuleLiftingSurface
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = -1
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6650,7 +8705,7 @@ PART
 	part = StandardCtrlSrf_4288911598
 	partName = Part
 	persistentId = 2247315067
-	pos = 3.56665683,9.76273727,-4.54134893
+	pos = 3.56665659,9.76273727,-4.54134989
 	attPos = 0,0,0
 	attPos0 = 2.97481894,-2.11042309,0.00961522106
 	rot = -0.681562066,-0.0964666605,0.0513071418,-0.723557353
@@ -6691,6 +8746,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -6819,6 +8906,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 270
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 175
@@ -6874,7 +8980,7 @@ PART
 	part = StandardCtrlSrf_4288911410
 	partName = Part
 	persistentId = 271209479
-	pos = 1.80004144,9.67373848,-4.1631093
+	pos = 1.80004144,9.67373848,-4.16311026
 	attPos = 0,0,0
 	attPos0 = 1.36479497,-1.28610599,-0.00499370601
 	rot = -0.681562066,-0.0964666605,0.0513071418,-0.723557353
@@ -6915,6 +9021,38 @@ PART
 		RemoveSameVesselInteraction
 		{
 			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
 			wasActiveBeforePartWasAdjusted = False
 		}
 	}
@@ -7043,6 +9181,25 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 270
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = HitpointTracker
 		isEnabled = True
 		Hitpoints = 175
@@ -7098,7 +9255,7 @@ PART
 	part = basicFin_4293087560
 	partName = Part
 	persistentId = 527885531
-	pos = 4.45035505,9.85095406,-4.96736288
+	pos = 4.45035505,9.85095406,-4.96736383
 	attPos = -0.0902631283,-0.250784636,-0.0390028767
 	attPos0 = 3.81278992,-2.49899507,3.7252903E-09
 	rot = -0.430459529,0.560985506,0.560985625,-0.430459291
@@ -7141,6 +9298,38 @@ PART
 			actionGroup = None
 			wasActiveBeforePartWasAdjusted = False
 		}
+		AutostrutOff
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutRoot
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutHeaviest
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		AutostrutGrandparent
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesEnableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
+		ResourcesDisableFlow
+		{
+			actionGroup = None
+			active = False
+			wasActiveBeforePartWasAdjusted = False
+		}
 	}
 	PARTDATA
 	{
@@ -7149,6 +9338,25 @@ PART
 	{
 		name = ModuleLiftingSurface
 		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		packedVolume = 90
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
