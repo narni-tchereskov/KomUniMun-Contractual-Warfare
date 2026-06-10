@@ -38,9 +38,9 @@ The pack will feature many missions with locations spread all throught Kerbin an
 
 [Ferram Aerospace Research Continued][7]
 
-[KerBalloons][9]
+[KerBalloons][8]
 
-[SCANsat][8]
+[SCANsat][9]
 
 [RealFuels][10]
 
