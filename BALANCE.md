@@ -4,9 +4,11 @@ This is a simple guide for balancing mission rewards, values may be changed arbi
 
 ## Rough Values
 
-Science rewards -> Funds reward / 4000
+Science rewards -> Arbitrary, keep low to avoid balance issues
 Reputation rewards -> Funds reward / 1000
 
+10 Units - 20000
+9 Units - 18000
 8 Units - 16000
 7 Units - 14000
 6 Units - 12000
