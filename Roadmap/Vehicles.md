@@ -19,11 +19,6 @@ This is a list of vehicle periods which are currently required for the next step
 - lateSPAA
 - standardSPAA
 
-- earlyAAA
-- midAAA
-- lateAAA
-- standardAAA
-
 - midSAM
 - lateSAM
 - standardSAM

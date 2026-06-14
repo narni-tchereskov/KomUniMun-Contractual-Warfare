@@ -1,4 +1,4 @@
-ship = static_01a
+ship = aaa_03a
 version = 1.12.5
 description = 
 type = SPH
@@ -16,7 +16,7 @@ PART
 {
 	part = probeCoreOcto2.v2_4292672220
 	partName = Part
-	persistentId = 3997473618
+	persistentId = 2697640863
 	pos = 0,10,0
 	attPos = 0,0,0
 	attPos0 = 0,10,0
@@ -259,7 +259,7 @@ PART
 {
 	part = SurfAntenna_4292672156
 	partName = Part
-	persistentId = 2124688930
+	persistentId = 150960684
 	pos = 0,10,0
 	attPos = -7.44645767E-09,-0.000813007355,0.33593753
 	attPos0 = 7.44645767E-09,0.000813007355,-0.33593753
@@ -401,7 +401,7 @@ PART
 {
 	part = fairingSize1_4292672124
 	partName = Part
-	persistentId = 3819157121
+	persistentId = 361640194
 	pos = 0,10,0
 	attPos = -2.50070258E-08,0.0179567337,0.286047041
 	attPos0 = 2.50070258E-08,-0.0179567337,-0.286047041
@@ -427,8 +427,8 @@ PART
 	link = structuralIBeam2_4292665470
 	link = structuralIBeam2_4292665434
 	link = structuralIBeam2_4292665398
-	link = flagPartFlat_4290035930
-	link = flagPartFlat_4290035596
+	link = bahaGatlingGun_4292653990
+	link = baha20mmAmmo_4292651670
 	srfN = ,probeCoreOcto2.v2_4292672220,collider,0|0|0,0|1|0,0|0|0
 	attN = interstage01a,Null_0_0|0.699999988|0_0|-1|0_0|0.699999988|0_0|-1|0
 	attN = interstage01b,Null_0_0|0.74000001|0_0|1|0_0|0.74000001|0_0|1|0
@@ -820,7 +820,7 @@ PART
 {
 	part = missileController_4292671896
 	partName = Part
-	persistentId = 2657158647
+	persistentId = 889628501
 	pos = 0,10,0
 	attPos = 3.14722026E-09,0,9.72305088E-07
 	attPos0 = -3.14722026E-09,0,-9.72305088E-07
@@ -877,7 +877,7 @@ PART
 		AutoFireCosAngleAdjustment = 3
 		guardAngle = 200
 		guardRange = 100000
-		gunRange = 0
+		gunRange = 2500
 		multiTargetNum = 1
 		multiMissileTgtNum = 2
 		maxMissilesOnTarget = 1
@@ -922,8 +922,8 @@ PART
 		isVIP = False
 		weaponChannel = 0
 		underAttackAG = None
-		guardMode = False
-		team = <"Name":"Target","Neutral":false,"Allies":[]>
+		guardMode = True
+		team = <"Name":"Unknown","Neutral":false,"Allies":[]>
 		isArmed = False
 		stagingEnabled = True
 		EVENTS
@@ -1102,7 +1102,7 @@ PART
 {
 	part = rtg_4292671852
 	partName = Part
-	persistentId = 945787676
+	persistentId = 363525589
 	pos = 0,10,0
 	attPos = 0,0,0
 	attPos0 = 0,0,0
@@ -1278,7 +1278,7 @@ PART
 {
 	part = batteryPack_4292671818
 	partName = Part
-	persistentId = 1211855640
+	persistentId = 3969230746
 	pos = 0,9.90000057,1.49011612E-08
 	attPos = 0,9.53674316E-07,0
 	attPos0 = 0,-0.100000381,0
@@ -1410,7 +1410,7 @@ PART
 {
 	part = structuralIBeam2_4292665688
 	partName = Part
-	persistentId = 1808312522
+	persistentId = 4158868330
 	pos = 0,9.71000004,1.72749996
 	attPos = 2.03416405E-07,-0.0711507797,0.052334547
 	attPos0 = -2.1215871E-07,-0.0288496017,-2.25233459
@@ -1536,7 +1536,7 @@ PART
 {
 	part = structuralIBeam2_4292665470
 	partName = Part
-	persistentId = 1708579438
+	persistentId = 3249219527
 	pos = 1.72749972,9.71000004,1.3371718E-07
 	attPos = 0.052334547,-0.0711507797,-2.00297052E-07
 	attPos0 = -2.25233388,-0.0288494043,7.79091636E-08
@@ -1662,7 +1662,7 @@ PART
 {
 	part = structuralIBeam2_4292665434
 	partName = Part
-	persistentId = 2156799925
+	persistentId = 3813443681
 	pos = -2.01728056E-07,9.71000004,-1.72749984
 	attPos = -2.07991647E-07,-0.0711507797,-0.052334547
 	attPos0 = 4.09064029E-07,-0.0288496017,2.25233459
@@ -1788,7 +1788,7 @@ PART
 {
 	part = structuralIBeam2_4292665398
 	partName = Part
-	persistentId = 1401861213
+	persistentId = 4215830114
 	pos = -1.72749972,9.71000004,1.8768219E-07
 	attPos = -0.052334547,-0.0711507797,2.0653583E-07
 	attPos0 = 2.25233388,-0.0288497992,-3.46408342E-07
@@ -1912,32 +1912,31 @@ PART
 }
 PART
 {
-	part = flagPartFlat_4290087722
+	part = bahaGatlingGun_4292653990
 	partName = Part
-	persistentId = 3728483630
-	pos = -1.60000002,10.1750002,-2
-	attPos = 1.01108027,-0.0524998456,2
-	attPos0 = -1.08986072E-07,-1.99999976,-2.38418608E-07
-	rot = -0.707106769,1.12382281E-08,-2.72941634E-08,-0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = 0,0,0,1
+	persistentId = 2563618927
+	pos = 0,10.5,-0.100000001
+	attPos = 7.41642268E-08,-0.0292196274,0.526706219
+	attPos0 = -3.04528456E-08,0.529219627,-0.426706195
+	rot = 3.23581268E-08,1,-8.42937027E-08,-3.23581268E-08
+	attRot = 0,0.999999881,0,0
+	attRot0 = 8.42937027E-08,3.23581233E-08,-1.1353265E-08,1
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = True
-	istg = -1
+	istg = 0
 	resPri = 0
 	dstg = 2
-	sidx = -1
-	sqor = -1
+	sidx = 0
+	sqor = 1
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = flagPartFlat_4290038536
-	srfN = srfAttach,flagPartFlat_4290035930,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
+	srfN = srfAttach,fairingSize1_4292672124,Collider 1,0|-0.301719993|0,0|-0.75999999|0,0|-0.301719993|0
 	EVENTS
 	{
 	}
@@ -1964,120 +1963,16 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecalBackground
+		name = ModuleTurret
 		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
+		maxPitch = 65
+		minPitch = -8
+		yawRange = 90
+		yawStandbyAngle = 0
+		minPitchLimit = -8
+		maxPitchLimit = 65
+		yawRangeLimit = 90
 		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
 		EVENTS
 		{
 		}
@@ -2090,17 +1985,67 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = ModuleWeapon
 		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
+		WeaponDisplayName = Vulcan Turret
+		customTurretID = 0
+		priority = 0
+		BurstOverride = False
+		fireBurstLength = 1
+		FireAngleOverride = False
+		FiringTolerance = 1
+		roundsPerMinute = 5500
+		defaultDetonationRange = 3500
+		detonationRange = -1
+		detonateAtMinimumDistance = True
+		AmmoTypeNum = 1
+		advancedAmmoOption = True
+		useCustomBelt = True
+		SelectedAmmoType = 20x102mmHEBullet
+		ammoBelt = 20x102mmHEBullet; 20x102mmHEBullet; 20x102mmBullet; 
+		deployWepGroup = 0
+		canHotSwap = False
+		useRippleFire = False
+		useThisWeaponForAim = False
+		isAPS = False
+		dualModeAPS = False
+		customFireKey = 
+		engageEnabled = True
+		engageRangeMin = 1
+		engageRangeMax = 2500
+		engageAir = True
+		engageMissile = True
+		engageGround = True
+		engageSLW = True
+		weaponChannel = 0
+		shortName = Vulcan Turret
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			AGToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			AGFireToggle
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			AGFireHold
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			AGJettison
+			{
+				actionGroup = None
+				active = False
+				wasActiveBeforePartWasAdjusted = False
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -2110,14 +2055,14 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1
+		Hitpoints = 200
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
 		HullTypeNum = 2
 		hullType = Aluminium
 		SelectedArmorType = None
-		maxHitPoints = 1
+		maxHitPoints = -1
 		ArmorThickness = 10
 		ArmorSet = True
 		ExplodeMode = Never
@@ -2140,12 +2085,27 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 25
+		armorVolume = 3.30461574
 		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2160,17 +2120,17 @@ PART
 }
 PART
 {
-	part = flagPartFlat_4290038536
+	part = baha20mmAmmo_4292651670
 	partName = Part
-	persistentId = 3861767482
-	pos = 1.60000002,10.1750011,-2.00000048
-	attPos = -1.01108027,-0.0524996966,2
-	attPos0 = 1.08986129E-07,-2,-2.38418608E-07
-	rot = 0.707106829,1.12382317E-08,-2.72941669E-08,0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = 0,0,1.33226752E-15,1
+	persistentId = 2076427283
+	pos = 0,10.0900002,0
+	attPos = 5.01819564E-08,-0.240400314,0.503338993
+	attPos0 = -4.14397299E-08,0.340399742,-0.503338993
+	rot = -8.42937027E-08,3.23581268E-08,-3.23581268E-08,1
+	attRot = 0,0,0,1
+	attRot0 = -1.1353265E-08,-1,-8.42937027E-08,3.23581233E-08
 	mir = 1,1,1
-	symMethod = Mirror
+	symMethod = Radial
 	autostrutMode = Heaviest
 	rigidAttachment = True
 	istg = -1
@@ -2181,11 +2141,10 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	sym = flagPartFlat_4290087722
-	srfN = srfAttach,flagPartFlat_4290035596,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
+	srfN = srfAttach,fairingSize1_4292672124,Collider 1,0|-0.112899996|0,0|-1|0,0|-0.112899996|0
 	EVENTS
 	{
 	}
@@ -2212,120 +2171,11 @@ PART
 	}
 	MODULE
 	{
-		name = FlagDecalBackground
+		name = ModuleCASE
 		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
+		CASELevel = 0
+		Case2 = False
 		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
 		EVENTS
 		{
 		}
@@ -2338,11 +2188,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleCargoPart
+		name = CFEnable
 		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2358,14 +2205,14 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1
+		Hitpoints = 200
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
 		HullTypeNum = 2
 		hullType = Aluminium
 		SelectedArmorType = None
-		maxHitPoints = 1
+		maxHitPoints = 200
 		ArmorThickness = 10
 		ArmorSet = True
 		ExplodeMode = Never
@@ -2388,11 +2235,11 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 10
+		armorVolume = 0.562400162
 		ignitionTemp = -1
 		stagingEnabled = True
 		EVENTS
@@ -2405,1000 +2252,15 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = flagPartFlat_4290037218
-	partName = Part
-	persistentId = 2519772442
-	pos = -1.60000002,10.1750002,2
-	attPos = 1.05198646,-0.0525007993,-2
-	attPos0 = 1.08986072E-07,1.99999976,2.38418608E-07
-	rot = -0.707106769,1.12382281E-08,-2.72941634E-08,-0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
-	modSize = 0,0,0
-	sym = flagPartFlat_4290036884
-	srfN = srfAttach,flagPartFlat_4290035930,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
-	EVENTS
+	RESOURCE
 	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = FlagDecalBackground
-		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 1
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = flagPartFlat_4290036884
-	partName = Part
-	persistentId = 2251646230
-	pos = 1.60000002,10.1749992,2.00000048
-	attPos = -1.05198646,-0.0525006503,-2
-	attPos0 = -1.08986129E-07,2,2.38418608E-07
-	rot = 0.707106829,1.12382317E-08,-2.72941669E-08,0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = 0,0,1.33226752E-15,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
-	modSize = 0,0,0
-	sym = flagPartFlat_4290037218
-	srfN = srfAttach,flagPartFlat_4290035596,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = FlagDecalBackground
-		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 1
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = flagPartFlat_4290035930
-	partName = Part
-	persistentId = 1021156992
-	pos = -1.60000002,10.1750002,0
-	attPos = 1.11706877,-0.0525008291,0.129401028
-	attPos0 = 0.482931316,0.252500504,-0.129401028
-	rot = -0.707106769,1.12382281E-08,-2.72941634E-08,-0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = 5.82027866E-08,0.707106829,-0.707106769,-1.96703915E-08
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
-	modSize = 0,0,0
-	link = flagPartFlat_4290087722
-	link = flagPartFlat_4290037218
-	sym = flagPartFlat_4290035596
-	srfN = srfAttach,fairingSize1_4292672124,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = FlagDecalBackground
-		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 1
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = flagPartFlat_4290035596
-	partName = Part
-	persistentId = 2113466980
-	pos = 1.60000002,10.1750002,0
-	attPos = -1.11706877,-0.0525006205,0.129401028
-	attPos0 = -0.482931256,0.252500564,-0.129401028
-	rot = 0.707106829,1.12382317E-08,-2.72941669E-08,0.707106829
-	attRot = 4.37113847E-08,-4.21468513E-08,-0.99999994,5.96046448E-08
-	attRot0 = -3.61445629E-09,-0.707106829,0.707106829,4.21468513E-08
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 112.5
-	modMass = 0.0958499983
-	modSize = 0,0,0
-	link = flagPartFlat_4290038536
-	link = flagPartFlat_4290036884
-	sym = flagPartFlat_4290035930
-	srfN = srfAttach,fairingSize1_4292672124,Collider 1,0|0|0.0250000004,0|0|-1,0|0|0.0250000004
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = FlagDecalBackground
-		isEnabled = True
-		currentflagUrl = Squad/Flags/stripes
-		displayingPortrait = False
-		flagSize = 3
-		placementID = 0
-		flagDisplayed = True
-		isMirrored = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		MESH
-		{
-			name = small
-			displayName = Small
-			meshName = FlatSmall
-			orientation = LANDSCAPE
-			mass = 0
-			cost = 0
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = small
-			displayName = Small Panel
-			meshName = FlatSmallPanel
-			orientation = LANDSCAPE
-			mass = 0.00135000004
-			cost = 7.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium
-			meshName = FlatMedium
-			orientation = LANDSCAPE
-			mass = 0.000449999992
-			cost = 7.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = medium
-			displayName = Medium Panel
-			meshName = FlatMediumPanel
-			orientation = LANDSCAPE
-			mass = 0.00584999984
-			cost = 22.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = large
-			displayName = Large
-			meshName = FlatLarge
-			orientation = LANDSCAPE
-			mass = 0.0022499999
-			cost = 22.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = large
-			displayName = Large Panel
-			meshName = FlatLargePanel
-			orientation = LANDSCAPE
-			mass = 0.0238499995
-			cost = 52.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge
-			meshName = FlatHuge
-			orientation = LANDSCAPE
-			mass = 0.00944999978
-			cost = 52.5
-			variantNames = White,Dark,Orange,TransparentBackground
-			indexOffset = 0
-		}
-		MESH
-		{
-			name = huge
-			displayName = Huge Panel
-			meshName = FlatHugePanel
-			orientation = LANDSCAPE
-			mass = 0.0958499983
-			cost = 112.5
-			variantNames = WhitePanel,DarkPanel,OrangePanel
-			indexOffset = 1000
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModulePartVariants
-		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		selectedVariant = OrangePanel
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 1
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 0
-		maxTorque = 0
-		maxG = 0
-		maxSupportedArmor = 1
-		armorVolume = 6.73275566
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
+		name = 20x102Ammo
+		amount = 650
+		maxAmount = 650
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
 	}
 }
