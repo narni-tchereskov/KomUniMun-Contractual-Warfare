@@ -28,10 +28,10 @@ This is a list of vehicle periods which are currently required for the next step
 - lateAAA > Done!
 - standardAAA > Done!
 
-- earlyArtillery
-- midArtillery
-- lateArtillery
-- standardArtillery
+- earlyArtillery > Done!
+- midArtillery > Done!
+- lateArtillery > Done!
+- standardArtillery > Done!
 
 - earlyOutpost
 - midOutpost
@@ -54,10 +54,7 @@ This is a list of vehicle periods which are currently required for the next step
 - RealFuelsStock
 
 - Stock
-  - targets
-    - submarine_01a.craft > Done!
-    - drone_01a.craft
-
+  - targets > Done!
   - special
   - standard
   - late
