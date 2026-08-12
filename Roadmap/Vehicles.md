@@ -1,65 +1,14 @@
 # Vehicles
 
-This is a list of vehicle periods which are currently required for the next step.
+This is a list of vehicle changes which are currently required for the next step.
 
-## List
-
-- earlyFighters
-- midFighters
-- lateFighters
-- standardFighters
-
-- earlyTanks
-- midTanks
-- lateTanks
-- standardTanks
-
-- earlySPAA
-- midSPAA
-- lateSPAA
-- standardSPAA
-
-- midSAM
-- lateSAM
-- standardSAM
-
-- earlyAAA > Done!
-- midAAA > Done!
-- lateAAA > Done!
-- standardAAA > Done!
-
-- earlyArtillery > Done!
-- midArtillery > Done!
-- lateArtillery > Done!
-- standardArtillery > Done!
-
-- earlyOutpost
-- midOutpost
-- lateOutpost
-- standardOutpost
-
-- earlyPatrolBoats
-- midPatrolBoats
-- latePatrolBoats
-- standardPatrolBoats
-
-- standardSatellites
-
-## Vessel Optimization
+## Vehicle Compatibility
 
 - All > Done!
 
 - FARc
 - RealFuelsFARc
 - RealFuelsStock
-
-- Stock
-  - targets > Done!
-  - special
-  - standard
-  - late
-  - mid
-  - early
 
 ## Note
 
