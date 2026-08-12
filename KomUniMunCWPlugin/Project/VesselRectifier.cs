@@ -23,6 +23,8 @@ namespace KomUniMunVesselRectifier
         public static bool IsSceneSettled =>
             Time.time - _addonAwakeTime > Settings.SceneSettleDuration;
 
+        private static FieldInfo _vesselControlLevelField;
+
         // Walks the call stack to see whether PRE triggered the current chain.
         internal static bool IsCallerPhysicsRangeExtender()
         {
@@ -73,6 +75,8 @@ namespace KomUniMunVesselRectifier
         {
             _addonInstanceCount++;
             _addonAwakeTime = Time.time;
+
+            _vesselControlLevelField = ReflectionUtils.FindFieldInHierarchy(typeof(Vessel), "currentControlLevel");
 
             BdaIntegration.DetectPresence();
 
@@ -248,6 +252,12 @@ namespace KomUniMunVesselRectifier
 
             if (vessel.loaded && !vessel.packed)
             {
+                // Now forces the vessel to have complete control without a pilot.
+                if (_vesselControlLevelField != null)
+                {
+                    _vesselControlLevelField.SetValue(vessel, Vessel.ControlLevel.FULL);
+                }
+
                 if (
                     vessel.vesselName.IsContractAircraft()
                     || vessel.vesselName.IsContractHelicopter()
