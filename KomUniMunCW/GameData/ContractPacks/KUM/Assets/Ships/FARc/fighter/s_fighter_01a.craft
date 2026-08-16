@@ -2,7 +2,7 @@ ship = s_fighter_01a
 version = 1.12.5
 description = 
 type = SPH
-size = 11.0300217,3.45676613,11.6349087
+size = 11.0300035,3.45676613,11.5844812
 steamPublishedFileId = 0
 persistentId = 1653164241
 rot = 0,0,0,1
@@ -16,7 +16,7 @@ PART
 {
 	part = probeStackSmall_4293528132
 	partName = Part
-	persistentId = 3661150172
+	persistentId = 2128005540
 	pos = 0,10,0
 	attPos = 0,0.0749999434,0
 	attPos0 = 0,10,0
@@ -35,8 +35,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.0399999991
 	modSize = 0,0,0
 	link = rtg_4293528078
 	link = missileController_4293528044
@@ -251,12 +251,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 250
+		Hitpoints = 125
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -270,7 +270,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -281,12 +281,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 3.76722884
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -333,7 +378,7 @@ PART
 {
 	part = rtg_4293528078
 	partName = Part
-	persistentId = 3086135943
+	persistentId = 2202934041
 	pos = 0,10,0
 	attPos = -0.326802522,0.100000203,0.474719554
 	attPos0 = 0.326802522,-0.100000203,-0.474719554
@@ -504,12 +549,57 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = missileController_4293528044
 	partName = Part
-	persistentId = 4255917258
+	persistentId = 3066780846
 	pos = 0,9.89999962,0
 	attPos = 3.26080407E-09,0.0640010089,-0.286041796
 	attPos0 = -3.26080407E-09,-0.064000994,0.386042207
@@ -786,12 +876,57 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bdPilotAI_4293528000
 	partName = Part
-	persistentId = 1168570685
+	persistentId = 587409400
 	pos = 0,10.1000004,0
 	attPos = -2.88248714E-09,0.120692387,-0.550677419
 	attPos0 = 2.88248714E-09,-0.120692402,0.450677037
@@ -1072,13 +1207,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = Mark1Cockpit_4293962152
 	partName = Part
-	persistentId = 387499390
-	pos = 0,10,0.200000182
+	persistentId = 2436148650
+	pos = 0,10,0.200000361
 	attPos = 0,-0.0749999434,0
 	attPos0 = 0,0.275000036,-2.98023224E-08
 	rot = 0.707106829,0,0,0.707106829
@@ -1096,8 +1276,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 4500
+	modMass = -0.462399989
 	modSize = 0,0,0
 	attN = bottom,probeStackSmall_4293528132_0|-0.174999997|0_0|-1|0_0|-0.174999997|0_0|-1|0
 	EVENTS
@@ -1340,12 +1520,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1150
+		Hitpoints = 575
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -1359,7 +1539,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -1370,12 +1550,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 8.08360386
-		ignitionTemp = -1
+		ignitionTemp = 750
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1412,6 +1592,51 @@ PART
 		name = ModuleHMD
 		isEnabled = True
 		HMD = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1485,8 +1710,8 @@ PART
 {
 	part = bdRadome1inline_4294217240
 	partName = Part
-	persistentId = 4205895096
-	pos = 0,10,-0.700000465
+	persistentId = 3359871095
+	pos = 0,10,-0.700000823
 	attPos = 0,0.0597997904,-5.96046448E-08
 	attPos0 = 0,-0.759800076,1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -1504,8 +1729,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.149999991
 	modSize = 0,0,0
 	link = R8winglet_4294809894
 	link = R8winglet_4294809932
@@ -1578,12 +1803,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 525
+		Hitpoints = 262.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -1597,7 +1822,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -1608,12 +1833,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 4.2051177
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1630,8 +1900,8 @@ PART
 {
 	part = R8winglet_4294809894
 	partName = Part
-	persistentId = 3770231402
-	pos = 0.930405021,9.8044672,1.57666075
+	persistentId = 4178745789
+	pos = 0.930405021,9.8044672,1.57666183
 	attPos = 1,-0.60000062,-0.299999923
 	attPos0 = 1.00040531,0.556641579,-0.304466754
 	rot = -0.0122386497,0.709343493,0.700801551,0.074561201
@@ -1649,8 +1919,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1280
+	modMass = -0.0181149393
 	modSize = 0,0,0
 	sym = R8winglet_4294809932
 	srfN = srfAttach,bdRadome1inline_4294217240,,0.540501237|0.174731255|0,0.125|0|0,0.540501237|0.174731255|0
@@ -1680,126 +1950,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 22.5
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -1820,12 +1970,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 200
+		Hitpoints = 100
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 200
 		ArmorThickness = 10
@@ -1839,7 +1989,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -1850,12 +2000,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 2.79999995
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 150
+		exponent = 3
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1872,8 +2098,8 @@ PART
 {
 	part = R8winglet_4294809932
 	partName = Part
-	persistentId = 1678296695
-	pos = -0.930405021,9.8044672,1.57666028
+	persistentId = 888686517
+	pos = -0.930405021,9.8044672,1.57666135
 	attPos = -1,-0.600000262,-0.299999923
 	attPos0 = -1.00040531,0.556641698,-0.304466754
 	rot = 0.700802565,0.0745549947,-0.0122325253,0.709343195
@@ -1891,8 +2117,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1280
+	modMass = -0.0181149393
 	modSize = 0,0,0
 	sym = R8winglet_4294809894
 	srfN = srfAttach,bdRadome1inline_4294217240,,0.540501237|0.174731255|0,0.125|0|0,0.540501237|0.174731255|0
@@ -1922,126 +2148,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 22.5
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -2062,12 +2168,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 200
+		Hitpoints = 100
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 200
 		ArmorThickness = 10
@@ -2081,7 +2187,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2092,12 +2198,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 2.79999995
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 150
+		exponent = 3
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2114,8 +2296,8 @@ PART
 {
 	part = airbrake1_4293764862
 	partName = Part
-	persistentId = 1038716569
-	pos = 0,10.6000061,-0.452048302
+	persistentId = 66815660
+	pos = 0,10.6000061,-0.452048659
 	attPos = 5.67126897E-08,-0.0825647116,0.0432309508
 	attPos0 = 0,0.247950926,-0.600004077
 	rot = -3.76916773E-08,0.707107008,0.70710665,-3.76916489E-08
@@ -2133,8 +2315,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 2000
+	modMass = -0.0199999996
 	modSize = 0,0,0
 	srfN = srfAttach,bdRadome1inline_4294217240,CylCOL,0|0|-0.0250000004,0|0|1,0|0|-0.0250000004
 	EVENTS
@@ -2348,12 +2530,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 300
+		Hitpoints = 150
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 300
 		ArmorThickness = 10
@@ -2367,7 +2549,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2378,12 +2560,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 2.71884131
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2400,8 +2627,8 @@ PART
 {
 	part = airplaneTail_4294234826
 	partName = Part
-	persistentId = 3824244712
-	pos = 0,10,-1.35980403
+	persistentId = 1750138454
+	pos = 0,10,-1.35980475
 	attPos = 0,0,0
 	attPos0 = 0,-0.65980047,1.1920924E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -2419,8 +2646,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1350
+	modMass = -0.0799999982
 	modSize = 0,0,0
 	link = MK1Fuselage_4294194912
 	link = MK1Fuselage_4294195682
@@ -2488,12 +2715,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1200
+		Hitpoints = 600
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 1200
 		ArmorThickness = 10
@@ -2507,7 +2734,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2518,12 +2745,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 60
 		armorVolume = 11.254714
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2540,8 +2812,8 @@ PART
 {
 	part = MK1Fuselage_4294194912
 	partName = Part
-	persistentId = 3438836309
-	pos = 0.620000422,10,-4.17211485
+	persistentId = 3840800943
+	pos = 0.620000422,10,-4.17211771
 	attPos = 0,0,0
 	attPos0 = 0.620000184,-4.68725109,1.1920929E-06
 	rot = 0.707106888,0,0,0.707106769
@@ -2559,8 +2831,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1100
+	modMass = -0.099999994
 	modSize = 0,0,0
 	link = ramAirIntake_4294188156
 	link = radialEngineBody_4294185514
@@ -2617,12 +2889,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 675
+		Hitpoints = 337.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -2636,7 +2908,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2647,12 +2919,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 50
-		maxTorque = 50
-		maxG = 50
+		maxForce = 37.5
+		maxTorque = 37.5
+		maxG = 37.5
 		maxSupportedArmor = 60
 		armorVolume = 10.032198
-		ignitionTemp = -1
+		ignitionTemp = 750
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2684,6 +2956,51 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -2701,7 +3018,7 @@ PART
 	part = ramAirIntake_4294188156
 	partName = Part
 	persistentId = 859094279
-	pos = 0.620000422,9.99999905,-3.2346139
+	pos = 0.620000422,9.99999905,-3.23461676
 	attPos = 0,0,0
 	attPos0 = 0,0.937498689,2.53320025E-07
 	rot = 0.50000006,0.50000006,0.50000006,0.50000006
@@ -2719,8 +3036,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.0239999983
 	modSize = 0,0,0
 	sym = ramAirIntake_4294228570
 	attN = bottom01,MK1Fuselage_4294194912_0|0|0_0|-1|0_0|0|0_0|-1|0
@@ -2806,12 +3123,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 350
+		Hitpoints = 175
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 350
 		ArmorThickness = 10
@@ -2825,7 +3142,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2836,12 +3153,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 6.1942873
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2869,8 +3231,8 @@ PART
 {
 	part = radialEngineBody_4294185514
 	partName = Part
-	persistentId = 413857905
-	pos = 0.620000422,10,-6.04712772
+	persistentId = 643467055
+	pos = 0.620000422,10,-6.04713345
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500143,9.23872221E-07
 	rot = 0.707106888,0,0,0.707106769
@@ -2888,8 +3250,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.0599999987
 	modSize = 0,0,0
 	link = SaturnAL31_4294185458
 	link = delta.small_4294167240
@@ -2961,12 +3323,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 700
+		Hitpoints = 350
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -2980,7 +3342,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -2991,12 +3353,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 10.2768831
-		ignitionTemp = -1
+		ignitionTemp = 750
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3017,6 +3379,51 @@ PART
 		armoredCockpit = False
 		FireBottles = 0
 		FBRemaining = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3055,8 +3462,8 @@ PART
 {
 	part = SaturnAL31_4294185458
 	partName = Part
-	persistentId = 3257996011
-	pos = 0.620000422,10,-6.98463297
+	persistentId = 1083385053
+	pos = 0.620000422,10,-6.98463917
 	attPos = 0,0,0
 	attPos0 = 0,-0.937502742,-5.68433545E-14
 	rot = 0.707106888,0,0,0.707106769
@@ -3514,13 +3921,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = delta.small_4294167240
 	partName = Part
-	persistentId = 1157767453
-	pos = 0.910002828,10.5000134,-6.35979509
+	persistentId = 1122378454
+	pos = 0.910002828,10.5000134,-6.35980129
 	attPos = 0.300000578,0.00181955099,0.112455845
 	attPos0 = 0.290002406,-0.312666267,-0.500013649
 	rot = -0.454519719,0.54167515,0.54167527,-0.45451948
@@ -3538,8 +3990,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 400
+	modMass = 0.0844363868
 	modSize = 0,0,0
 	link = elevon3_4294167192
 	sym = delta.small_4293294404
@@ -3570,21 +4022,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -3605,12 +4042,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 400
+		Hitpoints = 200
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 400
 		ArmorThickness = 10
@@ -3624,7 +4061,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -3635,12 +4072,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 4
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3657,8 +4141,8 @@ PART
 {
 	part = elevon3_4294167192
 	partName = Part
-	persistentId = 3441877318
-	pos = 1.07707477,11.4475288,-6.98483372
+	persistentId = 2378298736
+	pos = 1.07707477,11.4475288,-6.98483944
 	attPos = 0,0,0
 	attPos0 = -0.968095601,-0.625000775,1.89365693E-07
 	rot = -0.454519182,0.541675568,0.541674972,-0.454519898
@@ -3676,8 +4160,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1300
+	modMass = -0.0326959938
 	modSize = 0,0,0
 	sym = elevon3_4293294356
 	srfN = srfAttach,delta.small_4294167240,,0|0|0,1|0|0,0|0|0
@@ -3707,118 +4191,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = True
-		ignoreYaw = False
-		ignoreRoll = True
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -3839,12 +4211,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 500
+		Hitpoints = 250
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 500
 		ArmorThickness = 10
@@ -3858,7 +4230,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -3869,12 +4241,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 3.4000001
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 0
+		yawaxis = 100
+		rollaxis = 0
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3891,8 +4339,8 @@ PART
 {
 	part = deltaWing_4294809682
 	partName = Part
-	persistentId = 1406171368
-	pos = 1.21956873,9.90653229,-5.93029976
+	persistentId = 3102873300
+	pos = 1.21956873,9.90653229,-5.43030596
 	attPos = -0.0479312055,0.0477647781,-0.0676780343
 	attPos0 = 0.599568307,0.116823532,0.0934661627
 	rot = -0.0214426406,0.719014406,0.694655299,-0.00355625525
@@ -3910,8 +4358,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = 0.211223543
 	modSize = 0,0,0
 	link = StandardCtrlSrf_4294809466
 	link = elevon2_4294809406
@@ -3946,21 +4394,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -3981,12 +4414,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1400
+		Hitpoints = 700
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 1400
 		ArmorThickness = 10
@@ -4000,7 +4433,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4011,12 +4444,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 16
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4033,8 +4513,8 @@ PART
 {
 	part = StandardCtrlSrf_4294809466
 	partName = Part
-	persistentId = 3372935924
-	pos = 4.08191109,9.97071838,-6.95664167
+	persistentId = 664888686
+	pos = 4.08191109,9.97071838,-6.45665073
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -0.0214426387,0.719014585,0.69465512,-0.00355625339
@@ -4052,8 +4532,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 800
+	modMass = -0.0215847474
 	modSize = 0,0,0
 	sym = StandardCtrlSrf_4294805376
 	srfN = srfAttach,deltaWing_4294809682,,0|0|0,1|0|0,0|0|0
@@ -4083,126 +4563,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 30
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -4223,12 +4583,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 175
+		Hitpoints = 500
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -4242,7 +4602,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4253,12 +4613,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 1.68770123
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4275,8 +4711,8 @@ PART
 {
 	part = elevon2_4294809406
 	partName = Part
-	persistentId = 2835833722
-	pos = 2.25781703,9.90540123,-7.00169706
+	persistentId = 2566487069
+	pos = 2.25781631,9.90540123,-6.50170612
 	attPos = 0,0,0
 	attPos0 = 0,0,0
 	rot = -0.0214426387,0.719014585,0.69465512,-0.00355625339
@@ -4294,8 +4730,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1100
+	modMass = -0.025343243
 	modSize = 0,0,0
 	sym = elevon2_4294805342
 	srfN = srfAttach,deltaWing_4294809682,,0|0|0,1|0|0,0|0|0
@@ -4325,126 +4761,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 30
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -4465,12 +4781,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 500
+		Hitpoints = 250
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 500
 		ArmorThickness = 10
@@ -4484,7 +4800,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4495,12 +4811,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 2.5
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4517,8 +4909,8 @@ PART
 {
 	part = bahaAdjustableRail_4293859958
 	partName = Part
-	persistentId = 1115902574
-	pos = 5.02684879,10.0044823,-6.9354744
+	persistentId = 3008430204
+	pos = 5.02684879,10.0044823,-6.43548298
 	attPos = -0.225422382,-0.15253377,-3.71751412E-08
 	attPos0 = -3.64735603,-0.948184252,-1.35316475E-06
 	rot = -0.0123418868,0.0123422444,0.706998944,0.706999302
@@ -4536,8 +4928,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim9_4293560564
 	sym = bahaAdjustableRail_4293860268
@@ -4591,12 +4983,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -4610,7 +5002,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4621,12 +5013,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.56371218
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4643,11 +5080,11 @@ PART
 {
 	part = bahaAim9_4293560564
 	partName = Part
-	persistentId = 1865728062
-	pos = 5.15860558,10.0050688,-6.91868639
+	persistentId = 1724603189
+	pos = 5.15858746,10.0224991,-5.91900492
 	attPos = 0,0,0
 	attPos0 = 2.48197495E-07,-0.131755739,0.0167983249
-	rot = 0.0123408139,-0.0123407841,-0.706999063,-0.706999183
+	rot = 0.0123409033,-0.0123408139,-0.706998944,-0.706999302
 	attRot = 0.49999994,-0.49999994,-0.49999994,-0.49999994
 	attRot0 = 2.53319769E-07,0.017454328,-2.6822093E-07,-0.99984771
 	mir = 1,1,1
@@ -4837,16 +5274,61 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaAdjustableRail_4293648580
 	partName = Part
-	persistentId = 3460936081
-	pos = 2.72268581,9.87655354,-5.2305007
+	persistentId = 2854097259
+	pos = 2.72268581,9.87655354,-4.73050642
 	attPos = 0,0,0
 	attPos0 = -1.5143249,0.65581876,-0.20667851
-	rot = -0.0174539983,-4.31346621E-08,-7.21106375E-08,0.99984777
+	rot = -0.0174539983,-4.37932073E-08,-7.01350018E-08,0.99984777
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = 0.0214108173,-0.725048602,-0.688354552,-0.00374331162
 	mir = 1,1,1
@@ -4861,8 +5343,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim9_4293561302
 	sym = bahaAdjustableRail_4293649064
@@ -4916,12 +5398,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -4935,7 +5417,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -4946,12 +5428,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -4968,11 +5495,11 @@ PART
 {
 	part = bahaAim9_4293561302
 	partName = Part
-	persistentId = 2129393458
-	pos = 2.7226851,9.58556175,-5.2035284
+	persistentId = 2076016685
+	pos = 2.72268558,9.59603214,-4.40371895
 	attPos = 0,0,0
 	attPos0 = -1.48080289E-07,-0.291755766,0.0167993288
-	rot = -0.0174539685,-8.23170865E-10,-7.06289001E-08,0.999847829
+	rot = -0.0174539685,-6.5853456E-10,-7.04642673E-08,0.999847829
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = 8.86793643E-08,4.19095123E-08,1.86264493E-09,1
 	mir = 1,1,1
@@ -5162,16 +5689,61 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaAdjustableRail_4293647930
 	partName = Part
-	persistentId = 3904280156
-	pos = 1.92316508,9.87657356,-4.43001366
+	persistentId = 3471669996
+	pos = 1.92316508,9.87657356,-3.93001938
 	attPos = 0,0,0
 	attPos0 = -0.735307872,1.47628307,-0.206674874
-	rot = -0.0174542367,9.76292753E-08,-3.2647344E-07,0.99984777
+	rot = -0.0174542367,1.00592729E-07,-3.23509994E-07,0.99984777
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = 0.0214110967,-0.725048423,-0.688354731,-0.00374337588
 	mir = 1,1,1
@@ -5186,8 +5758,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim120_4293573554
 	sym = bahaAdjustableRail_4293649784
@@ -5241,12 +5813,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -5260,7 +5832,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -5271,12 +5843,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5293,11 +5910,11 @@ PART
 {
 	part = bahaAim120_4293573554
 	partName = Part
-	persistentId = 3111949676
-	pos = 1.92316484,9.56358719,-4.22716618
+	persistentId = 1099355915
+	pos = 1.92316461,9.57754898,-3.3274169
 	attPos = 0,0,0
 	attPos0 = -8.1025064E-08,-0.319875091,0.191799164
-	rot = -0.0174542367,-9.21959042E-09,-3.25321025E-07,0.99984777
+	rot = -0.0174542367,1.64641278E-09,-3.28943003E-07,0.99984777
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = 1.2115197E-07,-1.03842467E-07,0,1
 	mir = 1,1,1
@@ -5487,13 +6104,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaChaffPod_4293792406
 	partName = Part
-	persistentId = 1391134458
-	pos = 0.899999976,10.7000027,-3.7570734
+	persistentId = 3767111958
+	pos = 0.899999976,10.7000027,-3.75707626
 	attPos = 0.0152552873,-0.00272893906,-0.0105223656
 	attPos0 = 0.279999554,0.415040314,-0.700001419
 	rot = 0.130525649,0.991445065,-1.49011612E-07,-5.21540642E-08
@@ -5511,8 +6173,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = -0.00039999999
 	modSize = 0,0,0
 	sym = bahaChaffPod_4293792640
 	srfN = srfAttach,MK1Fuselage_4294194912,CylCOL,0|-0.109999999|0,0|-1|0,0|-0.109999999|0
@@ -5566,12 +6228,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 75
+		Hitpoints = 37.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -5585,7 +6247,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -5596,12 +6258,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 0.225448385
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5629,8 +6336,8 @@ PART
 {
 	part = bahaCmPod_4293792776
 	partName = Part
-	persistentId = 2376592987
-	pos = 0.899999976,10.7000027,-3.43706608
+	persistentId = 1090355774
+	pos = 0.899999976,10.7000027,-3.43706894
 	attPos = 0.015277341,-0.0184836388,-0.0106048584
 	attPos0 = 0.279999554,0.735046446,-0.700002432
 	rot = 0.130525649,0.991445065,-1.49011612E-07,-5.21540642E-08
@@ -5648,8 +6355,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = -0.00039999999
 	modSize = 0,0,0
 	sym = bahaCmPod_4293793484
 	srfN = srfAttach,MK1Fuselage_4294194912,CylCOL,0|-0.109999999|0,0|-1|0,0|-0.109999999|0
@@ -5703,12 +6410,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 75
+		Hitpoints = 37.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -5722,7 +6429,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -5733,12 +6440,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 0.225448251
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5766,8 +6518,8 @@ PART
 {
 	part = bahaAdjustableRail_4294165854
 	partName = Part
-	persistentId = 1887562395
-	pos = 0.480000407,9.59999847,-5.1721282
+	persistentId = 2492226967
+	pos = 0.480000407,9.59999847,-5.17213106
 	attPos = -0.100000024,-1.05235386,-0.2539289
 	attPos0 = 0,0.0523516312,0.653929234
 	rot = -2.38418579E-07,-4.4408921E-16,9.6418018E-10,1.00000012
@@ -5785,8 +6537,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim120_4293572306
 	sym = bahaAdjustableRail_4294167230
@@ -5840,12 +6592,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -5859,7 +6611,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -5870,12 +6622,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -5892,8 +6689,8 @@ PART
 {
 	part = bahaAim120_4293572306
 	partName = Part
-	persistentId = 3449664877
-	pos = 0.416360795,9.30648232,-4.98033047
+	persistentId = 2416792647
+	pos = 0.416360795,9.30648232,-4.98033381
 	attPos = 0,0,0
 	attPos0 = -6.1683364E-10,-0.319874972,0.191799507
 	rot = 8.94069672E-08,0,0.382683516,-0.923879623
@@ -6086,13 +6883,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = MK1Fuselage_4294195682
 	partName = Part
-	persistentId = 3188466657
-	pos = -0.620000422,10,-4.1721139
+	persistentId = 3305066261
+	pos = -0.620000422,10,-4.17211676
 	attPos = 0,0,0
 	attPos0 = -0.620000422,-4.68724918,1.1920929E-06
 	rot = 0.707106829,0,0,0.707106829
@@ -6110,8 +6952,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1100
+	modMass = -0.099999994
 	modSize = 0,0,0
 	link = ramAirIntake_4294228570
 	link = radialEngineBody_4293294756
@@ -6168,12 +7010,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 675
+		Hitpoints = 337.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -6187,7 +7029,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -6198,12 +7040,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 50
-		maxTorque = 50
-		maxG = 50
+		maxForce = 37.5
+		maxTorque = 37.5
+		maxG = 37.5
 		maxSupportedArmor = 60
 		armorVolume = 10.032198
-		ignitionTemp = -1
+		ignitionTemp = 750
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6235,6 +7077,51 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -6252,7 +7139,7 @@ PART
 	part = ramAirIntake_4294228570
 	partName = Part
 	persistentId = 4039143715
-	pos = -0.620000422,10,-3.23461246
+	pos = -0.620000422,10,-3.23461533
 	attPos = 0,0,0
 	attPos0 = 0,0.937498689,0
 	rot = -0.50000006,0.50000006,0.50000006,-0.50000006
@@ -6270,8 +7157,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.0239999983
 	modSize = 0,0,0
 	sym = ramAirIntake_4294188156
 	attN = bottom01,MK1Fuselage_4294195682_0|0|0_0|-1|0_0|0|0_0|-1|0
@@ -6357,12 +7244,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 350
+		Hitpoints = 175
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 350
 		ArmorThickness = 10
@@ -6376,7 +7263,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -6387,12 +7274,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 6.1942873
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6421,7 +7353,7 @@ PART
 	part = radialEngineBody_4293294756
 	partName = Part
 	persistentId = 2980274990
-	pos = -0.620000422,10,-6.04712582
+	pos = -0.620000422,10,-6.04713154
 	attPos = 0,0,0
 	attPos0 = 0,-1.87500143,4.76837101E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -6439,8 +7371,8 @@ PART
 	sepI = -1
 	attm = 0
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 3000
+	modMass = -0.0599999987
 	modSize = 0,0,0
 	link = SaturnAL31_4293299124
 	link = delta.small_4293294404
@@ -6512,12 +7444,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 700
+		Hitpoints = 350
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -6531,7 +7463,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -6542,12 +7474,12 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 65
 		armorVolume = 10.2768831
-		ignitionTemp = -1
+		ignitionTemp = 750
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6568,6 +7500,51 @@ PART
 		armoredCockpit = False
 		FireBottles = 0
 		FBRemaining = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -6607,7 +7584,7 @@ PART
 	part = SaturnAL31_4293299124
 	partName = Part
 	persistentId = 3667231336
-	pos = -0.620000422,10,-6.98463106
+	pos = -0.620000422,10,-6.98463726
 	attPos = 0,0,0
 	attPos0 = 0,-0.937502742,-5.68433545E-14
 	rot = 0.707106829,0,0,0.707106829
@@ -7065,13 +8042,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = delta.small_4293294404
 	partName = Part
 	persistentId = 3342929079
-	pos = -0.910002828,10.5000134,-6.35979223
+	pos = -0.910002828,10.5000134,-6.35979843
 	attPos = 0.300000578,0.00181955099,0.112455845
 	attPos0 = -0.290002406,-0.312664568,-0.50001359
 	rot = -0.541675448,0.454519391,0.45451957,-0.541675091
@@ -7089,8 +8111,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 400
+	modMass = 0.0844363868
 	modSize = 0,0,0
 	link = elevon3_4293294356
 	sym = delta.small_4294167240
@@ -7121,21 +8143,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -7156,12 +8163,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 400
+		Hitpoints = 200
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 400
 		ArmorThickness = 10
@@ -7175,7 +8182,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -7186,12 +8193,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 4
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7209,7 +8263,7 @@ PART
 	part = elevon3_4293294356
 	partName = Part
 	persistentId = 2797544205
-	pos = -1.07707536,11.4475269,-6.98482895
+	pos = -1.07707536,11.4475269,-6.98483467
 	attPos = 0,0,0
 	attPos0 = -0.968095601,-0.625000775,1.89365693E-07
 	rot = -0.541675031,0.454519808,0.454519153,-0.541675508
@@ -7227,8 +8281,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1300
+	modMass = -0.0326959938
 	modSize = 0,0,0
 	sym = elevon3_4294167192
 	srfN = srfAttach,delta.small_4293294404,,0|0|0,1|0|0,0|0|0
@@ -7258,118 +8312,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = True
-		ignoreYaw = False
-		ignoreRoll = True
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -7390,12 +8332,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 500
+		Hitpoints = 250
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 500
 		ArmorThickness = 10
@@ -7409,7 +8351,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -7420,12 +8362,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 3.4000001
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 0
+		yawaxis = 100
+		rollaxis = 0
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7442,11 +8460,11 @@ PART
 {
 	part = deltaWing_4294805548
 	partName = Part
-	persistentId = 4201967382
-	pos = -1.21956873,9.90653229,-5.93029881
+	persistentId = 2335348459
+	pos = -1.21956873,9.90653229,-5.430305
 	attPos = 0.0479307398,0.0477628708,-0.0676762462
 	attPos0 = -0.599568307,0.116823517,0.0934661627
-	rot = 0.694657385,-0.00346173719,-0.021536909,0.719010055
+	rot = 0.694657445,-0.00346173998,-0.0215369053,0.719010115
 	attRot = -0.70076865,0.0212747324,0.0217571966,-0.712739527
 	attRot0 = -0.0172198992,-0.0176767111,-0.0127810873,0.999613762
 	mir = 1,1,1
@@ -7461,8 +8479,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = 0.211223543
 	modSize = 0,0,0
 	link = StandardCtrlSrf_4294805376
 	link = elevon2_4294805342
@@ -7497,21 +8515,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -7532,12 +8535,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1400
+		Hitpoints = 700
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 1400
 		ArmorThickness = 10
@@ -7551,7 +8554,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -7562,12 +8565,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 16
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7584,11 +8634,11 @@ PART
 {
 	part = StandardCtrlSrf_4294805376
 	partName = Part
-	persistentId = 3731432312
-	pos = -4.08217525,9.97074127,-6.95587683
+	persistentId = 1021574351
+	pos = -4.08217525,9.97074127,-6.45588589
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = -0.694656968,0.00346173067,0.0215368979,-0.719010472
+	rot = -0.694657028,0.00346173253,0.0215368941,-0.719010532
 	attRot = -2.5121481E-15,-2.5121481E-15,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -7603,8 +8653,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 800
+	modMass = -0.0215847474
 	modSize = 0,0,0
 	sym = StandardCtrlSrf_4294809466
 	srfN = srfAttach,deltaWing_4294805548,,0|0|0,1|0|0,0|0|0
@@ -7634,126 +8684,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 30
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -7774,12 +8704,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 175
+		Hitpoints = 500
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -7793,7 +8723,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -7804,12 +8734,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 1.68770075
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7826,11 +8832,11 @@ PART
 {
 	part = elevon2_4294805342
 	partName = Part
-	persistentId = 3558733879
-	pos = -2.25810051,9.90541649,-7.00141954
+	persistentId = 1801535567
+	pos = -2.25810027,9.90541649,-6.5014286
 	attPos = 0,0,0
 	attPos0 = 0,0,0
-	rot = 0.694656968,-0.00346173067,-0.0215368979,0.719010472
+	rot = 0.694657028,-0.00346173253,-0.0215368941,0.719010532
 	attRot = -0.5,-0.499999911,0.5,-0.499999911
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
@@ -7845,8 +8851,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1100
+	modMass = -0.025343243
 	modSize = 0,0,0
 	sym = elevon2_4294809406
 	srfN = srfAttach,deltaWing_4294805548,,0|0|0,1|0|0,0|0|0
@@ -7876,126 +8882,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = True
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 30
-		authorityLimiter = 150
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionExtend
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActionRetract
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			PitchInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TogglePitch
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			YawInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollActive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			RollInactive
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisSpeedMultiplier = 0
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -8016,12 +8902,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 500
+		Hitpoints = 250
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 500
 		ArmorThickness = 10
@@ -8035,7 +8921,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -8046,12 +8932,88 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 2.5
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		isEnabled = True
+		pitchaxis = 70
+		yawaxis = 0
+		rollaxis = 100
+		pitchaxisDueToAoA = 0
+		brakeRudder = 0
+		maxdeflect = 30
+		isFlap = False
+		isSpoiler = False
+		flapDeflectionLevel = 0
+		maxdeflectFlap = 15
+		isDynamicDeflection = False
+		dynamicControlStartSpeed = 200
+		exponent = 2
+		minControl = 0.100000001
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActivateSpoiler
+			{
+				actionGroup = Brakes
+				wasActiveBeforePartWasAdjusted = False
+			}
+			IncreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			DecreaseDeflect
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8068,11 +9030,11 @@ PART
 {
 	part = bahaAdjustableRail_4293860268
 	partName = Part
-	persistentId = 3196889544
-	pos = -5.0268321,10.0044641,-6.93547583
+	persistentId = 2971257767
+	pos = -5.02683115,10.0044641,-6.43548489
 	attPos = -0.225382328,-0.152591884,-1.74808292E-08
 	attPos0 = -3.64710426,-0.949159324,-8.25446804E-08
-	rot = 0.0123403668,0.0123405159,0.706999063,-0.706999362
+	rot = 0.0123403072,0.0123405755,0.706998944,-0.706999421
 	attRot = -0.0130900275,1.04884371E-07,-1.6270338E-08,-0.999914289
 	attRot0 = 0.493412405,0.506501973,0.493412346,-0.506502032
 	mir = 1,1,1
@@ -8087,8 +9049,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim9_4293560204
 	sym = bahaAdjustableRail_4293859958
@@ -8142,12 +9104,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -8161,7 +9123,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -8172,12 +9134,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.56371218
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8194,11 +9201,11 @@ PART
 {
 	part = bahaAim9_4293560204
 	partName = Part
-	persistentId = 4214228433
-	pos = -5.15858793,10.0050507,-6.91868782
+	persistentId = 1621453775
+	pos = -5.15858746,10.0224991,-5.91900396
 	attPos = 0,0,0
 	attPos0 = -2.96160579E-07,-0.131755695,0.0167983752
-	rot = -0.0123425126,-0.0123424232,-0.706999183,0.706999063
+	rot = -0.0123425424,-0.012342304,-0.706999302,0.706999063
 	attRot = 0.49999994,-0.49999994,-0.49999994,-0.49999994
 	attRot0 = 8.94069458E-08,-0.0174520276,1.6391273E-07,-0.99984771
 	mir = 1,1,1
@@ -8388,16 +9395,61 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaAdjustableRail_4293649064
 	partName = Part
-	persistentId = 3111549678
-	pos = -2.72268581,9.87655354,-5.23049974
+	persistentId = 158385483
+	pos = -2.72268581,9.87655354,-4.73050547
 	attPos = 0,0,0
 	attPos0 = -1.51449156,0.655416727,0.206685975
-	rot = -0.0174539387,-5.27710284E-08,7.989998E-09,0.99984777
+	rot = -0.0174539685,-5.59119755E-08,8.49676951E-09,0.999847829
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = -0.688355744,0.00364953745,0.0215059146,0.725045264
 	mir = 1,1,1
@@ -8412,8 +9464,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim9_4293560786
 	sym = bahaAdjustableRail_4293648580
@@ -8467,12 +9519,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -8486,7 +9538,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -8497,12 +9549,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8519,11 +9616,11 @@ PART
 {
 	part = bahaAim9_4293560786
 	partName = Part
-	persistentId = 1998876637
-	pos = -2.72268581,9.58556175,-5.20352793
+	persistentId = 2494799552
+	pos = -2.72268558,9.59603214,-4.40371799
 	attPos = 0,0,0
 	attPos0 = -2.98023224E-08,-0.291755825,0.016799096
-	rot = -0.0174527466,5.68508796E-10,7.18713977E-08,0.99984777
+	rot = -0.0174527466,3.39304762E-09,7.16810291E-08,0.999847889
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = 1.22189522E-06,4.79631126E-08,6.42612576E-08,1
 	mir = 1,1,1
@@ -8713,16 +9810,61 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaAdjustableRail_4293649784
 	partName = Part
-	persistentId = 1381073747
-	pos = -1.92316508,9.87657356,-4.43001223
+	persistentId = 1910882254
+	pos = -1.92316508,9.87657356,-3.93001795
 	attPos = 0,0,0
 	attPos0 = -0.735699296,1.47608495,0.206683755
-	rot = -0.0174535215,2.52932551E-07,3.17367011E-07,0.999847651
+	rot = -0.0174535215,2.48453915E-07,3.16577285E-07,0.99984777
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = -0.688355327,0.00364998262,0.0215059314,0.725045621
 	mir = 1,1,1
@@ -8737,8 +9879,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim120_4293573042
 	sym = bahaAdjustableRail_4293647930
@@ -8792,12 +9934,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -8811,7 +9953,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -8822,12 +9964,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8844,11 +10031,11 @@ PART
 {
 	part = bahaAim120_4293573042
 	partName = Part
-	persistentId = 3897150549
-	pos = -1.92316484,9.56358814,-4.22716522
+	persistentId = 3372250603
+	pos = -1.92316461,9.57754898,-3.32741594
 	attPos = 0,0,0
 	attPos0 = -7.63684511E-08,-0.319874346,0.191799626
-	rot = -0.0174556673,5.95777294E-09,3.2594869E-07,0.999847651
+	rot = -0.0174558163,4.78473794E-09,3.29755892E-07,0.99984777
 	attRot = -0.707106769,0,0,0.707106769
 	attRot0 = -2.11596443E-06,-2.47964579E-07,2.56113641E-09,1
 	mir = 1,1,1
@@ -9038,13 +10225,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaChaffPod_4293792640
 	partName = Part
-	persistentId = 1131471881
-	pos = -0.899999976,10.7000027,-3.75707245
+	persistentId = 316577055
+	pos = -0.899999976,10.7000027,-3.75707531
 	attPos = -0.0152552873,-0.00272703171,-0.0105223656
 	attPos0 = -0.279999554,0.415040016,-0.700001299
 	rot = -0.130525649,0.991445065,-1.49011612E-07,5.21540642E-08
@@ -9062,8 +10294,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = -0.00039999999
 	modSize = 0,0,0
 	sym = bahaChaffPod_4293792406
 	srfN = srfAttach,MK1Fuselage_4294195682,CylCOL,0|-0.109999999|0,0|-1|0,0|-0.109999999|0
@@ -9117,12 +10349,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 75
+		Hitpoints = 37.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -9136,7 +10368,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -9147,12 +10379,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 0.225448385
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9180,8 +10457,8 @@ PART
 {
 	part = bahaCmPod_4293793484
 	partName = Part
-	persistentId = 718367414
-	pos = -0.899999976,10.7000027,-3.4370656
+	persistentId = 3357503883
+	pos = -0.899999976,10.7000027,-3.43706846
 	attPos = -0.015277341,-0.0184817314,-0.0106048584
 	attPos0 = -0.279999554,0.735045671,-0.700002253
 	rot = -0.130525649,0.991445065,-1.49011612E-07,5.21540642E-08
@@ -9199,8 +10476,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = -0.00039999999
 	modSize = 0,0,0
 	sym = bahaCmPod_4293792776
 	srfN = srfAttach,MK1Fuselage_4294195682,CylCOL,0|-0.109999999|0,0|-1|0,0|-0.109999999|0
@@ -9254,12 +10531,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 75
+		Hitpoints = 37.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -9273,7 +10550,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -9284,12 +10561,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 0.225448251
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9317,8 +10639,8 @@ PART
 {
 	part = bahaAdjustableRail_4294167230
 	partName = Part
-	persistentId = 1456238081
-	pos = -0.480000407,9.59999847,-5.17212725
+	persistentId = 427798715
+	pos = -0.480000407,9.59999847,-5.17213011
 	attPos = 0.100000024,-1.05235291,-0.253929138
 	attPos0 = 0,0.0523500443,0.653929234
 	rot = 2.38418579E-07,-4.4408921E-16,9.6418018E-10,-1.00000012
@@ -9336,8 +10658,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 100
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	link = bahaAim120_4293571946
 	sym = bahaAdjustableRail_4294165854
@@ -9391,12 +10713,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 25
+		Hitpoints = 12.5
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = -1
 		ArmorThickness = 10
@@ -9410,7 +10732,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -9421,12 +10743,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 5
 		armorVolume = 0.563713312
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9443,8 +10810,8 @@ PART
 {
 	part = bahaAim120_4293571946
 	partName = Part
-	persistentId = 2994287531
-	pos = -0.416360795,9.30648232,-4.98033142
+	persistentId = 1767914766
+	pos = -0.416360795,9.30648232,-4.98033476
 	attPos = 0,0,0
 	attPos0 = 6.16833695E-10,-0.319874972,0.191799536
 	rot = -8.94069672E-08,0,0.382683516,0.923879623
@@ -9637,13 +11004,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = structuralWing_4294809824
 	partName = Part
-	persistentId = 124745686
-	pos = 0.51000011,10,-2.57233262
+	persistentId = 2377724809
+	pos = 0.51000011,10,-2.072335
 	attPos = -0.0217690468,0.0205744356,0.000551223406
 	attPos0 = 0.51000011,-1.21252596,4.76837215E-07
 	rot = -0.0121251782,0.719231844,0.694550872,-0.0125560528
@@ -9661,8 +11073,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1000
+	modMass = 0.0898437649
 	modSize = 0,0,0
 	sym = structuralWing_4294805734
 	srfN = srfAttach,airplaneTail_4294234826,,0.0399999991|0|0,1|0|0,0.0399999991|0|0
@@ -9692,21 +11104,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -9727,12 +11124,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 700
+		Hitpoints = 350
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 700
 		ArmorThickness = 10
@@ -9746,7 +11143,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -9757,12 +11154,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 9
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9779,11 +11223,11 @@ PART
 {
 	part = structuralWing_4294805734
 	partName = Part
-	persistentId = 2660940241
-	pos = -0.51000011,10,-2.57233214
+	persistentId = 4113140599
+	pos = -0.51000011,10,-2.07233453
 	attPos = 0.0217691064,0.0205744356,0.000551223406
 	attPos0 = -0.51000011,-1.21252549,4.76837215E-07
-	rot = 0.694552481,-0.0125541817,-0.0121234339,0.719230473
+	rot = 0.694552481,-0.0125541771,-0.0121234292,0.719230473
 	attRot = 0.70691061,0.0166592728,0.0166592691,0.706910491
 	attRot0 = -0.0174499433,-0.0174497254,0.000304585294,0.99969542
 	mir = 1,1,1
@@ -9798,8 +11242,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1000
+	modMass = 0.0898437649
 	modSize = 0,0,0
 	sym = structuralWing_4294809824
 	srfN = srfAttach,airplaneTail_4294234826,,0.0399999991|0|0,1|0|0,0.0399999991|0|0
@@ -9829,21 +11273,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleCargoPart
 		isEnabled = True
 		beingAttached = False
@@ -9864,12 +11293,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 700
+		Hitpoints = 350
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 700
 		ArmorThickness = 10
@@ -9883,7 +11312,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -9894,12 +11323,59 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 20
 		armorVolume = 9
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		isEnabled = True
+		massMultiplier = 1.5
+		massOverride = -3.40282347E+38
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -9916,8 +11392,8 @@ PART
 {
 	part = bahaHiddenVulcan_4293973742
 	partName = Part
-	persistentId = 100398182
-	pos = 0,9.39999962,0.400003791
+	persistentId = 2325446103
+	pos = 0,9.39999962,0.400004148
 	attPos = -8.75229472E-11,1.58338749,-0.03404814
 	attPos0 = 8.75229472E-11,-0.483387589,0.634048343
 	rot = 0.999962032,4.37598224E-09,-3.81872312E-11,0.00872677565
@@ -9982,7 +11458,7 @@ PART
 		advancedAmmoOption = True
 		useCustomBelt = True
 		SelectedAmmoType = 20x102mmHEBullet
-		ammoBelt = 20x102mmHEBullet; 20x102mmHEBullet; 20x102mmBullet; 
+		ammoBelt = 20x102mmHEBullet; 20x102mmHEBullet; 20x102mmBullet;
 		deployWepGroup = 0
 		canHotSwap = False
 		useRippleFire = False
@@ -10082,13 +11558,58 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = baha20mmAmmo_4293967682
 	partName = Part
-	persistentId = 1703702227
-	pos = 0,10,-0.700000703
+	persistentId = 1727724646
+	pos = 0,10,-0.700001061
 	attPos = -9.88134019E-10,-0.0832082406,-0.733283937
 	attPos0 = 9.88134019E-10,0.0832080022,0.733283937
 	rot = 1.00000012,4.37614833E-09,1.55431223E-15,2.38418579E-07
@@ -10106,8 +11627,8 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
+	modCost = 1200
+	modMass = -0.00399999972
 	modSize = 0,0,0
 	srfN = srfAttach,bdRadome1inline_4294217240,Inline.collider,0|-0.112899996|0,0|-1|0,0|-0.112899996|0
 	EVENTS
@@ -10170,12 +11691,12 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 200
+		Hitpoints = 100
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
+		HullTypeNum = 5
+		hullType = Composites
 		SelectedArmorType = None
 		maxHitPoints = 200
 		ArmorThickness = 10
@@ -10189,7 +11710,7 @@ PART
 		Hardness = 300
 		Strength = 200
 		SafeUseTemp = 993
-		radarReflectivity = 1
+		radarReflectivity = 0.800000012
 		Cost = 0
 		vFactor = 1.82712211E-06
 		muParam1 = 1.37732458
@@ -10200,12 +11721,57 @@ PART
 		muParam3S = 7.37037039
 		HEEquiv = 0.210114747
 		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
+		maxForce = 16.5
+		maxTorque = 16.5
+		maxG = 37.5
 		maxSupportedArmor = 10
 		armorVolume = 0.562400579
-		ignitionTemp = -1
+		ignitionTemp = 750
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
