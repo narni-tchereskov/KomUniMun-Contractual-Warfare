@@ -2,9 +2,9 @@ ship = s_sam_01a
 version = 1.12.5
 description = 
 type = VAB
-size = 6.93500996,7.02657318,9.16315842
+size = 13.3037844,7.47591019,13.3037777
 steamPublishedFileId = 0
-persistentId = 3259219112
+persistentId = 703086585
 rot = 0,0,0,0
 missionFlag = Squad/Flags/default
 vesselType = Debris
@@ -14,9 +14,9 @@ OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 PART
 {
-	part = probeCoreOcto2.v2_4293311996
+	part = probeCoreOcto2.v2_4292336498
 	partName = Part
-	persistentId = 2443584895
+	persistentId = 868824208
 	pos = 0,15,0
 	attPos = -0.121619076,-1.32497787,-1.48986554
 	attPos0 = 0,15,0
@@ -38,9 +38,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = missileController_4293311932
-	link = rtg_4293311888
-	link = fairingSize2_4293311854
+	link = missileController_4292336434
+	link = rtg_4292336390
+	link = fairingSize2_4292336356
 	attN = bottom,Null_0_0|-0.0610621013|0_0|-1|0_0|-0.0610621013|0_0|-1|0
 	attN = top,Null_0_0|0.0610621013|0_0|1|0_0|0.0610621013|0_0|1|0
 	EVENTS
@@ -255,9 +255,9 @@ PART
 }
 PART
 {
-	part = missileController_4293311932
+	part = missileController_4292336434
 	partName = Part
-	persistentId = 1583176442
+	persistentId = 2444227129
 	pos = 0,15,0
 	attPos = 2.50212171E-08,0.005841434,0.250208884
 	attPos0 = -2.50212171E-08,-0.005841434,-0.250208884
@@ -279,7 +279,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeCoreOcto2.v2_4293311996,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
+	srfN = srfAttach,probeCoreOcto2.v2_4292336498,collider,0|0.0359999985|0,0|-1|0,0|0.0359999985|0
 	EVENTS
 	{
 	}
@@ -537,9 +537,9 @@ PART
 }
 PART
 {
-	part = rtg_4293311888
+	part = rtg_4292336390
 	partName = Part
-	persistentId = 571446014
+	persistentId = 4258243609
 	pos = 0,15,0
 	attPos = -0.326802492,0.0224320292,0.285937339
 	attPos0 = 0.326802492,-0.0224320292,-0.285937339
@@ -561,7 +561,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,probeCoreOcto2.v2_4293311996,collider,0|-0.326802492|0,0|-1|0,0|-0.326802492|0
+	srfN = srfAttach,probeCoreOcto2.v2_4292336498,collider,0|-0.326802492|0,0|-1|0,0|-0.326802492|0
 	attN = top,Null_0_0|0.326802492|0_0|1|0_0|0.326802492|0_0|1|0
 	attN = bottom,Null_0_0|-0.326802492|0_0|-1|0_0|-0.326802492|0_0|-1|0
 	EVENTS
@@ -713,9 +713,9 @@ PART
 }
 PART
 {
-	part = fairingSize2_4293311854
+	part = fairingSize2_4292336356
 	partName = Part
-	persistentId = 1492129727
+	persistentId = 1176050894
 	pos = 0,14.9899998,9.31322575E-10
 	attPos = -2.2499103E-08,0.0603195131,0.257359535
 	attPos0 = 2.2499103E-08,-0.0603195131,-0.257359535
@@ -734,11 +734,11 @@ PART
 	sepI = -1
 	attm = 1
 	sameVesselCollision = False
-	modCost = 0
-	modMass = 1.40129846E-45
+	modCost = 423.719879
+	modMass = 0.423719883
 	modSize = 0,0,0
 	link = strutOcto_4293442848
-	srfN = ,probeCoreOcto2.v2_4293311996,collider,0|0|0,0|1|0,0|0|0
+	srfN = ,probeCoreOcto2.v2_4292336498,collider,0|0|0,0|1|0,0|0|0
 	attN = interstage01a,Null_0_0|1.19000006|0_0|-1|0_0|1.19000006|0_0|-1|0
 	attN = interstage01b,Null_0_0|1.25|0_0|1|0_0|1.25|0_0|1|0
 	attN = interstage02a,Null_0_0|2.19000006|0_0|-1|0_0|2.19000006|0_0|-1|0
@@ -781,11 +781,11 @@ PART
 	{
 		name = ModuleProceduralFairing
 		isEnabled = True
-		interstageCraftID = 0
+		interstageCraftID = 4292576440
 		nArcs = 3
 		ejectionForce = 100
 		useClamshell = False
-		isCapped = False
+		isCapped = True
 		stagingEnabled = False
 		fsm = st_idle
 		EVENTS
@@ -798,6 +798,71 @@ PART
 				actionGroup = None
 				wasActiveBeforePartWasAdjusted = False
 			}
+		}
+		XSECTION
+		{
+			h = 0
+			r = 1.25
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 0
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 1
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 2
+			}
+		}
+		XSECTION
+		{
+			h = 0.300000012
+			r = 1.87721276
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 3
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 4
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 5
+			}
+		}
+		XSECTION
+		{
+			h = 2.08154678
+			r = 1.87721276
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 6
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 7
+			}
+			ATTACHEDFLAG
+			{
+				attachedFlagPartIDs = 
+				panelIndex = 8
+			}
+		}
+		XSECTION
+		{
+			h = 2.54470825
+			r = 1.28547835
 		}
 		UPGRADESAPPLIED
 		{
@@ -1092,7 +1157,7 @@ PART
 	{
 		name = HitpointTracker
 		isEnabled = True
-		Hitpoints = 1300
+		Hitpoints = 3075
 		Armor = 10
 		ArmorRemaining = 100
 		ArmorTypeNum = 1
@@ -1144,8 +1209,8 @@ PART
 {
 	part = strutOcto_4293442848
 	partName = Part
-	persistentId = 2128454427
-	pos = 0,14.6975002,9.31322575E-10
+	persistentId = 2465111844
+	pos = 0,14.6899996,9.31322575E-10
 	attPos = 0,0.0287342072,0
 	attPos0 = 0,-0.328734398,0
 	rot = 0,0,0,1
@@ -1171,14 +1236,10 @@ PART
 	link = structuralIBeam2_4293442766
 	link = structuralIBeam2_4293442740
 	link = radarDataReceiver_4293409216
-	link = patriotLauncherTurret_4293425582
 	link = externalTankToroid_4293379184
-	link = structuralIBeam1_4293358428
-	link = structuralIBeam1_4293359218
-	link = structuralIBeam1_4293358532
-	link = structuralIBeam1_4293358480
-	link = bdRadome1snub_4293314994
-	attN = top,fairingSize2_4293311854_0|0.128734395|0_0|1|0_0|0.128734395|0_0|1|0
+	link = scanLockRadar1_4292600732
+	link = adapterLargeSmallQuad_4292576440
+	attN = top,fairingSize2_4292336356_0|0.128734395|0_0|1|0_0|0.128734395|0_0|1|0
 	attN = bottom,externalTankToroid_4293379184_0|-0.128734395|0_0|-1|0_0|-0.128734395|0_0|-1|0
 	EVENTS
 	{
@@ -1278,9 +1339,9 @@ PART
 {
 	part = structuralIBeam2_4293442818
 	partName = Part
-	persistentId = 3346330063
-	pos = -1.85750091,14.5350008,9.31322575E-10
-	attPos = 0.0716819763,-0.0978059769,-3.02090029E-07
+	persistentId = 781889
+	pos = -1.85750091,14.5275002,9.31322575E-10
+	attPos = 0.0141811371,-0.160305023,-3.02090029E-07
 	attPos0 = -1.87168205,-0.0021944046,3.02090029E-07
 	rot = -0.521333814,0.477714449,-0.521333814,-0.477714449
 	attRot = -0.0436193943,-3.89987775E-09,-8.93218726E-08,-0.999048233
@@ -1300,12 +1361,138 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
+	link = structuralIBeam2_4292644858
 	sym = structuralIBeam2_4293442792
 	sym = structuralIBeam2_4293442766
 	sym = structuralIBeam2_4293442740
 	srfN = srfAttach,strutOcto_4293442848,collider,0|-1.59827399|0,0|-1|0,0|-1.59827399|0
-	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = top,structuralIBeam2_4292644858_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
 	attN = bottom,Null_0_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1000
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = 1000
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 200
+		maxTorque = 200
+		maxG = 50
+		maxSupportedArmor = 10
+		armorVolume = 2.43893337
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = structuralIBeam2_4292644858
+	partName = Part
+	persistentId = 2404096892
+	pos = -5.04188776,14.2489014,2.86195655E-06
+	attPos = 3.0636258E-07,-0.0978059769,0.0716819763
+	attPos0 = 4.76837158E-07,3.19654822,-5.96046448E-07
+	rot = 0.521333754,-0.477714479,-0.521333754,-0.477714539
+	attRot = -0.707106769,0,0,0.707106769
+	attRot0 = -1.49011612E-08,1,-8.94069672E-08,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = structuralIBeam2_4292644812
+	sym = structuralIBeam2_4292644766
+	sym = structuralIBeam2_4292645472
+	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = bottom,structuralIBeam2_4293442818_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1404,9 +1591,9 @@ PART
 {
 	part = structuralIBeam2_4293442792
 	partName = Part
-	persistentId = 318089060
-	pos = -1.1920929E-07,14.5350008,1.85750079
-	attPos = -2.97817422E-07,-0.0978059769,-0.0716819763
+	persistentId = 2144721573
+	pos = -1.1920929E-07,14.5275002,1.85750079
+	attPos = -3.09738368E-07,-0.160305023,-0.0141811371
 	attPos0 = 1.90529065E-07,-0.0021944046,1.87168193
 	rot = -0.737277329,0,0,-0.675590217
 	attRot = 0,0,0,1
@@ -1426,12 +1613,138 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
+	link = structuralIBeam2_4292644812
 	sym = structuralIBeam2_4293442766
 	sym = structuralIBeam2_4293442740
 	sym = structuralIBeam2_4293442818
 	srfN = srfAttach,strutOcto_4293442848,collider,0|-1.59827399|0,0|-1|0,0|-1.59827399|0
-	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = top,structuralIBeam2_4292644812_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
 	attN = bottom,Null_0_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1000
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = 1000
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 200
+		maxTorque = 200
+		maxG = 50
+		maxSupportedArmor = 10
+		armorVolume = 2.43893337
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = structuralIBeam2_4292644812
+	partName = Part
+	persistentId = 2646338297
+	pos = -1.1920929E-07,14.2489033,5.0418849
+	attPos = 3.0636258E-07,-0.0978059769,0.0716819763
+	attPos0 = 0,3.19654799,-2.38418579E-07
+	rot = 0,-0.675590277,-0.737277269,0
+	attRot = -0.707106769,0,0,0.707106769
+	attRot0 = 0,1,-8.94069672E-08,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = structuralIBeam2_4292644766
+	sym = structuralIBeam2_4292645472
+	sym = structuralIBeam2_4292644858
+	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = bottom,structuralIBeam2_4293442792_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1530,8 +1843,8 @@ PART
 {
 	part = structuralIBeam2_4293442766
 	partName = Part
-	persistentId = 2705431567
-	pos = 1.85750091,14.5350008,-1.18277967E-07
+	persistentId = 3720142995
+	pos = 1.85750091,14.5275002,-1.18277967E-07
 	attPos = -0.0716819763,-0.0978059769,3.08356675E-07
 	attPos0 = 1.87168205,-0.0021944046,-4.65717676E-07
 	rot = -0.521333814,-0.477714479,0.521333814,-0.477714419
@@ -1552,12 +1865,138 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
+	link = structuralIBeam2_4292644766
 	sym = structuralIBeam2_4293442740
 	sym = structuralIBeam2_4293442818
 	sym = structuralIBeam2_4293442792
 	srfN = srfAttach,strutOcto_4293442848,collider,0|-1.59827399|0,0|-1|0,0|-1.59827399|0
-	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = top,structuralIBeam2_4292644766_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
 	attN = bottom,Null_0_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1000
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = 1000
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 200
+		maxTorque = 200
+		maxG = 50
+		maxSupportedArmor = 10
+		armorVolume = 2.43893337
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = structuralIBeam2_4292644766
+	partName = Part
+	persistentId = 1322734277
+	pos = 5.04188776,14.2489014,1.50867606E-06
+	attPos = 3.0636258E-07,-0.0978059769,0.0716819763
+	attPos0 = -3.02913691E-07,3.19654822,-5.96046448E-07
+	rot = -0.521333754,-0.477714449,-0.521333754,0.477714568
+	attRot = -0.707106769,0,0,0.707106769
+	attRot0 = 1.49011594E-08,1,-8.94069601E-08,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = structuralIBeam2_4292645472
+	sym = structuralIBeam2_4292644858
+	sym = structuralIBeam2_4292644812
+	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = bottom,structuralIBeam2_4293442766_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1656,9 +2095,9 @@ PART
 {
 	part = structuralIBeam2_4293442740
 	partName = Part
-	persistentId = 471844230
-	pos = -1.1920929E-07,14.5350008,-1.85750079
-	attPos = 3.0636258E-07,-0.0978059769,0.0716819763
+	persistentId = 1559210703
+	pos = -1.1920929E-07,14.5275002,-1.85750079
+	attPos = 2.94441662E-07,-0.160305023,0.0141811371
 	attPos0 = -4.13650952E-07,-0.0021944046,-1.87168193
 	rot = 0,-0.675590217,0.737277329,0
 	attRot = 0,0,0,1
@@ -1678,12 +2117,138 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
+	link = structuralIBeam2_4292645472
 	sym = structuralIBeam2_4293442818
 	sym = structuralIBeam2_4293442792
 	sym = structuralIBeam2_4293442766
 	srfN = srfAttach,strutOcto_4293442848,collider,0|-1.59827399|0,0|-1|0,0|-1.59827399|0
-	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = top,structuralIBeam2_4292645472_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
 	attN = bottom,Null_0_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1000
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = 1000
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 200
+		maxTorque = 200
+		maxG = 50
+		maxSupportedArmor = 10
+		armorVolume = 2.43893337
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = structuralIBeam2_4292645472
+	partName = Part
+	persistentId = 4147413488
+	pos = -1.1920929E-07,14.2489033,-5.0418849
+	attPos = 3.0636258E-07,-0.0978059769,0.0716819763
+	attPos0 = 0,3.19654799,-2.38418579E-07
+	rot = -0.737277269,0,0,0.675590277
+	attRot = -0.707106769,0,0,0.707106769
+	attRot0 = 0,1,-8.94069672E-08,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = structuralIBeam2_4292644858
+	sym = structuralIBeam2_4292644812
+	sym = structuralIBeam2_4292644766
+	attN = top,Null_0_0|1.59827399|0_0|1|0_0|1.59827399|0_0|1|0
+	attN = bottom,structuralIBeam2_4293442740_0|-1.59827399|0_0|-1|0_0|-1.59827399|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1782,8 +2347,8 @@ PART
 {
 	part = radarDataReceiver_4293409216
 	partName = Part
-	persistentId = 1684892495
-	pos = 0,15.1975002,9.31322575E-10
+	persistentId = 839986501
+	pos = 0,15.1899996,9.31322575E-10
 	attPos = -1.77824351E-08,0.606452942,0.203407347
 	attPos0 = 1.77824351E-08,-0.106452942,-0.203407347
 	rot = 1,0,0,0
@@ -1918,15 +2483,679 @@ PART
 }
 PART
 {
+	part = externalTankToroid_4293379184
+	partName = Part
+	persistentId = 3636402387
+	pos = 0,14.6899996,9.31322575E-10
+	attPos = 0,0.253734589,0
+	attPos0 = 0,-0.253734589,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = FuelCellArray_4293365150
+	attN = top,strutOcto_4293442848_0|0.125|0_0|1|0_0|0.125|0_0|1|0
+	attN = bottom,Null_0_0|-0.125|0_0|-1|0_0|-0.125|0_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 250
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 50
+		maxTorque = 50
+		maxG = 50
+		maxSupportedArmor = 15
+		armorVolume = 3.79169297
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSelfSealingTank
+		isEnabled = True
+		SSTank = False
+		InertTank = False
+		armoredCockpit = False
+		FireBottles = 0
+		FBRemaining = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 27
+		maxAmount = 27
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 33
+		maxAmount = 33
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = FuelCellArray_4293365150
+	partName = Part
+	persistentId = 3971036006
+	pos = 0,14.8900003,0.200000003
+	attPos = 0,0.285317421,-0.269739449
+	attPos0 = 0,-0.085316658,0.469739467
+	rot = 0.5,-0.5,0.5,-0.5
+	attRot = 0,0,0.999999881,0
+	attRot0 = 0.5,-0.5,0.5,-0.5
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,externalTankToroid_4293379184,COL_005,0.0500000007|0|0,1|0|0,0.0500000007|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		EfficiencyBonus = 1
+		IsActivated = True
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 250
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 25
+		armorVolume = 2.48478556
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 300
+		maxAmount = 300
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = scanLockRadar1_4292600732
+	partName = Part
+	persistentId = 653424637
+	pos = 0,15.1824989,0
+	attPos = -9.31513782E-08,-0.0275011063,1.06552756
+	attPos0 = 0,0.492499352,-9.31322575E-10
+	rot = 8.42937027E-08,-1.50523221E-08,1.50523221E-08,1
+	attRot = 0,0,0,1
+	attRot0 = 8.42937027E-08,-1.50523221E-08,1.50523221E-08,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,strutOcto_4293442848,Collider,0|0|0,0|-1|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleRadar
+		isEnabled = True
+		DynamicRadar = True
+		linkedVesselID = 
+		radarEnabled = False
+		rangeIndex = 99
+		currentAngle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			AGEnable
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			TargetNext
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			TargetPrev
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTurret
+		isEnabled = True
+		maxPitch = 85
+		minPitch = -8
+		yawRange = 360
+		yawStandbyAngle = 0
+		minPitchLimit = -8
+		maxPitchLimit = 85
+		yawRangeLimit = 360
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1000
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 100
+		armorVolume = 14.2196569
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = adapterLargeSmallQuad_4292576440
+	partName = Part
+	persistentId = 2894120212
+	pos = 0,17.5825005,9.31322575E-10
+	attPos = 0,2.38000011,0
+	attPos0 = 0,2.89249992,0
+	rot = -1,0,0,0
+	attRot = -0.99999994,0,0,0
+	attRot0 = -1,0,0,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = True
+	istg = -1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = patriotLauncherTurret_4293425582
+	srfN = ,strutOcto_4293442848,Collider,0|0|0,0|1|0,0|0|0
+	attN = top,Null_0_0|0|0_0|1|0_0|0|0_0|1|0
+	attN = bottom01,Null_0_0.625|-0.75|0.625_0|-1|0_0.625|-0.75|0.625_0|-1|0
+	attN = bottom02,Null_0_0.625|-0.75|-0.625_0|-1|0_0.625|-0.75|-0.625_0|-1|0
+	attN = bottom03,Null_0_-0.625|-0.75|0.625_0|-1|0_-0.625|-0.75|0.625_0|-1|0
+	attN = bottom04,Null_0_-0.625|-0.75|-0.625_0|-1|0_-0.625|-0.75|-0.625_0|-1|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+			wasActiveBeforePartWasAdjusted = False
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModulePartVariants
+		isEnabled = True
+		useVariantMass = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoPart
+		isEnabled = True
+		beingAttached = False
+		beingSettled = False
+		reinitResourcesOnStoreInVessel = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = HitpointTracker
+		isEnabled = True
+		Hitpoints = 1050
+		Armor = 10
+		ArmorRemaining = 100
+		ArmorTypeNum = 1
+		HullTypeNum = 2
+		hullType = Aluminium
+		SelectedArmorType = None
+		maxHitPoints = -1
+		ArmorThickness = 10
+		ArmorSet = True
+		ExplodeMode = Never
+		FireFX = True
+		FireFXLifeTimeInSeconds = 5
+		Density = 2700
+		Diffusivity = 237
+		Ductility = 0.600000024
+		Hardness = 300
+		Strength = 200
+		SafeUseTemp = 993
+		radarReflectivity = 1
+		Cost = 0
+		vFactor = 1.82712211E-06
+		muParam1 = 1.37732458
+		muParam2 = 2.04939008
+		muParam3 = 4.5333333
+		muParam1S = 1.92650819
+		muParam2S = 2.65274119
+		muParam3S = 7.37037039
+		HEEquiv = 0.210114747
+		HEATEquiv = 0.55794096
+		maxForce = 22
+		maxTorque = 22
+		maxG = 50
+		maxSupportedArmor = 35
+		armorVolume = 8.43998432
+		ignitionTemp = -1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
 	part = patriotLauncherTurret_4293425582
 	partName = Part
-	persistentId = 760952454
-	pos = 0,16.7999992,1.04686499
-	attPos = 0,-0.0124282837,-0.0468649864
-	attPos0 = 0,2.10249901,1.04686499
+	persistentId = 442733233
+	pos = 0,19.8899994,1.27999997
+	attPos = 0,1.99750137,0.253135085
+	attPos0 = 0,-2.30749893,-1.27999997
 	rot = 0,0,0,-1
 	attRot = 0,0,0,-0.999999881
-	attRot0 = 0,0,0,-1
+	attRot0 = -1,0,0,0
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Heaviest
@@ -1958,7 +3187,7 @@ PART
 	link = bahaPac-3_4293411714
 	link = bahaPac-3_4293411062
 	link = bahaPac-3_4293410410
-	srfN = srfAttach,strutOcto_4293442848,,0|-1.59242702|-1.04686499,0|-1|0,0|-1.59242702|-1.04686499
+	srfN = srfAttach,adapterLargeSmallQuad_4292576440,,0|-1.59242702|-1.04686499,0|-1|0,0|-1.59242702|-1.04686499
 	attN = bottom,Null_0_0|-1.59242702|-1.04686499_0|-1|0_0|-1.59242702|-1.04686499_0|-1|0
 	attN = missile1,bahaPac-3_4293422956_0.858752608|0.714490771|-2.09428191_0|0|1_0.858752608|0.714490771|-2.09428191_0|0|1
 	attN = missile4,bahaPac-3_4293411714_0.858752608|-0.366770297|-2.09428191_0|0|1_0.858752608|-0.366770297|-2.09428191_0|0|1
@@ -2127,8 +3356,8 @@ PART
 {
 	part = bahaPac-3_4293422956
 	partName = Part
-	persistentId = 874718878
-	pos = 0.858752608,17.5144901,1.85312796
+	persistentId = 2593776705
+	pos = 0.858752608,20.6044884,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.858752608,0.714490891,0.80626297
 	rot = 0,0,0,1
@@ -2321,13 +3550,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293420146
 	partName = Part
-	persistentId = 3290441006
-	pos = 0.858752608,17.954977,1.85312796
+	persistentId = 2491673228
+	pos = 0.858752608,21.0449753,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.858752608,1.1549778,0.80626297
 	rot = 0,0,0,1
@@ -2520,13 +3764,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293419494
 	partName = Part
-	persistentId = 4211682263
-	pos = 0.41308251,17.954977,1.85312796
+	persistentId = 2705366460
+	pos = 0.41308251,21.0449753,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.41308251,1.1549778,0.80626297
 	rot = 0,0,0,1
@@ -2719,13 +3978,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293418842
 	partName = Part
-	persistentId = 2908095833
-	pos = 0.41308251,17.5144901,1.85312796
+	persistentId = 3035151099
+	pos = 0.41308251,20.6044884,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.41308251,0.714490891,0.80626297
 	rot = 0,0,0,1
@@ -2918,13 +4192,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293418190
 	partName = Part
-	persistentId = 2411918801
-	pos = -0.42013371,17.5144901,1.85312796
+	persistentId = 647268279
+	pos = -0.42013371,20.6044884,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.42013371,0.714490891,0.80626297
 	rot = 0,0,0,1
@@ -3117,13 +4406,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293417538
 	partName = Part
-	persistentId = 3890044489
-	pos = -0.865803778,17.5144901,1.85312796
+	persistentId = 426471622
+	pos = -0.865803778,20.6044884,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.865803778,0.714490891,0.80626297
 	rot = 0,0,0,1
@@ -3316,13 +4620,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293416886
 	partName = Part
-	persistentId = 1483456998
-	pos = -0.865803778,17.954977,1.85312796
+	persistentId = 746546584
+	pos = -0.865803778,21.0449753,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.865803778,1.1549778,0.80626297
 	rot = 0,0,0,1
@@ -3515,13 +4834,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293416234
 	partName = Part
-	persistentId = 2012397844
-	pos = -0.42013371,17.954977,1.85312796
+	persistentId = 4001171816
+	pos = -0.42013371,21.0449753,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.42013371,1.1549778,0.80626297
 	rot = 0,0,0,1
@@ -3714,13 +5048,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293414974
 	partName = Part
-	persistentId = 1180849651
-	pos = -0.42013371,16.8737164,1.85312796
+	persistentId = 1442772630
+	pos = -0.42013371,19.9637146,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.42013371,0.0737171173,0.80626297
 	rot = 0,0,0,1
@@ -3913,13 +5262,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293414322
 	partName = Part
-	persistentId = 1164490820
-	pos = -0.865803778,16.8737164,1.85312796
+	persistentId = 1126182666
+	pos = -0.865803778,19.9637146,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.865803778,0.0737171173,0.80626297
 	rot = 0,0,0,1
@@ -4112,13 +5476,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293413670
 	partName = Part
-	persistentId = 153208533
-	pos = -0.865803778,16.4332294,1.85312796
+	persistentId = 1962778502
+	pos = -0.865803778,19.5232277,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.865803778,-0.366769791,0.80626297
 	rot = 0,0,0,1
@@ -4311,13 +5690,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293413018
 	partName = Part
-	persistentId = 895365366
-	pos = -0.42013371,16.4332294,1.85312796
+	persistentId = 4133001989
+	pos = -0.42013371,19.5232277,2.08626294
 	attPos = 0,0,0
 	attPos0 = -0.42013371,-0.366769791,0.80626297
 	rot = 0,0,0,1
@@ -4510,13 +5904,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293412366
 	partName = Part
-	persistentId = 1151645528
-	pos = 0.41308251,16.4332294,1.85312796
+	persistentId = 457830136
+	pos = 0.41308251,19.5232277,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.41308251,-0.366769791,0.80626297
 	rot = 0,0,0,1
@@ -4709,13 +6118,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293411714
 	partName = Part
-	persistentId = 1094072162
-	pos = 0.858752608,16.4332294,1.85312796
+	persistentId = 4246520003
+	pos = 0.858752608,19.5232277,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.858752608,-0.366769791,0.80626297
 	rot = 0,0,0,1
@@ -4908,13 +6332,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293411062
 	partName = Part
-	persistentId = 172357865
-	pos = 0.858752608,16.8737164,1.85312796
+	persistentId = 156446214
+	pos = 0.858752608,19.9637146,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.858752608,0.0737171173,0.80626297
 	rot = 0,0,0,1
@@ -5107,13 +6546,28 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = bahaPac-3_4293410410
 	partName = Part
-	persistentId = 3516596133
-	pos = 0.41308251,16.8737164,1.85312796
+	persistentId = 4226281356
+	pos = 0.41308251,19.9637146,2.08626294
 	attPos = 0,0,0
 	attPos0 = 0.41308251,0.0737171173,0.80626297
 	rot = 0,0,0,1
@@ -5306,1552 +6760,10 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = externalTankToroid_4293379184
-	partName = Part
-	persistentId = 172720123
-	pos = 0,14.6975002,9.31322575E-10
-	attPos = 0,0.253734589,0
-	attPos0 = 0,-0.253734589,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = FuelCellArray_4293365150
-	attN = top,strutOcto_4293442848_0|0.125|0_0|1|0_0|0.125|0_0|1|0
-	attN = bottom,Null_0_0|-0.125|0_0|-1|0_0|-0.125|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModulePartVariants
+		name = ModuleTestSubject
 		isEnabled = True
-		useVariantMass = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 250
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 50
-		maxTorque = 50
-		maxG = 50
-		maxSupportedArmor = 15
-		armorVolume = 3.79169297
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSelfSealingTank
-		isEnabled = True
-		SSTank = False
-		InertTank = False
-		armoredCockpit = False
-		FireBottles = 0
-		FBRemaining = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 27
-		maxAmount = 27
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 33
-		maxAmount = 33
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = FuelCellArray_4293365150
-	partName = Part
-	persistentId = 327056441
-	pos = 0,14.897501,0.200000003
-	attPos = 0,0.285317421,-0.269739449
-	attPos0 = 0,-0.085316658,0.469739467
-	rot = 0.5,-0.5,0.5,-0.5
-	attRot = 0,0,0.999999881,0
-	attRot0 = 0.5,-0.5,0.5,-0.5
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,externalTankToroid_4293379184,COL_005,0.0500000007|0|0,1|0|0,0.0500000007|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleResourceConverter
-		isEnabled = True
-		EfficiencyBonus = 1
-		IsActivated = True
-		stagingEnabled = True
-		lastUpdateTime = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 250
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 25
-		armorVolume = 2.48478556
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 300
-		maxAmount = 300
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = structuralIBeam1_4293358428
-	partName = Part
-	persistentId = 3866380330
-	pos = 1.01327899E-07,15.0900002,1.69999993
-	attPos = 1.30874724E-07,0.178791046,0.148750186
-	attPos0 = 1.01327899E-07,0.392499924,1.69999993
-	rot = 0.60876137,0,0,0.793353438
-	attRot = 0,0,0,1
-	attRot0 = 0.60876137,0,0,0.793353438
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = bdRadome1snub_4293356364
-	sym = structuralIBeam1_4293359218
-	sym = structuralIBeam1_4293358532
-	sym = structuralIBeam1_4293358480
-	srfN = srfAttach,strutOcto_4293442848,Collider,0.271114707|0|0,1|0|0,0.271114707|0|0
-	attN = top,bdRadome1snub_4293356364_0|0.528679371|0_0|1|0_0|0.528679371|0_0|1|0
-	attN = bottom,Null_0_0|-0.528679371|0_0|-1|0_0|-0.528679371|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 400
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 200
-		maxTorque = 200
-		maxG = 50
-		maxSupportedArmor = 10
-		armorVolume = 1.45352042
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = bdRadome1snub_4293356364
-	partName = Part
-	persistentId = 755822515
-	pos = 1.01327899E-07,15.3514795,2.67585516
-	attPos = 0,0,0
-	attPos0 = 0,1.01027942,2.38418579E-07
-	rot = 0.608761311,0,0,0.793353498
-	attRot = 0.707106769,0,0,0.707106769
-	attRot0 = -5.96046448E-08,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = bdRadome1snub_4293355630
-	sym = bdRadome1snub_4293355586
-	sym = bdRadome1snub_4293355542
-	attN = bottom01,structuralIBeam1_4293358428_0|-0.481599987|0_0|-1|0_0|-0.481599987|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRadar
-		isEnabled = True
-		DynamicRadar = True
-		linkedVesselID = 
-		radarEnabled = False
-		rangeIndex = 99
-		currentAngle = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			AGEnable
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetNext
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetPrev
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 45
-		armorVolume = 3.70221257
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralIBeam1_4293359218
-	partName = Part
-	persistentId = 3629912793
-	pos = 1.70000005,15.0900002,9.31322575E-10
-	attPos = 0.148750186,0.178791046,-1.2200853E-07
-	attPos0 = 1.70000005,0.392499924,0
-	rot = -0.430459291,-0.560985625,0.430459291,-0.560985625
-	attRot = -0.43045938,0.560985625,-0.430459321,-0.560985744
-	attRot0 = -0.430459291,-0.560985625,0.430459291,-0.560985625
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = bdRadome1snub_4293355630
-	sym = structuralIBeam1_4293358532
-	sym = structuralIBeam1_4293358480
-	sym = structuralIBeam1_4293358428
-	srfN = srfAttach,strutOcto_4293442848,Collider,0.271114707|0|0,1|0|0,0.271114707|0|0
-	attN = top,bdRadome1snub_4293355630_0|0.528679371|0_0|1|0_0|0.528679371|0_0|1|0
-	attN = bottom,Null_0_0|-0.528679371|0_0|-1|0_0|-0.528679371|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 400
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 200
-		maxTorque = 200
-		maxG = 50
-		maxSupportedArmor = 10
-		armorVolume = 1.45352042
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = bdRadome1snub_4293355630
-	partName = Part
-	persistentId = 3639336190
-	pos = 2.67585564,15.3514795,2.39349845E-07
-	attPos = 0,0,0
-	attPos0 = -1.1920929E-07,1.01027966,4.76837158E-07
-	rot = -0.430459261,-0.560985625,0.430459261,-0.560985625
-	attRot = 0.707106769,0,0,0.707106769
-	attRot0 = -2.98023188E-08,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = bdRadome1snub_4293355586
-	sym = bdRadome1snub_4293355542
-	sym = bdRadome1snub_4293356364
-	attN = bottom01,structuralIBeam1_4293359218_0|-0.481599987|0_0|-1|0_0|-0.481599987|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRadar
-		isEnabled = True
-		DynamicRadar = True
-		linkedVesselID = 
-		radarEnabled = False
-		rangeIndex = 99
-		currentAngle = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			AGEnable
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetNext
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetPrev
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 45
-		armorVolume = 3.70221257
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralIBeam1_4293358532
-	partName = Part
-	persistentId = 1216249010
-	pos = 1.01327899E-07,15.0900002,-1.69999993
-	attPos = -1.1314232E-07,0.178791046,-0.148750186
-	attPos0 = 1.01327899E-07,0.392499924,-1.69999993
-	rot = 0,-0.793353438,0.60876137,0
-	attRot = 0,0,0,1
-	attRot0 = 0,-0.793353438,0.60876137,0
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = bdRadome1snub_4293355586
-	sym = structuralIBeam1_4293358480
-	sym = structuralIBeam1_4293358428
-	sym = structuralIBeam1_4293359218
-	srfN = srfAttach,strutOcto_4293442848,Collider,0.271114707|0|0,1|0|0,0.271114707|0|0
-	attN = top,bdRadome1snub_4293355586_0|0.528679371|0_0|1|0_0|0.528679371|0_0|1|0
-	attN = bottom,Null_0_0|-0.528679371|0_0|-1|0_0|-0.528679371|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 400
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 200
-		maxTorque = 200
-		maxG = 50
-		maxSupportedArmor = 10
-		armorVolume = 1.45352042
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = bdRadome1snub_4293355586
-	partName = Part
-	persistentId = 1503733424
-	pos = 1.01327899E-07,15.3514795,-2.67585516
-	attPos = 0,0,0
-	attPos0 = 0,1.01027942,4.76837158E-07
-	rot = 0,-0.793353498,0.608761311,0
-	attRot = 0.707106769,0,0,0.707106769
-	attRot0 = -5.96046448E-08,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = bdRadome1snub_4293355542
-	sym = bdRadome1snub_4293356364
-	sym = bdRadome1snub_4293355630
-	attN = bottom01,structuralIBeam1_4293358532_0|-0.481599987|0_0|-1|0_0|-0.481599987|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRadar
-		isEnabled = True
-		DynamicRadar = True
-		linkedVesselID = 
-		radarEnabled = False
-		rangeIndex = 99
-		currentAngle = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			AGEnable
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetNext
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetPrev
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 45
-		armorVolume = 3.70221257
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralIBeam1_4293358480
-	partName = Part
-	persistentId = 182955793
-	pos = -1.70000005,15.0900002,1.49550047E-07
-	attPos = -0.148750186,0.178791046,1.35012684E-07
-	attPos0 = -1.70000005,0.392499924,1.48618724E-07
-	rot = 0.430459291,-0.560985625,0.430459231,0.560985625
-	attRot = 0,0,0,1
-	attRot0 = 0.430459291,-0.560985625,0.430459231,0.560985625
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = bdRadome1snub_4293355542
-	sym = structuralIBeam1_4293358428
-	sym = structuralIBeam1_4293359218
-	sym = structuralIBeam1_4293358532
-	srfN = srfAttach,strutOcto_4293442848,Collider,0.271114707|0|0,1|0|0,0.271114707|0|0
-	attN = top,bdRadome1snub_4293355542_0|0.528679371|0_0|1|0_0|0.528679371|0_0|1|0
-	attN = bottom,Null_0_0|-0.528679371|0_0|-1|0_0|-0.528679371|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleCargoPart
-		isEnabled = True
-		beingAttached = False
-		beingSettled = False
-		reinitResourcesOnStoreInVessel = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = 400
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 200
-		maxTorque = 200
-		maxG = 50
-		maxSupportedArmor = 10
-		armorVolume = 1.45352042
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = bdRadome1snub_4293355542
-	partName = Part
-	persistentId = 711296530
-	pos = -2.67585516,15.3514795,1.87785062E-07
-	attPos = 0,0,0
-	attPos0 = -6.6614156E-08,1.0102793,4.47034836E-07
-	rot = 0.430459261,-0.560985625,0.430459201,0.560985625
-	attRot = 0.707106769,0,0,0.707106769
-	attRot0 = -4.47034871E-08,0,-1.4901163E-08,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = bdRadome1snub_4293356364
-	sym = bdRadome1snub_4293355630
-	sym = bdRadome1snub_4293355586
-	attN = bottom01,structuralIBeam1_4293358480_0|-0.481599987|0_0|-1|0_0|-0.481599987|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRadar
-		isEnabled = True
-		DynamicRadar = True
-		linkedVesselID = 
-		radarEnabled = False
-		rangeIndex = 99
-		currentAngle = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			AGEnable
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetNext
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetPrev
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 45
-		armorVolume = 3.70221257
-		ignitionTemp = -1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = bdRadome1snub_4293314994
-	partName = Part
-	persistentId = 1837942173
-	pos = 0,15.3899994,9.31322575E-10
-	attPos = 0,-0.301600456,0
-	attPos0 = 0,0.692499161,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,0.99999994
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Heaviest
-	rigidAttachment = True
-	istg = -1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = ,strutOcto_4293442848,,0|0|0,0|1|0,0|0|0
-	attN = bottom01,Null_0_0|-0.481599987|0_0|-1|0_0|-0.481599987|0_0|-1|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-			wasActiveBeforePartWasAdjusted = False
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleRadar
-		isEnabled = True
-		DynamicRadar = True
-		linkedVesselID = 
-		radarEnabled = False
-		rangeIndex = 99
-		currentAngle = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			AGEnable
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetNext
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-			TargetPrev
-			{
-				actionGroup = None
-				wasActiveBeforePartWasAdjusted = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = HitpointTracker
-		isEnabled = True
-		Hitpoints = 400
-		Armor = 10
-		ArmorRemaining = 100
-		ArmorTypeNum = 1
-		HullTypeNum = 2
-		hullType = Aluminium
-		SelectedArmorType = None
-		maxHitPoints = -1
-		ArmorThickness = 10
-		ArmorSet = True
-		ExplodeMode = Never
-		FireFX = True
-		FireFXLifeTimeInSeconds = 5
-		Density = 2700
-		Diffusivity = 237
-		Ductility = 0.600000024
-		Hardness = 300
-		Strength = 200
-		SafeUseTemp = 993
-		radarReflectivity = 1
-		Cost = 0
-		vFactor = 1.82712211E-06
-		muParam1 = 1.37732458
-		muParam2 = 2.04939008
-		muParam3 = 4.5333333
-		muParam1S = 1.92650819
-		muParam2S = 2.65274119
-		muParam3S = 7.37037039
-		HEEquiv = 0.210114747
-		HEATEquiv = 0.55794096
-		maxForce = 22
-		maxTorque = 22
-		maxG = 50
-		maxSupportedArmor = 45
-		armorVolume = 3.70221257
-		ignitionTemp = -1
 		stagingEnabled = True
 		EVENTS
 		{
