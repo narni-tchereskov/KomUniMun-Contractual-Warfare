@@ -18,7 +18,7 @@ Reputation rewards -> Funds reward / 1000
 2 Units - 5500
 1 Units - 4000
 
-Note 1: Satellite test missions have lower reputation and increased science rewards.
+Note 1: Satellite test missions have far lower reputation rewards.
 Note 2: Test missions have reduced reputation rewards.
 
 ## Extra Unit Values
