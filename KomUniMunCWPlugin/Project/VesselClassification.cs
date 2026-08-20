@@ -5,16 +5,17 @@ namespace KomUniMunVesselRectifier
 {
     internal static class VesselClassification
     {
-        // Matches any managed vessel.
+        // Matches any managed vessel while rejecting debris and probes.
         internal static bool IsContractVessel(this string vesselName)
         {
-            if (string.IsNullOrEmpty(vesselName))
-                return false;
-
-            return vesselName.IndexOf("ID:", StringComparison.OrdinalIgnoreCase) >= 0;
+            return !string.IsNullOrEmpty(vesselName)
+                && vesselName.IndexOf('(') < 0
+                && !vesselName.EndsWith("Debris", StringComparison.OrdinalIgnoreCase)
+                && !vesselName.EndsWith("Probe", StringComparison.OrdinalIgnoreCase)
+                && vesselName.IndexOf("ID:", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        // Identifies units requiring altitude reposition).
+        // Identifies units requiring altitude reposition.
         internal static bool IsContractAircraft(this string vesselName)
         {
             if (string.IsNullOrEmpty(vesselName))
@@ -46,7 +47,7 @@ namespace KomUniMunVesselRectifier
                 || vesselName.IndexOf("HLI ID:", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        // Checks if Pilot AI should be enabled (AIR and ATGT).
+        // Checks if Pilot AI should be enabled.
         internal static bool IsPilotEnabled(this string vesselName)
         {
             if (string.IsNullOrEmpty(vesselName))
@@ -72,14 +73,9 @@ namespace KomUniMunVesselRectifier
             if (vessel.mainBody == null || vessel.mainBody.bodyTransform == null)
                 return false;
 
-            if (
-                double.IsNaN(vessel.orbit.pos.x)
-                || double.IsNaN(vessel.orbit.pos.y)
-                || double.IsNaN(vessel.orbit.pos.z)
-            )
-                return false;
-
-            return true;
+            return !double.IsNaN(vessel.orbit.pos.x)
+                && !double.IsNaN(vessel.orbit.pos.y)
+                && !double.IsNaN(vessel.orbit.pos.z);
         }
     }
 }
