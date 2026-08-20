@@ -7,5 +7,6 @@ namespace KomUniMunVesselRectifier
         public VesselFlags Flags { get; set; }
 
         public float UnpackedAtTime { get; set; } = -1f;
+        public float LastUnrailTime { get; set; } = -1f;
     }
 }

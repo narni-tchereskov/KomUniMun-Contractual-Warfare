@@ -184,7 +184,13 @@ namespace KomUniMunVesselRectifier
         // Handles the creation and registration of a new vessel.
         private void OnVesselCreated(Vessel vessel)
         {
-            VerboseLogging.Log($"OnVesselCreated triggered for {vessel?.vesselName}");
+            if (vessel == null)
+                return;
+
+            // Let's get rid of these in the future.
+            string normalizedName = string.IsNullOrEmpty(vessel.vesselName) ? "Unknown" : vessel.vesselName;
+
+            VerboseLogging.Log($"OnVesselCreated triggered for {normalizedName}");
             VesselTracking.TryRegisterVessel(vessel);
         }
 
@@ -212,16 +218,27 @@ namespace KomUniMunVesselRectifier
             {
                 Vessel vessel = FlightGlobals.Vessels[i];
 
-                // NullPo begone, yes it needed to be said here and nowhere else.
-                if (
-                    vessel == null
-                    || vessel.gameObject == null
-                    || vessel.vesselType == VesselType.Debris
-                )
+                // NullPo begone.
+                if (vessel == null || vessel.gameObject == null)
                     continue;
 
-                if (!VesselTracking.IsVesselManaged(vessel.id))
+                // Stop managing debris.
+                if (vessel.vesselType == VesselType.Debris)
+                {
+                    if (VesselTracking.IsVesselManaged(vessel.id))
+                        VesselTracking.StopTracking(vessel.id);
+
                     continue;
+                }
+
+                // If not tracked, register.
+                if (!VesselTracking.IsVesselManaged(vessel.id))
+                {
+                    VesselTracking.TryRegisterVessel(vessel);
+
+                    if (!VesselTracking.IsVesselManaged(vessel.id))
+                        continue;
+                }
 
                 ProcessVessel(vessel, sceneSettled);
             }
@@ -230,22 +247,6 @@ namespace KomUniMunVesselRectifier
         // Prepares vessel during spawn for combat and banishes kraken.
         private void ProcessVessel(Vessel vessel, bool sceneSettled)
         {
-            if (vessel == null)
-                return;
-
-            if (!VesselTracking.IsVesselManaged(vessel.id))
-            {
-                VesselTracking.TryRegisterVessel(vessel);
-                if (!VesselTracking.IsVesselManaged(vessel.id))
-                    return;
-            }
-
-            if (vessel.vesselType == VesselType.Debris)
-            {
-                VesselTracking.StopTracking(vessel.id);
-                return;
-            }
-
             VesselTrack tracking = VesselTracking.GetVesselTracking(vessel.id);
             if (tracking == null)
                 return;
@@ -289,14 +290,19 @@ namespace KomUniMunVesselRectifier
                 VesselTracking.ClearVesselFlag(vessel.id, VesselFlags.CombatStateApplied);
             }
 
-            CheckAndUnrailVessel(vessel, sceneSettled);
+            CheckAndUnrailVessel(vessel, tracking, sceneSettled);
         }
 
         // Evaluates if packed vessel needs to be forced to load.
-        private void CheckAndUnrailVessel(Vessel vessel, bool sceneSettled)
+        private void CheckAndUnrailVessel(Vessel vessel, VesselTrack tracking, bool sceneSettled)
         {
             if (!sceneSettled || !vessel.packed || !vessel.IsFullyInitialized())
                 return;
+
+            if (Time.time - tracking.LastUnrailTime < 1.0f)
+                return;
+
+            tracking.LastUnrailTime = Time.time;
 
             bool isPositioned = VesselPositioned.Instance?.HasPositioned(vessel.id) == true;
 
