@@ -68,10 +68,6 @@ namespace KomUniMunVesselRectifier
             VerboseLogging.Log($"Applying transform to {vessel.vesselName}.");
 
             Vector3d upDirection = radialVector.normalized;
-            Vector3d polarAxis = vessel.mainBody.bodyTransform.up;
-            Vector3d northTangent = (
-                polarAxis - Vector3d.Dot(polarAxis, upDirection) * upDirection
-            ).normalized;
 
             double terrainRadius = GetTerrainRadius(vessel, worldPosition);
 
@@ -79,30 +75,15 @@ namespace KomUniMunVesselRectifier
             Vector3d newPosition =
                 vessel.mainBody.position + upDirection * (terrainRadius + altitudeAboveGround);
 
-            // Determine relative velocity vector based on vessel type
-            Vector3d relativeVelocity = Vector3d.zero;
-
-            if (vessel.vesselName.IsContractHelicopter())
-            {
-                relativeVelocity = upDirection * Settings.HelicopterSpawnSpeed;
-            }
-            else if (vessel.vesselName.IsContractAircraft())
-            {
-                relativeVelocity = northTangent * Settings.AircraftSpawnSpeed;
-            }
-            else
-            {
-                relativeVelocity = northTangent * Settings.SpawnSpeed;
-            }
-
-            Vector3d newVelocity = vessel.mainBody.getRFrmVel(newPosition) + relativeVelocity;
+            // Let's not give it any velocity, it has caused enough issues.
+            Vector3d spawnVelocity = vessel.mainBody.getRFrmVel(newPosition);
 
             vessel.SetPosition(newPosition);
-            vessel.SetWorldVelocity(newVelocity);
+            vessel.SetWorldVelocity(spawnVelocity);
             vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
             vessel.orbit?.UpdateFromStateVectors(
                 newPosition - vessel.mainBody.position,
-                newVelocity,
+                spawnVelocity,
                 vessel.mainBody,
                 Planetarium.GetUniversalTime()
             );
@@ -113,13 +94,7 @@ namespace KomUniMunVesselRectifier
         // Forces all parts of the vessel to unpack so physics can resume. Kludgy but ok.
         public static void ForceUnpackAllParts(Vessel vessel)
         {
-            if (
-                vessel == null
-                || (
-                    !vessel.vesselName.IsContractAircraft()
-                    && !vessel.vesselName.IsContractHelicopter()
-                )
-            )
+            if (vessel == null || (!vessel.vesselName.IsContractAircraft()))
                 return;
 
             VerboseLogging.Log($"Forcing unpack on {vessel.vesselName}.");

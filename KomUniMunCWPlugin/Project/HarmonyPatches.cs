@@ -88,10 +88,7 @@ namespace KomUniMunVesselRectifier
             if (__instance.vesselType == VesselType.Debris)
                 return true;
 
-            if (
-                !__instance.vesselName.IsContractAircraft()
-                && !__instance.vesselName.IsContractHelicopter()
-            )
+            if (!__instance.vesselName.IsContractAircraft())
                 return true;
 
             if (!VesselRectifier.IsSceneSettled)
@@ -146,10 +143,7 @@ namespace KomUniMunVesselRectifier
             if (!__instance.loaded)
                 return;
 
-            if (
-                !__instance.vesselName.IsContractAircraft()
-                && !__instance.vesselName.IsContractHelicopter()
-            )
+            if (!__instance.vesselName.IsContractAircraft())
                 return;
 
             if (__instance.packed)
@@ -187,10 +181,7 @@ namespace KomUniMunVesselRectifier
             if (__instance.vesselType == VesselType.Debris)
                 return true;
 
-            if (
-                !__instance.vesselName.IsContractAircraft()
-                && !__instance.vesselName.IsContractHelicopter()
-            )
+            if (!__instance.vesselName.IsContractAircraft())
                 return true;
 
             VerboseLogging.Log($"Blocked GoOnRails for {__instance.vesselName}.");
@@ -221,10 +212,7 @@ namespace KomUniMunVesselRectifier
             if (!VesselTracking.IsVesselManaged(__instance.id))
                 return;
 
-            if (
-                !__instance.vesselName.IsContractAircraft()
-                && !__instance.vesselName.IsContractHelicopter()
-            )
+            if (!__instance.vesselName.IsContractAircraft())
                 return;
 
             VerboseLogging.Log($"Applying hardening to {__instance.vesselName}.");
@@ -257,9 +245,8 @@ namespace KomUniMunVesselRectifier
 
             bool isManaged = VesselTracking.IsVesselManaged(__0.id);
             bool isAircraft = __0.vesselName.IsContractAircraft();
-            bool isHelicopter = __0.vesselName.IsContractHelicopter();
             bool callerIsPre = VesselRectifier.IsCallerPhysicsRangeExtender();
-            bool blocked = isManaged && (isAircraft || isHelicopter) && callerIsPre;
+            bool blocked = isManaged && isAircraft && callerIsPre;
 
             if (blocked)
                 VerboseLogging.Log($"Blocked PRE switch for {__0.vesselName}.");
@@ -290,10 +277,7 @@ namespace KomUniMunVesselRectifier
 
             if (
                 VesselTracking.IsVesselManaged(__instance.id)
-                && (
-                    __instance.vesselName.IsContractAircraft()
-                    || __instance.vesselName.IsContractHelicopter()
-                )
+                && __instance.vesselName.IsContractAircraft()
                 && VesselRectifier.IsCallerPhysicsRangeExtender()
             )
             {
