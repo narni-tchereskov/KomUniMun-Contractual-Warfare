@@ -42,7 +42,7 @@ namespace KomUniMunVesselRectifier
                     }
                     else if (module is ModuleGimbal gimbal)
                     {
-                        gimbal.Activate();
+                        gimbal.isEnabled = true;
                         gimbal.gimbalActive = true;
                     }
                 }
