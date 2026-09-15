@@ -11,11 +11,9 @@ namespace KomUniMunVesselRectifier
             if (vessel?.parts == null || !vessel.loaded || tracking == null)
                 return;
 
-            VerboseLogging.Log(
-                $"Activating engines for {vessel.vesselName}"
-            );
+            VerboseLogging.Log($"Activating engines for {vessel.vesselName}");
 
-            // Zero the vessel throttle just incase.
+            // Zero the vessel throttle just in case.
             vessel.ctrlState.mainThrottle = 0f;
 
             for (int i = vessel.parts.Count - 1; i >= 0; i--)
@@ -25,6 +23,17 @@ namespace KomUniMunVesselRectifier
                 if (part?.Modules == null)
                     continue;
 
+                // Check if the engine is multi-mode.
+                MultiModeEngine multiMode = part.FindModuleImplementing<MultiModeEngine>();
+                string activeEngineId = null;
+
+                if (multiMode != null)
+                {
+                    activeEngineId = multiMode.runningPrimary
+                        ? multiMode.primaryEngineID
+                        : multiMode.secondaryEngineID;
+                }
+
                 for (int m = 0; m < part.Modules.Count; m++)
                 {
                     PartModule module = part.Modules[m];
@@ -32,9 +41,24 @@ namespace KomUniMunVesselRectifier
                     if (module == null)
                         continue;
 
-                    // If it's already, do it AGAIN!
+                    // If it's already active we don't care, do it AGAIN! (with discretion)
                     if (module is ModuleEngines engine)
                     {
+                        if (
+                            multiMode != null
+                            && !string.IsNullOrEmpty(activeEngineId)
+                            && !string.Equals(
+                                engine.engineID,
+                                activeEngineId,
+                                StringComparison.OrdinalIgnoreCase
+                            )
+                        )
+                        {
+                            engine.Shutdown();
+                            engine.EngineIgnited = false;
+                            continue;
+                        }
+
                         engine.Activate();
                         engine.staged = true;
                         engine.EngineIgnited = true;
