@@ -22,16 +22,8 @@ namespace KomUniMunVesselRectifier
                 return false;
 
             return vesselName.IndexOf("AIR ID:", StringComparison.OrdinalIgnoreCase) >= 0
-                || vesselName.IndexOf("ATGT ID:", StringComparison.OrdinalIgnoreCase) >= 0;
-        }
-
-        // Identifies units requiring altitude reposition with vertical velocity axis.
-        internal static bool IsContractHelicopter(this string vesselName)
-        {
-            if (string.IsNullOrEmpty(vesselName))
-                return false;
-
-            return vesselName.IndexOf("HLI ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("ATGT ID:", StringComparison.OrdinalIgnoreCase) >= 0
+                || vesselName.IndexOf("HLI ID:", StringComparison.OrdinalIgnoreCase) >= 0
                 || vesselName.IndexOf("HTGT ID:", StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
