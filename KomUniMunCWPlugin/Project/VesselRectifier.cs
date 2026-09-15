@@ -76,7 +76,10 @@ namespace KomUniMunVesselRectifier
             _addonInstanceCount++;
             _addonAwakeTime = Time.time;
 
-            _vesselControlLevelField = ReflectionUtils.FindFieldInHierarchy(typeof(Vessel), "currentControlLevel");
+            _vesselControlLevelField = ReflectionUtils.FindFieldInHierarchy(
+                typeof(Vessel),
+                "currentControlLevel"
+            );
 
             BdaIntegration.DetectPresence();
 
@@ -188,7 +191,9 @@ namespace KomUniMunVesselRectifier
                 return;
 
             // Let's get rid of these in the future.
-            string normalizedName = string.IsNullOrEmpty(vessel.vesselName) ? "Unknown" : vessel.vesselName;
+            string normalizedName = string.IsNullOrEmpty(vessel.vesselName)
+                ? "Unknown"
+                : vessel.vesselName;
 
             VerboseLogging.Log($"OnVesselCreated triggered for {normalizedName}");
             VesselTracking.TryRegisterVessel(vessel);
@@ -259,10 +264,7 @@ namespace KomUniMunVesselRectifier
                     _vesselControlLevelField.SetValue(vessel, Vessel.ControlLevel.FULL);
                 }
 
-                if (
-                    vessel.vesselName.IsContractAircraft()
-                    || vessel.vesselName.IsContractHelicopter()
-                )
+                if (vessel.vesselName.IsContractAircraft())
                     vessel.SafeIgnoreGForces(Settings.GHardeningDuration);
 
                 if (tracking.UnpackedAtTime < 0)
@@ -281,6 +283,7 @@ namespace KomUniMunVesselRectifier
                 {
                     VerboseLogging.Log($"Applying combat state to {vessel.vesselName}.");
                     BdaIntegration.ForceCombatState(vessel, tracking);
+                    PropulsionIntegration.ForceIgnition(vessel, tracking);
                     VesselTracking.SetVesselFlag(vessel.id, VesselFlags.CombatStateApplied);
                 }
             }
@@ -316,7 +319,7 @@ namespace KomUniMunVesselRectifier
                 return;
             }
 
-            if (vessel.vesselName.IsContractAircraft() || vessel.vesselName.IsContractHelicopter())
+            if (vessel.vesselName.IsContractAircraft())
             {
                 try
                 {
