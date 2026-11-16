@@ -4,10 +4,7 @@ This file includes all planned changes to the mod as of the last change.
 
 ## Compatibility
 
-- Compatibility with engine altering mods (AJE)
-
 - Compatibility with weapons mods (specific tagging)
-  - KerbalAdvancedDefenseReborn
   - BDArmory-Extended
 
 - Craft expansions
