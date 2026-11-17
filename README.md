@@ -15,11 +15,12 @@
 
 ## Description
 
-This contract pack was made after the desire for a reason to fly around kerbin and use BD Armory and its expansions' ordnance surfaced.
+This contract pack was made after the desire for a reason to fly around Kerbin and use BD Armory and its expansions' ordnance surfaced.
 
 The pack was inspired by KAF and DCA but was made with a different scope in mind, it uses Contract Configurator for all of the agency's contracts.
 
-The pack will feature many missions with locations spread all throught Kerbin and its moons, adding mission locations on other planets can be done upon request.
+The pack will feature many missions with locations spread all throught the Kerbol system and other solar systems*.
+*Other systems will be supported as long as Kerbin is not replaced as the home world.
 
 ## Development Status
 
