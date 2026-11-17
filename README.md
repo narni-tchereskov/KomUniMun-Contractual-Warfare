@@ -1,22 +1,17 @@
 # KomUniMun Contractual Warfare
 
-[Click here to access the KSP forum topic][1]
+<div align="center">
 
-[Click here to access the Github releases][2]
+<img src="https://i.imgur.com/ImLEST1.png" alt="KomUniMun Patch" width="256">
 
-[Click here to access the Spacedock releases][3]
+![CKAN Downloads][badge-ckan]
+![License][badge-license]
+![Last Commit][badge-commit]
+![Commits Since Latest Release][badge-commits-since]
 
-## Development Status
+**[KSP Forum Topic][1]** · **[GitHub Releases][2]** · **[SpaceDock][3]**
 
-This contract pack is a side project which is currently being actively developed by me (Narni Tchereskov) in my spare time, as such, updates may take a long time.
-
-## Contributing
-
-If you would like to contribute to this project through suggestions or development, enter in contact throug the KSP forums, Steam or Discord.
-
-We are currently looking to add more missions, if you have any locations or mission related ideas in mind we welcome any suggestions you may have.
-
-If you would like to fork this project you are free to do so without question.
+</div>
 
 ## Description
 
@@ -26,25 +21,31 @@ The pack was inspired by KAF and DCA but was made with a different scope in mind
 
 The pack will feature many missions with locations spread all throught Kerbin and its moons, adding mission locations on other planets can be done upon request.
 
+## Development Status
+
+This contract pack is a side project which is currently being actively developed by me (Narni Tchereskov) in my spare time; as such, updates may take a long time to arrive.
+
+## Contributing
+
+If you would like to contribute to this project through suggestions or development, get in touch through the KSP forums, Github, Steam, or Discord.
+
+We are currently looking to add more missions, if you have any locations or mission related ideas in mind we welcome any suggestions you may have.
+
+If you would like to fork this project, you are free to do so without question.
+
 ## Dependencies
 
-[BD Armory Plus][4]
+* [BD Armory Plus][4]
+* [Module Manager][5]
+* [Contract Configurator][6]
 
-[Module Manager][5]
+## Supported Mods
 
-[Contract Configurator][6]
-
-## Supported mods
-
-[Ferram Aerospace Research Continued][7]
-
-[KerBalloons][8]
-
-[SCANsat][9]
-
-[RealFuels][10]
-
-[Stockalike RF Engine Configs][11]
+* [Ferram Aerospace Research Continued][7]
+* [KerBalloons][8]
+* [SCANsat][9]
+* [RealFuels][10]
+* [Stockalike RF Engine Configs][11]
 
 [1]: https://forum.kerbalspaceprogram.com/topic/229136-1125-komunimun-contractual-warfare
 [2]: https://github.com/narni-tchereskov/KomUniMun-Contractual-Warfare/releases
@@ -57,3 +58,11 @@ The pack will feature many missions with locations spread all throught Kerbin an
 [9]: https://forum.kerbalspaceprogram.com/topic/72679-1125-scansat-v211-real-scanning-real-science-at-warp-speed-september-20-2025
 [10]: https://forum.kerbalspaceprogram.com/topic/58236-18-real-fuels
 [11]: https://forum.kerbalspaceprogram.com/topic/73410-stockalike-rf-engine-configs-v326-012019rf-v12
+
+[badge-ckan]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FKSP-CKAN%2FCKAN-meta%2Fmaster%2Fdownload_counts.json&query=$.KomUniMunCW&label=CKAN%20Downloads&color=brightgreen&style=flat-square
+
+[badge-license]: https://img.shields.io/github/license/narni-tchereskov/KomUniMun-Contractual-Warfare?style=flat-square&color=blue
+
+[badge-commit]: https://img.shields.io/github/last-commit/narni-tchereskov/KomUniMun-Contractual-Warfare/dev?style=flat-square&color=green
+
+[badge-commits-since]: https://img.shields.io/github/commits-since/narni-tchereskov/KomUniMun-Contractual-Warfare/latest/dev?style=flat-square&color=blue
