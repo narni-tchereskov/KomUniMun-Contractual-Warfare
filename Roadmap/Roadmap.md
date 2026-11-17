@@ -4,9 +4,6 @@ This file includes all planned changes to the mod as of the last change.
 
 ## Compatibility
 
-- Compatibility with weapons mods (specific tagging)
-  - BDArmory-Extended
-
 - Craft expansions
   - KerbalAdvancedDefenseReborn (Weapons)
   - AirplanePlus (Helicopters, Prop fighters)
