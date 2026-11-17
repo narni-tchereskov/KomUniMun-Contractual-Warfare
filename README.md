@@ -19,7 +19,7 @@ This contract pack was made after the desire for a reason to fly around Kerbin a
 
 The pack was inspired by KAF and DCA but was made with a different scope in mind, it uses Contract Configurator for all of the agency's contracts.
 
-The pack will feature many missions with locations spread all throught the Kerbol system and other solar systems*.
+The pack will feature many missions with locations spread all throughout the Kerbol system and other solar systems*.
 *Other systems will be supported as long as Kerbin is not replaced as the home world.
 
 ## Development Status
