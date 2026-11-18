@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://i.imgur.com/ImLEST1.png" alt="KomUniMun Patch" width="256">
+<img src="https://i.imgur.com/8ZBGGOx.png" alt="KomUniMun Patch" width="256">
 
 ![CKAN Downloads][badge-ckan]
 ![License][badge-license]
