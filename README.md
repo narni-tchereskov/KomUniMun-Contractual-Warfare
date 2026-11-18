@@ -32,6 +32,10 @@ If you would like to contribute to this project through suggestions or developme
 
 We are currently looking to add more missions, if you have any locations or mission related ideas in mind we welcome any suggestions you may have.
 
+We are also looking to add many more vehicles, we welcome any vehicle designs, preferably those with stock parts if you wish to share them.
+
+Modded vessels, particularly those with proprietary modules and parts may be added to the pack as internal and external extensions.
+
 If you would like to fork this project, you are free to do so without question.
 
 ## Dependencies
